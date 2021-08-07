@@ -1,6 +1,8 @@
 # Borderlands-3-HotFix-Tweaker
 HotFix Merger Addition
 
+To get source running smoothly install this theme : https://www.devcomponents.com/dotnetbar/download.aspx
+
 BORDERLANDS 3 HOTFIX TWEAKER
 ---------------------
 
