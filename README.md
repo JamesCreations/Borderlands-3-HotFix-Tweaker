@@ -2,7 +2,6 @@
 HotFix Merger Addition
 
 To get source running smoothly install this theme : https://www.devcomponents.com/dotnetbar/download.aspx
-
 BORDERLANDS 3 HOTFIX TWEAKER
 ---------------------
 
@@ -44,9 +43,14 @@ Loading Public Hotfix files from Github:
 "More Information" Tab:
  * Lists all prefixes (codenames) for all main DLC (to help you identify which DLC an item comes from).
 
+Adding Favorites to the "Favorites" Tab:
+ *Select any line of code > Right click > Select "Add to Favorites" >
 
 CREDIT
 -----------
+
+ * James reborn (Coding)
+ * Aplixion (Artwork/Logo Design)
 
  * James reborn (Coding)
  * Aplixion (Artwork/Logo Design)
