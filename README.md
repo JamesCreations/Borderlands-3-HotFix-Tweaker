@@ -75,7 +75,7 @@ HOW TO ADD AN EXCLUSION TO WINDOWS DEFENDER (ANTIVIRUS)
  * Go to Start  > Settings  > Update & Security  > Windows Security > Virus & threat protection.
  * Under Virus & threat protection settings, select Manage settings, and then under Exclusions, select Add or remove exclusions.
  * Select Add an exclusion, and then select from files, folders, file types, or process. A folder exclusion will apply to all subfolders within the folder as well.
-
+ * Once this is done redownload the tool and enjoy :)
 
 ------
 CREDIT
