@@ -52,6 +52,3 @@ CREDIT
 
  * James reborn (Coding)
  * Aplixion (Artwork/Logo Design)
-
- * James reborn (Coding)
- * Aplixion (Artwork/Logo Design)
