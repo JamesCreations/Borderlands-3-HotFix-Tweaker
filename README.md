@@ -24,9 +24,9 @@ INTRODUCTION
  "Borderlands 3 Hotfix Tweaker" is a program designed to make the process of editing existing hotfix files easier and more intuitive.
 
 
-------------
+--------
 FEATURES
-------------
+--------
 
  * Public Hotfixes are populated from Github and are synced automatically whenever their creator makes a change to that file.
  * Ability to edit locally stored Hotfix files.
@@ -36,11 +36,17 @@ FEATURES
  * Ability to view a list of all game files/directories, and all DLC Prefixes (codenames).
  
 
--------------
+----------------------------
 INSTRUCTIONS & CONFIGURATION
--------------
+----------------------------
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+NOTE: You may need to add an exclusion within your Antivirus software for "HotFixTweaker.exe" before using it!
+ * VirusTotal identified 2 false positives within this program (we're currently working on the code to resolve these false positives).
+ * Instructions for adding exclusions to Windows Defender are listed at the bottom of this page.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
  
-No installation neccessary, simply run the executable file titled "HotFixTweaker.exe".
+No installation neccessary, simply run the executable file titled "HotFixTweaker.exe". 
 
 Loading Custom Hotfix Files From Your Own Local Directory/Folder:
  * Navigate to the "Loading" tab > Right click anywhere within that box > Select "Load HotFixes Directory" > Select the folder that contains your hotfix files > Click "OK" > The "listbox" will now be populated with every hotfix file within the selected folder > Double click any file on that list to view it's contents > "Hotfix Editing" tab > "Session Editor" tab > Make your desired changes to the file > Right click anywhere within that box > Select "Save File" to save a copy of that hotfix file to your PC > 
@@ -62,9 +68,18 @@ Adding Favorites to the "Favorites" Tab:
  * Color Options - Allows you to specify which colors you'd like to apply to various tabs within the program.
  
  
------------
+-------------------------------------------------------
+HOW TO ADD AN EXCLUSION TO WINDOWS DEFENDER (ANTIVIRUS)
+-------------------------------------------------------
+ 
+ * Go to Start  > Settings  > Update & Security  > Windows Security > Virus & threat protection.
+ * Under Virus & threat protection settings, select Manage settings, and then under Exclusions, select Add or remove exclusions.
+ * Select Add an exclusion, and then select from files, folders, file types, or process. A folder exclusion will apply to all subfolders within the folder as well.
+
+
+------
 CREDIT
------------
+------
 
  * James reborn (Coding)
  * Aplixion (Artwork/Logo Design)
