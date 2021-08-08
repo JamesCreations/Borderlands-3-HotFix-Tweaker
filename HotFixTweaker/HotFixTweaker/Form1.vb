@@ -3,13 +3,63 @@ Imports System.Net
 Imports DevComponents.DotNetBar
 
 Public Class Form1
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TabItem2.Visible = False
-        allpublichotfixes(1)
-    End Sub
-
     Dim selectedtext, selectedfolder, savefilepath As String
 
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        TabItem2.Visible = False
+        allpublichotfixes(1)
+
+
+        TabItem8.Text = "List (" + ListBox3.Items.Count.ToString + ")"
+
+
+        ColorPickerButton1.SelectedColor = Color.Black
+        ColorPickerButton2.SelectedColor = Color.White
+        ColorPickerButton3.SelectedColor = Color.Black
+        ColorPickerButton4.SelectedColor = Color.White
+
+        If File.Exists(My.Application.Info.DirectoryPath + "\HotFixTweakerFavorites.hfts") Then
+            For Each item In File.ReadAllLines(My.Application.Info.DirectoryPath + "\HotFixTweakerFavorites.hfts")
+                ListBox4.Items.Add(item)
+            Next
+            TabItem13.Text = "Favorites (" + ListBox4.Items.Count.ToString + ")"
+        End If
+
+
+        If File.Exists(My.Application.Info.DirectoryPath + "\HotFixTweakerSettings.hfts") Then
+
+            CheckBoxX1.Checked = Semiparseloadingvalues(2, "Use Inital HotFixes Directory On Load : ")
+            TextBoxX1.Text = Semiparseloadingvalues(3, "Inital HotFixes Directory : ")
+            ColorPickerButton1.SelectedColor = Color.FromArgb(Semiparseloadingvalues(4, "Session Editor Background Color R : "), Semiparseloadingvalues(5, "Session Editor Background Color G : "), Semiparseloadingvalues(6, "Session Editor Background Color B : "))
+            ColorPickerButton2.SelectedColor = Color.FromArgb(Semiparseloadingvalues(7, "Session Editor Text Color R : "), Semiparseloadingvalues(8, "Session Editor Text Color G : "), Semiparseloadingvalues(9, "Session Editor Text Color B : "))
+            ColorPickerButton4.SelectedColor = Color.FromArgb(Semiparseloadingvalues(10, "HotFix Code Background Color R : "), Semiparseloadingvalues(11, "HotFix Code Background Color G : "), Semiparseloadingvalues(12, "HotFix Code Background Color B : "))
+            ColorPickerButton3.SelectedColor = Color.FromArgb(Semiparseloadingvalues(13, "HotFix Code Text Color R : "), Semiparseloadingvalues(14, "HotFix Code Text Color G : "), Semiparseloadingvalues(15, "HotFix Code Text Color B : "))
+
+
+        End If
+
+        If CheckBoxX1.Checked = True Then
+            selectedfolder = TextBoxX1.Text
+            Listboxrefresh(ListBox1)
+            TabItem1.Text = "Loading (" + ListBox1.Items.Count.ToString + ")"
+        End If
+
+        RichTextBoxEx1.BackColorRichTextBox = ColorPickerButton1.SelectedColor
+        RichTextBoxEx1.ForeColor = ColorPickerButton2.SelectedColor
+        RichTextBoxEx2.BackColorRichTextBox = ColorPickerButton4.SelectedColor
+        RichTextBoxEx2.ForeColor = ColorPickerButton3.SelectedColor
+
+
+
+    End Sub
+
+    Function Semiparseloadingvalues(linenow As Integer, stringfromsettings As String) As String
+        Dim Result As String
+
+        Result = File.ReadLines(My.Application.Info.DirectoryPath + "\HotFixTweakerSettings.hfts")(linenow).Replace(stringfromsettings, "").Replace("(", "").Replace(")", "")
+        Return Result
+    End Function
     Function Readtextfromgithub(githubby As String) As String
         Dim address As String = githubby
         Dim client As WebClient = New WebClient()
@@ -17,7 +67,7 @@ Public Class Form1
         Return reader.ReadToEnd
     End Function
 
-    Function publichotfixes(selected As String, gity As String, loadordoubleclick As Boolean)
+    Function publichotfixes(selected As String, gity As String, loadordoubleclick As Boolean, SwitchoffBLCM As Boolean)
         If loadordoubleclick = True Then
             If Not ListBox3.Items.Contains(selected) Then
                 ListBox3.Items.Add(selected)
@@ -25,165 +75,26 @@ Public Class Form1
         Else
             If ListBox3.SelectedItem = selected Then
                 RichTextBoxEx2.Clear()
-                RichTextBoxEx2.Text = Readtextfromgithub("https://raw.githubusercontent.com/BLCM/bl3mods/master/" + gity.Replace(" ", "%20").Replace("bl3mods/", "") + selected.Replace(" ", "%20"))
+
+                If SwitchoffBLCM = False Then
+                    RichTextBoxEx2.Text = Readtextfromgithub("https://raw.githubusercontent.com/BLCM/bl3mods/master/" + gity.Replace(" ", "%20").Replace("bl3mods/", "") + selected.Replace(" ", "%20"))
+                    ToolTip1.SetToolTip(ListBox3, "https://raw.githubusercontent.com/BLCM/bl3mods/master/" + gity.Replace(" ", "%20").Replace("bl3mods/", "") + selected.Replace(" ", "%20") + "
+HotFix Lines : " + RichTextBoxEx2.Lines.Count.ToString)
+                    TabItem9.Text = "HotFix Code ( Lines " + RichTextBoxEx2.Lines.Count.ToString + ")"
+
+                Else
+
+                    RichTextBoxEx2.Text = gity
+                    ToolTip1.SetToolTip(ListBox3, gity + "
+HotFix Lines : " + RichTextBoxEx2.Lines.Count.ToString)
+                    TabItem9.Text = "HotFix Code ( Lines " + RichTextBoxEx2.Lines.Count.ToString + ")"
+
+                End If
+
                 TabControl4.SelectedTabIndex = 1
+                End If
             End If
-        End If
-    End Function
-
-    Function allpublichotfixes(loadordoubleclick As Boolean)
-        publichotfixes("Amara True Melee.bl3hotfix", "CZ47/Amara/", loadordoubleclick)
-        publichotfixes("Amara2.0.bl3hotfix", "CZ47/Amara/", loadordoubleclick)
-        publichotfixes("Stronger Enemies Arms Race.bl3hotfix", "CZ47/Arms Race/", loadordoubleclick)
-        publichotfixes("Barbaric Yawp Loaders.bl3hotfix", "CZ47/Fl4k/", loadordoubleclick)
-        publichotfixes("Barbaric Yawp Loaders.bl3hotfix", "CZ47/Fl4k/", loadordoubleclick)
-        publichotfixes("Custom Loader Names.bl3hotfix", "CZ47/Fl4k/", loadordoubleclick)
-        publichotfixes("Purple Tree Fl4k Overhaul.bl3hotfix", "CZ47/Fl4k/", loadordoubleclick)
-        publichotfixes("Really Lucky 7.bl3hotfix", "CZ47/Gear/", loadordoubleclick)
-        publichotfixes("Spiritual Driver V1.bl3hotfix", "CZ47/Gear/", loadordoubleclick)
-        publichotfixes("Increased Spawns.bl3hotfix", "CZ47/Increased Spawns/", loadordoubleclick)
-        publichotfixes("Increased spawns x10.bl3hotfix", "CZ47/Increased Spawns/", loadordoubleclick)
-        publichotfixes("Increased spawns x15.bl3hotfix", "CZ47/Increased Spawns/", loadordoubleclick)
-        publichotfixes("Increased spawns x20.bl3hotfix", "CZ47/Increased Spawns/", loadordoubleclick)
-        publichotfixes("Increased spawns x4.bl3hotfix", "CZ47/Increased Spawns/", loadordoubleclick)
-        publichotfixes("Increased spawns x40.bl3hotfix", "CZ47/Increased Spawns/", loadordoubleclick)
-        publichotfixes("4P Enemy Health in Solo Mode.bl3hotfix", "CZ47/Mayhem/", loadordoubleclick)
-        publichotfixes("Enhanced Enemies Mayhem10.bl3hotfix", "CZ47/Mayhem/", loadordoubleclick)
-        publichotfixes("Increased Mayhem8+ Enemy Health.bl3hotfix", "CZ47/Mayhem/", loadordoubleclick)
-        publichotfixes("MayhemScaled StatuseffectDamage.bl3hotfix", "CZ47/Mayhem/", loadordoubleclick)
-        publichotfixes("Reduced SpawnDelay MTD.bl3hotfix", "CZ47/Takedown/", loadordoubleclick)
-        publichotfixes("No Elemental Penalties or Bonuses.bl3hotfix", "bl3mods/CZ47/Utility/", loadordoubleclick)
-        publichotfixes("Unrestricted Skilltrees.bl3hotfix", "bl3mods/CZ47/Utility/", loadordoubleclick)
-        publichotfixes("BetterSanctuary3Floors.bl3hotfix", "bl3mods/DexManly/BetterSanctuary3Floors/", loadordoubleclick)
-        publichotfixes("Floor_Under_Kritchy.bl3hotfix", "bl3mods/DexManly/FloorUnderKritchy/", loadordoubleclick)
-        publichotfixes("LessPunishingGuardianTakedownPlatforming.bl3hotfix", "bl3mods/DexManly/LessPunishingGuardianTakedownPlatforming/", loadordoubleclick)
-        publichotfixes("Patch_Slaughterstar3000_BossLootDrop.bl3hotfix", "bl3mods/DexManly/PatchSlaughterstar3000BossDrop/", loadordoubleclick)
-        publichotfixes("TrialNames_DisplayOnly.bl3hotfix", "bl3mods/DexManly/TrialNames/", loadordoubleclick)
-        publichotfixes("TrialNames_Full.bl3hotfix", "bl3mods/DexManly/TrialNames/", loadordoubleclick)
-        publichotfixes("TrialNames_SubHeader.bl3hotfix", "bl3mods/DexManly/TrialNames/", loadordoubleclick)
-        publichotfixes("NoXPBar.bl3hotfix", "bl3mods/Elektrohund/UI_Mods/", loadordoubleclick)
-        publichotfixes("Small_Hud.bl3hotfix", "bl3mods/Elektrohund/UI_Mods/", loadordoubleclick)
-        publichotfixes("Small_Hud_NoXPBar.bl3hotfix", "bl3mods/Elektrohund/UI_Mods/", loadordoubleclick)
-        publichotfixes("Small_Hud_NoXPBar_NoCrosshair.bl3hotfix", "bl3mods/Elektrohund/UI_Mods/", loadordoubleclick)
-        publichotfixes("Borderlands_3_Redux.bl3hotfix", "bl3mods/EpicNNG/", loadordoubleclick)
-        publichotfixes("Melee Amara Adjustments.bl3hotfix", "bl3mods/Freezer/Amara/", loadordoubleclick)
-        publichotfixes("White Elephant Rework.bl3hotfix", "bl3mods/Freezer/Artifacts/", loadordoubleclick)
-        publichotfixes("Rough Rider Reborn.bl3hotfix", "bl3mods/Freezer/", loadordoubleclick)
-        publichotfixes("Ward Reborn.bl3hotfix", "bl3mods/Freezer/", loadordoubleclick)
-        publichotfixes("Nuclear Moze.bl3hotfix", "bl3mods/Freezer/Moze/", loadordoubleclick)
-        publichotfixes("Elements_Dots_Overhaul.bl3hotfix", "bl3mods/Grimm/", loadordoubleclick)
-        publichotfixes("Weighted_Ammo.bl3hotfix", "bl3mods/Grimm/", loadordoubleclick)
-        publichotfixes("World_Drop_Scales_With_Your_Level.bl3hotfix", "bl3mods/Grimm/", loadordoubleclick)
-        publichotfixes("B3&2_NoMayhem.bl3hotfix", "bl3mods/Grimm/Borderlands 3&2/", loadordoubleclick)
-        publichotfixes("B3&2_RescaledMayhem.bl3hotfix", "bl3mods/Grimm/Borderlands 3&2/", loadordoubleclick)
-        publichotfixes("B3&2_RescaledMayhem_LessWorldDrop.bl3hotfix", "bl3mods/Grimm/Borderlands 3&2/", loadordoubleclick)
-        publichotfixes("B3&2_VanillaMayhem_NoModifiers.bl3hotfix", "bl3mods/Grimm/Borderlands 3&2/", loadordoubleclick)
-        publichotfixes("B3&2_VanillaMayhem_WithModifiers.bl3hotfix", "bl3mods/Grimm/Borderlands 3&2/", loadordoubleclick)
-        publichotfixes("Fl4k.bl3hotfix", "bl3mods/Grimm/FL4K/", loadordoubleclick)
-        publichotfixes("Garcia_Full_Auto.bl3hotfix", "bl3mods/Grimm/Gear/Garcia/", loadordoubleclick)
-        publichotfixes("unlocked_parts.bl3hotfix", "bl3mods/Jalokin333/Unlock Part Restrictions/", loadordoubleclick)
-        publichotfixes("less_guaranteed_gun_accessoires.bl3hotfix", "bl3mods/Jalokin333/", loadordoubleclick)
-        publichotfixes("Loot_the_Universe_Artifacts_to_Slaughterstar_3000.bl3hotfix", "bl3mods/Litch/", loadordoubleclick)
-        publichotfixes("Loot_the_Universe_COMs_to_Slaughter_Shaft.bl3hotfix", "bl3mods/Litch/", loadordoubleclick)
-        publichotfixes("Remove Health Gates.bl3hotfix", "bl3mods/Lonemasterino/", loadordoubleclick)
-        publichotfixes("map_defogger.bl3hotfix", "bl3mods/Novenic/Map Defogger/", loadordoubleclick)
-        publichotfixes("no_sparkles.bl3hotfix", "bl3mods/Novenic/No More Sparkles/", loadordoubleclick)
-        publichotfixes("Infinite_Fade_Away_Duration.bl3hotfix", "bl3mods/Phenom/Beastmaster/", loadordoubleclick)
-        publichotfixes("Infinite_Gamma_Burst_Duration.bl3hotfix", "bl3mods/Phenom/Beastmaster/", loadordoubleclick)
-        publichotfixes("Leave_No_Trace_Old_Version.bl3hotfix", "bl3mods/Phenom/Beastmaster/", loadordoubleclick)
-        publichotfixes("No_Action_Skills_Cooldown_Beastmaster.bl3hotfix", "bl3mods/Phenom/Beastmaster/", loadordoubleclick)
-        publichotfixes("Instant_Pet_Respawn.bl3hotfix", "bl3mods/Phenom/Beastmaster/Pets/", loadordoubleclick)
-        publichotfixes("PetZilla.bl3hotfix", "bl3mods/Phenom/Beastmaster/Pets/", loadordoubleclick)
-        publichotfixes("PokePet.bl3hotfix", "bl3mods/Phenom/Beastmaster/Pets/", loadordoubleclick)
-        publichotfixes("TrialNames_Full_FR.bl3hotfix", "bl3mods/Phenom/French Translations/", loadordoubleclick)
-        publichotfixes("Better_Vending_Machines.bl3hotfix", "bl3mods/Phenom/General/", loadordoubleclick)
-        publichotfixes("Legendary_Price_Scaling.bl3hotfix", "bl3mods/Phenom/General/", loadordoubleclick)
-        publichotfixes("Moxxis_Tipping_Jar_Rewards.bl3hotfix", "bl3mods/Phenom/General/", loadordoubleclick)
-        publichotfixes("TVHM_Scale_From_Level1.bl3hotfix", "bl3mods/Phenom/General/", loadordoubleclick)
-        publichotfixes("Unlimited_Bank_Backpack.bl3hotfix", "bl3mods/Phenom/General/", loadordoubleclick)
-        publichotfixes("Unlimited_Vehicles_Boost.bl3hotfix", "bl3mods/Phenom/General/", loadordoubleclick)
-        publichotfixes("Infinite_SNTNL_Drone_Duration.bl3hotfix", "bl3mods/Phenom/Operative/", loadordoubleclick)
-        publichotfixes("No_Action_Skills_Cooldown_Operative.bl3hotfix", "bl3mods/Phenom/Operative/", loadordoubleclick)
-        publichotfixes("Faster Slide.bl3hotfix", "bl3mods/Poïpoï/", loadordoubleclick)
-        publichotfixes("Legendary Arms Race.bl3hotfix", "bl3mods/Poïpoï/", loadordoubleclick)
-        publichotfixes("No Barrier AmpShot VFX.bl3hotfix", "bl3mods/Poïpoï/", loadordoubleclick)
-        publichotfixes("No DOT Screams.bl3hotfix", "bl3mods/Poïpoï/", loadordoubleclick)
-        publichotfixes("Silent ActionSkill Cooldowns.bl3hotfix", "bl3mods/Poïpoï/", loadordoubleclick)
-        publichotfixes("Slide Jumper.bl3hotfix", "bl3mods/Poïpoï/", loadordoubleclick)
-        publichotfixes("non_slippery_crit.bl3hotfix", "bl3mods/Rumo/WeaponChanges/", loadordoubleclick)
-        publichotfixes("green_monster_clickclick_fix.bl3hotfix", "bl3mods/SSpyR/bugfix/", loadordoubleclick)
-        publichotfixes("god_bear.bl3hotfix", "bl3mods/SSpyR/cheat_or_joke/", loadordoubleclick)
-        publichotfixes("god_clone.bl3hotfix", "bl3mods/SSpyR/cheat_or_joke/", loadordoubleclick)
-        publichotfixes("god_skag.bl3hotfix", "bl3mods/SSpyR/cheat_or_joke/", loadordoubleclick)
-        publichotfixes("enemy_gear_drops.bl3hotfix", "bl3mods/SSpyR/enemy/", loadordoubleclick)
-        publichotfixes("guardiantd_health_changes.bl3hotfix", "bl3mods/SSpyR/enemy/", loadordoubleclick)
-        publichotfixes("clear_skies.bl3hotfix", "bl3mods/SSpyR/event/", loadordoubleclick)
-        publichotfixes("supercharged_crystals.bl3hotfix", "bl3mods/SSpyR/event/", loadordoubleclick)
-        publichotfixes("dna_buff.bl3hotfix", "bl3mods/SSpyR/gear-general/", loadordoubleclick)
-        publichotfixes("webslinger_buff.bl3hotfix", "bl3mods/SSpyR/gear-general/", loadordoubleclick)
-        publichotfixes("no_anoint_balance.bl3hotfix", "bl3mods/SSpyR/loot-system/", loadordoubleclick)
-        publichotfixes("no_world_drops.bl3hotfix", "bl3mods/SSpyR/loot-system/", loadordoubleclick)
-        publichotfixes("trials_loot_changes.bl3hotfix", "bl3mods/SSpyR/loot-system/", loadordoubleclick)
-        publichotfixes("mayhem2_mods_no_weights.bl3hotfix", "bl3mods/SSpyR/mayhem/", loadordoubleclick)
-        publichotfixes("gear_randomizer_nade.bl3hotfix", "bl3mods/SSpyR/randomizer/", loadordoubleclick)
-        publichotfixes("gear_randomizer_relic.bl3hotfix", "bl3mods/SSpyR/randomizer/", loadordoubleclick)
-        publichotfixes("gear_randomizer_shield.bl3hotfix", "bl3mods/SSpyR/randomizer/", loadordoubleclick)
-        publichotfixes("commit_phalanx_stack.bl3hotfix", "bl3mods/SSpyR/skill-changes/", loadordoubleclick)
-        publichotfixes("zane_anarchy.bl3hotfix", "bl3mods/SSpyR/skill-changes/", loadordoubleclick)
-        publichotfixes("StygianEmperor_COV_FasterEquipSpeed.bl3hotfix", "bl3mods/Stygian Emperor/COV/FasterEquipSpeed/", loadordoubleclick)
-        publichotfixes("StygianEmperor_Consistent_Mitigated_Element_Influence.bl3hotfix", "bl3mods/Stygian Emperor/Consistent Mitigated Element Influence/", loadordoubleclick)
-        publichotfixes("StygianEmperor_HeavyWeapons_NoSpeedPenalty.bl3hotfix", "bl3mods/Stygian Emperor/HeavyWeapons/NoSpeedPenalty/", loadordoubleclick)
-        publichotfixes("StygianEmperor_IronBearNoSelfDamage.bl3hotfix", "bl3mods/Stygian Emperor/Moze/Iron Bear No Self Damage/", loadordoubleclick)
-        publichotfixes("StygianEmperor_IronBearUnlimitedFuel.bl3hotfix", "bl3mods/Stygian Emperor/Moze/IronBearUnlimitedFuel/", loadordoubleclick)
-        publichotfixes("StygianEmperor_IronBearUnlimitedFuel_FullRefund.bl3hotfix", "bl3mods/Stygian Emperor/Moze/IronBearUnlimitedFuel/", loadordoubleclick)
-        publichotfixes("StygianEmperor_Moze_ReactiveArmor.bl3hotfix", "bl3mods/Stygian Emperor/Moze/Reactive Armor/", loadordoubleclick)
-        publichotfixes("StygianEmperor_RelaxedSkillRequirements.bl3hotfix", "bl3mods/Stygian Emperor/Relaxed Skill Requirements/", loadordoubleclick)
-        publichotfixes("StygianEmperor_SilenceMessyBreakup.bl3hotfix", "bl3mods/Stygian Emperor/Shields/SilenceMessyBreakup/", loadordoubleclick)
-        publichotfixes("Guardian Angel Nerf 250%.bl3hotfix", "bl3mods/TheGigaMaster/Guardian Angel Nerf/", loadordoubleclick)
-        publichotfixes("Guardian Angel Nerf 400%.bl3hotfix", "bl3mods/TheGigaMaster/Guardian Angel Nerf/", loadordoubleclick)
-        publichotfixes("Weapon_Balance_Overhaul.bl3hotfix", "bl3mods/TheGigaMaster/Major Weapon Overhaul/", loadordoubleclick)
-        publichotfixes("ReVolter 150% Reduction.bl3hotfix", "bl3mods/TheGigaMaster/ReVolter Nerf/", loadordoubleclick)
-        publichotfixes("ReVolter 175% Reduction.bl3hotfix", "bl3mods/TheGigaMaster/ReVolter Nerf/", loadordoubleclick)
-        publichotfixes("TheNotSoFakobs.bl3hotfix", "bl3mods/TheGigaMaster/The Fakobs Buff/", loadordoubleclick)
-        publichotfixes("TheNotSoFakobs_Redux_Compatible.bl3hotfix", "bl3mods/TheGigaMaster/The Fakobs Buff/", loadordoubleclick)
-        publichotfixes("varkid_always_evolve.bl3hotfix", "bl3mods/TheGigaMaster/Varkid Evolution Increase/", loadordoubleclick)
-        publichotfixes("varkid_evolution_increase.bl3hotfix", "bl3mods/TheGigaMaster/Varkid Evolution Increase/", loadordoubleclick)
-        publichotfixes("buffed_projected_shields.bl3hotfix", "bl3mods/TheNiTrex/BuffedProjectedShields/", loadordoubleclick)
-        publichotfixes("ShowMeThePurplex2.bl3hotfix", "bl3mods/ZetaDaemon/ShowMeThePurple/", loadordoubleclick)
-        publichotfixes("ShowMeThePurplex20.bl3hotfix", "bl3mods/ZetaDaemon/ShowMeThePurple/", loadordoubleclick)
-        publichotfixes("ShowMeThePurplex5.bl3hotfix", "bl3mods/ZetaDaemon/ShowMeThePurple/", loadordoubleclick)
-        publichotfixes("BetterBrainstormer.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick)
-        publichotfixes("FITSK Nuclear fallout.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick)
-        publichotfixes("FullAutoAnarchy.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick)
-        publichotfixes("MaggieTrickshotBalancing.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick)
-        publichotfixes("OneOrphan.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick)
-        publichotfixes("SolekiOrion.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick)
-        publichotfixes("StackingR&R.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick)
-        publichotfixes("bekahBuff.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick)
-        publichotfixes("moreMaxAmmo.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick)
-        publichotfixes("unBurstPlasma.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick)
-        publichotfixes("3000_hyperion_slaughter.bl3hotfix", "bl3mods/altef-4/", loadordoubleclick)
-        publichotfixes("3000_mob_spawn_mod.bl3hotfix", "bl3mods/altef-4/", loadordoubleclick)
-        publichotfixes("Fixed Weapon Cards.bl3hotfix", "bl3mods/lollixlii/Fixed Weapon Cards/", loadordoubleclick)
-        publichotfixes("Oldschool Mayhem.bl3hotfix", "bl3mods/lollixlii/Oldschool Mayhem/", loadordoubleclick)
-        publichotfixes("RecursionBuff.bl3hotfix", "bl3mods/niol/Recursion Buff/", loadordoubleclick)
-        publichotfixes("SuperballBuff.bl3hotfix", "bl3mods/niol/Superball Buff/", loadordoubleclick)
-        publichotfixes("UndoMayhemLootHotfix.bl3hotfix", "bl3mods/notrixatenza/", loadordoubleclick)
-        publichotfixes("Standalone Third Person.bl3hotfix", "bl3mods/screen names/", loadordoubleclick)
-        publichotfixes("No Scaling.bl3hotfix", "bl3mods/shadowevil/", loadordoubleclick)
-        publichotfixes("armsracestarter-blue.bl3hotfix", "bl3mods/skruntskrunt/armsracestarterchest/", loadordoubleclick)
-        publichotfixes("armsracestarter-green.bl3hotfix", "bl3mods/skruntskrunt/armsracestarterchest/", loadordoubleclick)
-        publichotfixes("armsracestarter-orange.bl3hotfix", "bl3mods/skruntskrunt/armsracestarterchest/", loadordoubleclick)
-        publichotfixes("armsracestarter-purple.bl3hotfix", "bl3mods/skruntskrunt/armsracestarterchest/", loadordoubleclick)
-        publichotfixes("billy-and-the-cloneasaurus.bl3hotfix", "bl3mods/skruntskrunt/boss-rush-slaughter/", loadordoubleclick)
-        publichotfixes("boss_rush_3000.bl3hotfix", "bl3mods/skruntskrunt/boss-rush-slaughter/", loadordoubleclick)
-        publichotfixes("bossrace.bl3hotfix", "bl3mods/skruntskrunt/bossrace/", loadordoubleclick)
-        publichotfixes("chubby.bl3hotfix", "bl3mods/skruntskrunt/chubby/", loadordoubleclick)
-        publichotfixes("mitosis.bl3hotfix", "bl3mods/skruntskrunt/mitosisharker/", loadordoubleclick)
-        publichotfixes("omegamantakoreraid.bl3hotfix", "bl3mods/skruntskrunt/omegamantakoreraid/", loadordoubleclick)
-        publichotfixes("raid.bl3hotfix", "bl3mods/skruntskrunt/raid/", loadordoubleclick)
-        publichotfixes("truetrials.bl3hotfix", "bl3mods/skruntskrunt/truetrials/", loadordoubleclick)
-
+        Return 0
     End Function
 
     Function Listboxrefresh(listybox As ListBox)
@@ -194,7 +105,225 @@ Public Class Form1
                 listybox.Items.Add(item)
             End If
         Next
+        Return 0
     End Function
+
+
+#Region "Public HotFixes List"
+    Function allpublichotfixes(loadordoubleclick As Boolean)
+        publichotfixes("4P Enemy Health in Solo Mode.bl3hotfix", "CZ47/Mayhem/", loadordoubleclick, 0)
+        publichotfixes("3000_hyperion_slaughter.bl3hotfix", "bl3mods/altef-4/", loadordoubleclick, 0)
+        publichotfixes("3000_mob_spawn_mod.bl3hotfix", "bl3mods/altef-4/", loadordoubleclick, 0)
+        publichotfixes("all_weapons_can_anoint.bl3hotfix", "bl3mods/Apocalyptech/gear_changes/all_weapons_can_anoint/", loadordoubleclick, 0)
+        publichotfixes("alternate_scaling_bl1.bl3hotfix", "bl3mods/Apocalyptech/gameplay_changes/alternate_scaling/", loadordoubleclick, 0)
+        publichotfixes("alternate_scaling_bl2.bl3hotfix", "bl3mods/Apocalyptech/gameplay_changes/alternate_scaling/", loadordoubleclick, 0)
+        publichotfixes("alternate_scaling_tps.bl3hotfix", "Abl3mods/pocalyptech/gameplay_changes/alternate_scaling/", loadordoubleclick, 0)
+        publichotfixes("Amara2.0.bl3hotfix", "CZ47/Amara/", loadordoubleclick, 0)
+        publichotfixes("Amara True Melee.bl3hotfix", "CZ47/Amara/", loadordoubleclick, 0)
+        publichotfixes("anointment_reroll_cost_1.bl3hotfix", "bl3mods/Apocalyptech/economy/anointment_reroll_cost/", loadordoubleclick, 0)
+        publichotfixes("anointment_reroll_cost_10.bl3hotfix", "bl3mods/Apocalyptech/economy/anointment_reroll_cost/", loadordoubleclick, 0)
+        publichotfixes("anointment_reroll_cost_25.bl3hotfix", "bl3mods/Apocalyptech/economy/anointment_reroll_cost/", loadordoubleclick, 0)
+        publichotfixes("anointment_reroll_cost_50.bl3hotfix", "bl3mods/Apocalyptech/economy/anointment_reroll_cost/", loadordoubleclick, 0)
+        publichotfixes("anointment_reroll_cost_100.bl3hotfix", "bl3mods/Apocalyptech/economy/anointment_reroll_cost/", loadordoubleclick, 0)
+        publichotfixes("anointment_reroll_cost_150.bl3hotfix", "bl3mods/Apocalyptech/economy/anointment_reroll_cost/", loadordoubleclick, 0)
+        publichotfixes("anointment_reroll_cost_200.bl3hotfix", "bl3mods/Apocalyptech/economy/anointment_reroll_cost/", loadordoubleclick, 0)
+        publichotfixes("anointment_reroll_cost_free.bl3hotfix", "bl3mods/Apocalyptech/economy/anointment_reroll_cost/", loadordoubleclick, 0)
+        publichotfixes("armsracestarter-blue.bl3hotfix", "bl3mods/skruntskrunt/armsracestarterchest/", loadordoubleclick, 0)
+        publichotfixes("armsracestarter-green.bl3hotfix", "bl3mods/skruntskrunt/armsracestarterchest/", loadordoubleclick, 0)
+        publichotfixes("armsracestarter-orange.bl3hotfix", "bl3mods/skruntskrunt/armsracestarterchest/", loadordoubleclick, 0)
+        publichotfixes("armsracestarter-purple.bl3hotfix", "bl3mods/skruntskrunt/armsracestarterchest/", loadordoubleclick, 0)
+        publichotfixes("B3&2_NoMayhem.bl3hotfix", "bl3mods/Grimm/Borderlands 3&2/", loadordoubleclick, 0)
+        publichotfixes("B3&2_RescaledMayhem.bl3hotfix", "bl3mods/Grimm/Borderlands 3&2/", loadordoubleclick, 0)
+        publichotfixes("B3&2_RescaledMayhem_LessWorldDrop.bl3hotfix", "bl3mods/Grimm/Borderlands 3&2/", loadordoubleclick, 0)
+        publichotfixes("B3&2_VanillaMayhem_NoModifiers.bl3hotfix", "bl3mods/Grimm/Borderlands 3&2/", loadordoubleclick, 0)
+        publichotfixes("B3&2_VanillaMayhem_WithModifiers.bl3hotfix", "bl3mods/Grimm/Borderlands 3&2/", loadordoubleclick, 0)
+        publichotfixes("Barbaric Yawp Loaders.bl3hotfix", "CZ47/Fl4k/", loadordoubleclick, 0)
+        publichotfixes("bekahBuff.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick, 0)
+        publichotfixes("BetterBrainstormer.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick, 0)
+        publichotfixes("BetterSanctuary3Floors.bl3hotfix", "bl3mods/DexManly/BetterSanctuary3Floors/", loadordoubleclick, 0)
+        publichotfixes("better_maliwan_charge_time.bl3hotfix", "bl3mods/Apocalyptech/gear_changes/better_maliwan_charge_time/", loadordoubleclick, 0)
+        publichotfixes("better_mayhem_rewards.bl3hotfix", "bl3mods/Apocalyptech/mayhem/better_mayhem_rewards/", loadordoubleclick, 0)
+        publichotfixes("better_slots.bl3hotfix", "bl3mods/Apocalyptech/economy/better_slots/", loadordoubleclick, 0)
+        publichotfixes("Better_Vending_Machines.bl3hotfix", "bl3mods/Phenom/General/", loadordoubleclick, 0)
+        publichotfixes("billy-and-the-cloneasaurus.bl3hotfix", "bl3mods/skruntskrunt/boss-rush-slaughter/", loadordoubleclick, 0)
+        publichotfixes("black_market_world_drops.bl3hotfix", "bl3mods/Apocalyptech/loot_changes/black_market_world_drops/", loadordoubleclick, 0)
+        publichotfixes("Borderlands_3_Redux.bl3hotfix", "bl3mods/EpicNNG/", loadordoubleclick, 0)
+        publichotfixes("bossrace.bl3hotfix", "bl3mods/skruntskrunt/bossrace/", loadordoubleclick, 0)
+        publichotfixes("boss_drop_randomizer.bl3hotfix", "bl3mods/Apocalyptech/loot_changes/boss_drop_randomizer/", loadordoubleclick, 0)
+        publichotfixes("boss_rush_3000.bl3hotfix", "bl3mods/skruntskrunt/boss-rush-slaughter/", loadordoubleclick, 0)
+        publichotfixes("buffed_projected_shields.bl3hotfix", "bl3mods/TheNiTrex/BuffedProjectedShields/", loadordoubleclick, 0)
+        publichotfixes("cheaper_eridium_economy.bl3hotfix", "bl3mods/Apocalyptech/economy/cheaper_eridium_economy/", loadordoubleclick, 0)
+        publichotfixes("cheaper_sdus.bl3hotfix", "bl3mods/Apocalyptech/economy/cheaper_sdus/", loadordoubleclick, 0)
+        publichotfixes("cheaper_slots.bl3hotfix", "bl3mods/Apocalyptech/economy/cheaper_slots/", loadordoubleclick, 0)
+        publichotfixes("chubby.bl3hotfix", "bl3mods/skruntskrunt/chubby/", loadordoubleclick, 0)
+        publichotfixes("clear_skies.bl3hotfix", "bl3mods/SSpyR/event/", loadordoubleclick, 0)
+        publichotfixes("commit_phalanx_stack.bl3hotfix", "bl3mods/SSpyR/skill-changes/", loadordoubleclick, 0)
+        publichotfixes("customizations_only_heads_and_skins.bl3hotfix", "bl3mods/Apocalyptech/loot_changes/customizations_only_heads_and_skins/", loadordoubleclick, 0)
+        publichotfixes("customization_drop_rate_constant.bl3hotfix", "bl3mods/Apocalyptech/loot_changes/customization_drop_rate/", loadordoubleclick, 0)
+        publichotfixes("customization_drop_rate_frequent.bl3hotfix", "bl3mods/Apocalyptech/loot_changes/customization_drop_rate/", loadordoubleclick, 0)
+        publichotfixes("customization_drop_rate_improved.bl3hotfix", "bl3mods/Apocalyptech/loot_changes/customization_drop_rate/", loadordoubleclick, 0)
+        publichotfixes("customization_drop_rate_none.bl3hotfix", "bl3mods/Apocalyptech/loot_changes/customization_drop_rate/", loadordoubleclick, 0)
+        publichotfixes("Custom Loader Names.bl3hotfix", "CZ47/Fl4k/", loadordoubleclick, 0)
+        publichotfixes("dlc_loot_de-emphasizer.bl3hotfix", "bl3mods/Apocalyptech/loot_changes/dlc_loot_de-emphasizer/", loadordoubleclick, 0)
+        publichotfixes("dna_buff.bl3hotfix", "bl3mods/SSpyR/gear-general/", loadordoubleclick, 0)
+        publichotfixes("early_bloomer.bl3hotfix", "bl3mods/Apocalyptech/loot_changes/early_bloomer/", loadordoubleclick, 0)
+        publichotfixes("Elements_Dots_Overhaul.bl3hotfix", "bl3mods/Grimm/", loadordoubleclick, 0)
+        publichotfixes("enable_pendant_of_terra", "bl3mods/Apocalyptech/loot_changes/enable_pendant_of_terra/", loadordoubleclick, 0)
+        publichotfixes("enemy_equips_all.bl3hotfix", "bl3mods/Apocalyptech/gameplay_changes/enemy_equips/", loadordoubleclick, 0)
+        publichotfixes("enemy_equips_legendaries_all.bl3hotfix", "bl3mods/Apocalyptech/gameplay_changes/enemy_equips/", loadordoubleclick, 0)
+        publichotfixes("enemy_equips_legendaries_typelocked.bl3hotfix", "bl3mods/Apocalyptech/gameplay_changes/enemy_equips/", loadordoubleclick, 0)
+        publichotfixes("enemy_equips_shoddy.bl3hotfix", "bl3mods/Apocalyptech/gameplay_changes/enemy_equips/", loadordoubleclick, 0)
+        publichotfixes("enemy_equips_typelocked.bl3hotfix", "bl3mods/Apocalyptech/gameplay_changes/enemy_equips/", loadordoubleclick, 0)
+        publichotfixes("enemy_gear_drops.bl3hotfix", "bl3mods/SSpyR/enemy/", loadordoubleclick, 0)
+        publichotfixes("Enhanced Enemies Mayhem10.bl3hotfix", "CZ47/Mayhem/", loadordoubleclick, 0)
+        publichotfixes("expanded_legendary_pools.bl3hotfix", "bl3mods/Apocalyptech/loot_changes/expanded_legendary_pools/", loadordoubleclick, 0)
+        publichotfixes("fabricator_eridium.bl3hotfix", "bl3mods/Apocalyptech/gear_changes/fabricator/", loadordoubleclick, 0)
+        publichotfixes("fabricator_rapidfire.bl3hotfix", "bl3mods/Apocalyptech/gear_changes/fabricator/", loadordoubleclick, 0)
+        publichotfixes("fabricator_replicator.bl3hotfix", "bl3mods/Apocalyptech/gear_changes/fabricator/", loadordoubleclick, 0)
+        publichotfixes("Faster Slide.bl3hotfix", "bl3mods/Poïpoï/", loadordoubleclick, 0)
+        publichotfixes("FITSK Nuclear fallout.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick, 0)
+        publichotfixes("Fixed Weapon Cards.bl3hotfix", "bl3mods/lollixlii/Fixed Weapon Cards/", loadordoubleclick, 0)
+        publichotfixes("fix_siren_com_blank_parts.bl3hotfix", "bl3mods/Apocalyptech/gear_changes/fix_siren_com_blank_parts/", loadordoubleclick, 0)
+        publichotfixes("Fl4k.bl3hotfix", "bl3mods/Grimm/FL4K/", loadordoubleclick, 0)
+        publichotfixes("Floor_Under_Kritchy.bl3hotfix", "bl3mods/DexManly/FloorUnderKritchy/", loadordoubleclick, 0)
+        publichotfixes("free_respawn.bl3hotfix", "bl3mods/Apocalyptech/economy/free_respawn/", loadordoubleclick, 0)
+        publichotfixes("free_respec.bl3hotfix", "bl3mods/Apocalyptech/economy/free_respec/", loadordoubleclick, 0)
+        publichotfixes("FullAutoAnarchy.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick, 0)
+        publichotfixes("Garcia_Full_Auto.bl3hotfix", "bl3mods/Grimm/Gear/Garcia/", loadordoubleclick, 0)
+        publichotfixes("gear_randomizer_nade.bl3hotfix", "bl3mods/SSpyR/randomizer/", loadordoubleclick, 0)
+        publichotfixes("gear_randomizer_relic.bl3hotfix", "bl3mods/SSpyR/randomizer/", loadordoubleclick, 0)
+        publichotfixes("gear_randomizer_shield.bl3hotfix", "bl3mods/SSpyR/randomizer/", loadordoubleclick, 0)
+        publichotfixes("god_bear.bl3hotfix", "bl3mods/SSpyR/cheat_or_joke/", loadordoubleclick, 0)
+        publichotfixes("god_clone.bl3hotfix", "bl3mods/SSpyR/cheat_or_joke/", loadordoubleclick, 0)
+        publichotfixes("god_skag.bl3hotfix", "bl3mods/SSpyR/cheat_or_joke/", loadordoubleclick, 0)
+        publichotfixes("green_monster_clickclick_fix.bl3hotfix", "bl3mods/SSpyR/bugfix/", loadordoubleclick, 0)
+        publichotfixes("guaranteed_rare_spawns.bl3hotfix", "bl3mods/Apocalyptech/enemy_spawn_changes/guaranteed_rare_spawns/", loadordoubleclick, 0)
+        publichotfixes("Guardian Angel Nerf 250%.bl3hotfix", "bl3mods/TheGigaMaster/Guardian Angel Nerf/", loadordoubleclick, 0)
+        publichotfixes("Guardian Angel Nerf 400%.bl3hotfix", "bl3mods/TheGigaMaster/Guardian Angel Nerf/", loadordoubleclick, 0)
+        publichotfixes("guardiantd_health_changes.bl3hotfix", "bl3mods/SSpyR/enemy/", loadordoubleclick, 0)
+        publichotfixes("Increased Mayhem8+ Enemy Health.bl3hotfix", "CZ47/Mayhem/", loadordoubleclick, 0)
+        publichotfixes("Increased Spawns.bl3hotfix", "CZ47/Increased Spawns/", loadordoubleclick, 0)
+        publichotfixes("Increased spawns x4.bl3hotfix", "CZ47/Increased Spawns/", loadordoubleclick, 0)
+        publichotfixes("Increased spawns x10.bl3hotfix", "CZ47/Increased Spawns/", loadordoubleclick, 0)
+        publichotfixes("Increased spawns x15.bl3hotfix", "CZ47/Increased Spawns/", loadordoubleclick, 0)
+        publichotfixes("Increased spawns x20.bl3hotfix", "CZ47/Increased Spawns/", loadordoubleclick, 0)
+        publichotfixes("Increased spawns x40.bl3hotfix", "CZ47/Increased Spawns/", loadordoubleclick, 0)
+        publichotfixes("infighting.bl3hotfix", "bl3mods/Apocalyptech/enemy_spawn_changes/infighting/", loadordoubleclick, 0)
+        publichotfixes("Infinite_Fade_Away_Duration.bl3hotfix", "bl3mods/Phenom/Beastmaster/", loadordoubleclick, 0)
+        publichotfixes("Infinite_Gamma_Burst_Duration.bl3hotfix", "bl3mods/Phenom/Beastmaster/", loadordoubleclick, 0)
+        publichotfixes("infinite_slide.bl3hotfix", "bl3mods/Apocalyptech/gameplay_changes/infinite_slide/", loadordoubleclick, 0)
+        publichotfixes("Infinite_SNTNL_Drone_Duration.bl3hotfix", "bl3mods/Phenom/Operative/", loadordoubleclick, 0)
+        publichotfixes("Instant_Pet_Respawn.bl3hotfix", "bl3mods/Phenom/Beastmaster/Pets/", loadordoubleclick, 0)
+        publichotfixes("Leave_No_Trace_Old_Version.bl3hotfix", "bl3mods/Phenom/Beastmaster/", loadordoubleclick, 0)
+        publichotfixes("Legendary Arms Race.bl3hotfix", "bl3mods/Poïpoï/", loadordoubleclick, 0)
+        publichotfixes("Legendary_Price_Scaling.bl3hotfix", "bl3mods/Phenom/General/", loadordoubleclick, 0)
+        publichotfixes("LessPunishingGuardianTakedownPlatforming.bl3hotfix", "bl3mods/DexManly/LessPunishingGuardianTakedownPlatforming/", loadordoubleclick, 0)
+        publichotfixes("less_guaranteed_gun_accessoires.bl3hotfix", "bl3mods/Jalokin333/", loadordoubleclick, 0)
+        publichotfixes("Loot_the_Universe_Artifacts_to_Slaughterstar_3000.bl3hotfix", "bl3mods/Litch/", loadordoubleclick, 0)
+        publichotfixes("Loot_the_Universe_COMs_to_Slaughter_Shaft.bl3hotfix", "bl3mods/Litch/", loadordoubleclick, 0)
+        publichotfixes("MaggieTrickshotBalancing.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick, 0)
+        publichotfixes("map_defogger.bl3hotfix", "bl3mods/Novenic/Map Defogger/", loadordoubleclick, 0)
+        publichotfixes("mayhem2_mods_no_weights.bl3hotfix", "bl3mods/SSpyR/mayhem/", loadordoubleclick, 0)
+        publichotfixes("MayhemScaled StatuseffectDamage.bl3hotfix", "CZ47/Mayhem/", loadordoubleclick, 0)
+        publichotfixes("Melee Amara Adjustments.bl3hotfix", "bl3mods/Freezer/Amara/", loadordoubleclick, 0)
+        publichotfixes("mitosis.bl3hotfix", "bl3mods/skruntskrunt/mitosisharker/", loadordoubleclick, 0)
+        publichotfixes("money_grenade_changes_diamondkeys.bl3hotfix", "bl3mods/Apocalyptech/gear_changes/money_grenade_changes/", loadordoubleclick, 0)
+        publichotfixes("money_grenade_changes_eridium.bl3hotfix", "bl3mods/Apocalyptech/gear_changes/money_grenade_changes/", loadordoubleclick, 0)
+        publichotfixes("money_grenade_changes_grenades.bl3hotfix", "bl3mods/Apocalyptech/gear_changes/money_grenade_changes/", loadordoubleclick, 0)
+        publichotfixes("money_grenade_changes_loot.bl3hotfix", "bl3mods/Apocalyptech/gear_changes/money_grenade_changes/", loadordoubleclick, 0)
+        publichotfixes("moreMaxAmmo.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick, 0)
+        publichotfixes("movement_speed_cheats_extreme.bl3hotfix", "bl3mods/Apocalyptech/gameplay_changes/movement_speed_cheats/", loadordoubleclick, 0)
+        publichotfixes("Moxxis_Tipping_Jar_Rewards.bl3hotfix", "bl3mods/Phenom/General/", loadordoubleclick, 0)
+        publichotfixes("No Barrier AmpShot VFX.bl3hotfix", "bl3mods/Poïpoï/", loadordoubleclick, 0)
+        publichotfixes("No DOT Screams.bl3hotfix", "bl3mods/Poïpoï/", loadordoubleclick, 0)
+        publichotfixes("No Elemental Penalties or Bonuses.bl3hotfix", "bl3mods/CZ47/Utility/", loadordoubleclick, 0)
+        publichotfixes("non_slippery_crit.bl3hotfix", "bl3mods/Rumo/WeaponChanges/", loadordoubleclick, 0)
+        publichotfixes("No Scaling.bl3hotfix", "bl3mods/shadowevil/", loadordoubleclick, 0)
+        publichotfixes("NoXPBar.bl3hotfix", "bl3mods/Elektrohund/UI_Mods/", loadordoubleclick, 0)
+        publichotfixes("No_Action_Skills_Cooldown_Beastmaster.bl3hotfix", "bl3mods/Phenom/Beastmaster/", loadordoubleclick, 0)
+        publichotfixes("No_Action_Skills_Cooldown_Operative.bl3hotfix", "bl3mods/Phenom/Operative/", loadordoubleclick, 0)
+        publichotfixes("no_anoint_balance.bl3hotfix", "bl3mods/SSpyR/loot-system/", loadordoubleclick, 0)
+        publichotfixes("no_world_drops.bl3hotfix", "bl3mods/SSpyR/loot-system/", loadordoubleclick, 0)
+        publichotfixes("Nuclear Moze.bl3hotfix", "bl3mods/Freezer/Moze/", loadordoubleclick, 0)
+        publichotfixes("nvhm_gamestage_follows_level.bl3hotfix", "bl3mods/Apocalyptech/gameplay_changes/nvhm_gamestage_follows_level/", loadordoubleclick, 0)
+        publichotfixes("Oldschool Mayhem.bl3hotfix", "bl3mods/lollixlii/Oldschool Mayhem/", loadordoubleclick, 0)
+        publichotfixes("omegamantakoreraid.bl3hotfix", "bl3mods/skruntskrunt/omegamantakoreraid/", loadordoubleclick, 0)
+        publichotfixes("OneOrphan.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick, 0)
+        publichotfixes("Patch_Slaughterstar3000_BossLootDrop.bl3hotfix", "bl3mods/DexManly/PatchSlaughterstar3000BossDrop/", loadordoubleclick, 0)
+        publichotfixes("PetZilla.bl3hotfix", "bl3mods/Phenom/Beastmaster/Pets/", loadordoubleclick, 0)
+        publichotfixes("PokePet.bl3hotfix", "bl3mods/Phenom/Beastmaster/Pets/", loadordoubleclick, 0)
+        publichotfixes("Purple Tree Fl4k Overhaul.bl3hotfix", "CZ47/Fl4k/", loadordoubleclick, 0)
+        publichotfixes("raid.bl3hotfix", "bl3mods/skruntskrunt/raid/", loadordoubleclick, 0)
+        publichotfixes("Really Lucky 7.bl3hotfix", "CZ47/Gear/", loadordoubleclick, 0)
+        publichotfixes("RecursionBuff.bl3hotfix", "bl3mods/niol/Recursion Buff/", loadordoubleclick, 0)
+        publichotfixes("Reduced SpawnDelay MTD.bl3hotfix", "CZ47/Takedown/", loadordoubleclick, 0)
+        publichotfixes("Remove Health Gates.bl3hotfix", "bl3mods/Lonemasterino/", loadordoubleclick, 0)
+        publichotfixes("ReVolter 150% Reduction.bl3hotfix", "bl3mods/TheGigaMaster/ReVolter Nerf/", loadordoubleclick, 0)
+        publichotfixes("ReVolter 175% Reduction.bl3hotfix", "bl3mods/TheGigaMaster/ReVolter Nerf/", loadordoubleclick, 0)
+        publichotfixes("Rough Rider Reborn.bl3hotfix", "bl3mods/Freezer/", loadordoubleclick, 0)
+        publichotfixes("ShowMeThePurplex2.bl3hotfix", "bl3mods/ZetaDaemon/ShowMeThePurple/", loadordoubleclick, 0)
+        publichotfixes("ShowMeThePurplex5.bl3hotfix", "bl3mods/ZetaDaemon/ShowMeThePurple/", loadordoubleclick, 0)
+        publichotfixes("ShowMeThePurplex20.bl3hotfix", "bl3mods/ZetaDaemon/ShowMeThePurple/", loadordoubleclick, 0)
+        publichotfixes("Silent ActionSkill Cooldowns.bl3hotfix", "bl3mods/Poïpoï/", loadordoubleclick, 0)
+        publichotfixes("sizemod_npc_0.4_tiny.bl3hotfix", "bl3mods/Apocalyptech/enemy_spawn_changes/sizemod/", loadordoubleclick, 0)
+        publichotfixes("sizemod_npc_0.7_smol.bl3hotfix", "bl3mods/Apocalyptech/enemy_spawn_changes/sizemod/", loadordoubleclick, 0)
+        publichotfixes("sizemod_npc_2.0_big.bl3hotfix", "bl3mods/Apocalyptech/enemy_spawn_changes/sizemod/", loadordoubleclick, 0)
+        publichotfixes("sizemod_npc_3.0_huge.bl3hotfix", "bl3mods/Apocalyptech/enemy_spawn_changes/sizemod/", loadordoubleclick, 0)
+        publichotfixes("sizemod_npc_5.0_giant.bl3hotfix", "bl3mods/Apocalyptech/enemy_spawn_changes/sizemod/", loadordoubleclick, 0)
+        publichotfixes("Slide Jumper.bl3hotfix", "bl3mods/Poïpoï/", loadordoubleclick, 0)
+        publichotfixes("Small_Hud.bl3hotfix", "bl3mods/Elektrohund/UI_Mods/", loadordoubleclick, 0)
+        publichotfixes("Small_Hud_NoXPBar.bl3hotfix", "bl3mods/Elektrohund/UI_Mods/", loadordoubleclick, 0)
+        publichotfixes("Small_Hud_NoXPBar_NoCrosshair.bl3hotfix", "bl3mods/Elektrohund/UI_Mods/", loadordoubleclick, 0)
+        publichotfixes("SolekiOrion.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick, 0)
+        publichotfixes("Spiritual Driver V1.bl3hotfix", "CZ47/Gear/", loadordoubleclick, 0)
+        publichotfixes("StackingR&R.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick, 0)
+        publichotfixes("Standalone Third Person.bl3hotfix", "bl3mods/screen names/", loadordoubleclick, 0)
+        publichotfixes("Stronger Enemies Arms Race.bl3hotfix", "CZ47/Arms Race/", loadordoubleclick, 0)
+        publichotfixes("StygianEmperor_Consistent_Mitigated_Element_Influence.bl3hotfix", "bl3mods/Stygian Emperor/Consistent Mitigated Element Influence/", loadordoubleclick, 0)
+        publichotfixes("StygianEmperor_COV_FasterEquipSpeed.bl3hotfix", "bl3mods/Stygian Emperor/COV/FasterEquipSpeed/", loadordoubleclick, 0)
+        publichotfixes("StygianEmperor_HeavyWeapons_NoSpeedPenalty.bl3hotfix", "bl3mods/Stygian Emperor/HeavyWeapons/NoSpeedPenalty/", loadordoubleclick, 0)
+        publichotfixes("StygianEmperor_IronBearNoSelfDamage.bl3hotfix", "bl3mods/Stygian Emperor/Moze/Iron Bear No Self Damage/", loadordoubleclick, 0)
+        publichotfixes("StygianEmperor_IronBearUnlimitedFuel.bl3hotfix", "bl3mods/Stygian Emperor/Moze/IronBearUnlimitedFuel/", loadordoubleclick, 0)
+        publichotfixes("StygianEmperor_IronBearUnlimitedFuel_FullRefund.bl3hotfix", "bl3mods/Stygian Emperor/Moze/IronBearUnlimitedFuel/", loadordoubleclick, 0)
+        publichotfixes("StygianEmperor_Moze_ReactiveArmor.bl3hotfix", "bl3mods/Stygian Emperor/Moze/Reactive Armor/", loadordoubleclick, 0)
+        publichotfixes("StygianEmperor_RelaxedSkillRequirements.bl3hotfix", "bl3mods/Stygian Emperor/Relaxed Skill Requirements/", loadordoubleclick, 0)
+        publichotfixes("StygianEmperor_SilenceMessyBreakup.bl3hotfix", "bl3mods/Stygian Emperor/Shields/SilenceMessyBreakup/", loadordoubleclick, 0)
+        publichotfixes("SuperballBuff.bl3hotfix", "bl3mods/niol/Superball Buff/", loadordoubleclick, 0)
+        publichotfixes("supercharged_crystals.bl3hotfix", "bl3mods/SSpyR/event/", loadordoubleclick, 0)
+        publichotfixes("TheNotSoFakobs.bl3hotfix", "bl3mods/TheGigaMaster/The Fakobs Buff/", loadordoubleclick, 0)
+        publichotfixes("TheNotSoFakobs_Redux_Compatible.bl3hotfix", "bl3mods/TheGigaMaster/The Fakobs Buff/", loadordoubleclick, 0)
+        publichotfixes("TrialNames_DisplayOnly.bl3hotfix", "bl3mods/DexManly/TrialNames/", loadordoubleclick, 0)
+        publichotfixes("TrialNames_Full.bl3hotfix", "bl3mods/DexManly/TrialNames/", loadordoubleclick, 0)
+        publichotfixes("TrialNames_Full_FR.bl3hotfix", "bl3mods/Phenom/French Translations/", loadordoubleclick, 0)
+        publichotfixes("TrialNames_SubHeader.bl3hotfix", "bl3mods/DexManly/TrialNames/", loadordoubleclick, 0)
+        publichotfixes("trials_loot_changes.bl3hotfix", "bl3mods/SSpyR/loot-system/", loadordoubleclick, 0)
+        publichotfixes("truetrials.bl3hotfix", "bl3mods/skruntskrunt/truetrials/", loadordoubleclick, 0)
+        publichotfixes("TVHM_Scale_From_Level1.bl3hotfix", "bl3mods/Phenom/General/", loadordoubleclick, 0)
+        publichotfixes("unBurstPlasma.bl3hotfix", "bl3mods/ZetaDaemon/", loadordoubleclick, 0)
+        publichotfixes("UndoMayhemLootHotfix.bl3hotfix", "bl3mods/notrixatenza/", loadordoubleclick, 0)
+        publichotfixes("uniques_are_legendary.bl3hotfix", "bl3mods/Apocalyptech/gear_changes/uniques_are_legendary/", loadordoubleclick, 0)
+        publichotfixes("Unlimited_Bank_Backpack.bl3hotfix", "bl3mods/Phenom/General/", loadordoubleclick, 0)
+        publichotfixes("Unlimited_Vehicles_Boost.bl3hotfix", "bl3mods/Phenom/General/", loadordoubleclick, 0)
+        publichotfixes("unlocked_parts.bl3hotfix", "bl3mods/Jalokin333/Unlock Part Restrictions/", loadordoubleclick, 0)
+        publichotfixes("unlocked_vermivorous.bl3hotfix", "bl3mods/Apocalyptech/enemy_spawn_changes/unlocked_vermivorous/", loadordoubleclick, 0)
+        publichotfixes("unlock_dlc3_tech.bl3hotfix", "bl3mods/Apocalyptech/gameplay_changes/unlock_dlc3_tech/", loadordoubleclick, 0)
+        publichotfixes("Unrestricted Skilltrees.bl3hotfix", "bl3mods/CZ47/Utility/", loadordoubleclick, 0)
+        publichotfixes("varkid_always_evolve.bl3hotfix", "bl3mods/TheGigaMaster/Varkid Evolution Increase/", loadordoubleclick, 0)
+        publichotfixes("varkid_evolution_increase.bl3hotfix", "bl3mods/TheGigaMaster/Varkid Evolution Increase/", loadordoubleclick, 0)
+        publichotfixes("vehicle_unlocks.bl3hotfix", "bl3mods/Apocalyptech/gameplay_changes/vehicle_unlocks/", loadordoubleclick, 0)
+        publichotfixes("Ward Reborn.bl3hotfix", "bl3mods/Freezer/", loadordoubleclick, 0)
+        publichotfixes("Weapon_Balance_Overhaul.bl3hotfix", "bl3mods/TheGigaMaster/Major Weapon Overhaul/", loadordoubleclick, 0)
+        publichotfixes("webslinger_buff.bl3hotfix", "bl3mods/SSpyR/gear-general/", loadordoubleclick, 0)
+        publichotfixes("Weighted_Ammo.bl3hotfix", "bl3mods/Grimm/", loadordoubleclick, 0)
+        publichotfixes("White Elephant Rework.bl3hotfix", "bl3mods/Freezer/Artifacts/", loadordoubleclick, 0)
+        publichotfixes("World_Drop_Scales_With_Your_Level.bl3hotfix", "bl3mods/Grimm/", loadordoubleclick, 0)
+        publichotfixes("zane_anarchy.bl3hotfix", "bl3mods/SSpyR/skill-changes/", loadordoubleclick, 0)
+
+        Return 0
+    End Function
+#End Region
+
+
 
     Private Sub ListBox1_DoubleClick(sender As Object, e As EventArgs) Handles ListBox1.DoubleClick
         If Not ListBox1.SelectedItem = Nothing Then
@@ -204,6 +333,8 @@ Public Class Form1
                 RichTextBoxEx1.Clear()
                 RichTextBoxEx1.Text = File.ReadAllText(selectedtext)
                 TabItem2.Visible = True
+                TabItem6.Text = "Session Editor ( Lines " + RichTextBoxEx1.Lines.Count.ToString + ")"
+
             Else
                 MessageBox.Show("Please Only Load bl3hotfix Files.", "Error !", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
@@ -224,6 +355,7 @@ Public Class Form1
 
     Private Sub AddItemToLisboxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddItemToLisboxToolStripMenuItem.Click
         ListBox1.Items.Add(ToolStripTextBox1.Text)
+        TabItem1.Text = "Loading (" + ListBox1.Items.Count.ToString + ")"
     End Sub
 
     Private Sub WordWrapToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WordWrapToolStripMenuItem.Click
@@ -246,10 +378,12 @@ Public Class Form1
                 End If
             Next
         End If
+        TabItem1.Text = "Loading (" + ListBox1.Items.Count.ToString + ")"
     End Sub
 
     Private Sub RefreshCurrentSelectedDirectoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RefreshCurrentSelectedDirectoryToolStripMenuItem.Click
         Listboxrefresh(ListBox1)
+        TabItem1.Text = "Loading (" + ListBox1.Items.Count.ToString + ")"
     End Sub
 
     Private Sub ListBox2_DoubleClick(sender As Object, e As EventArgs) Handles ListBox2.DoubleClick
@@ -258,6 +392,8 @@ Public Class Form1
 
     Private Sub ListBox3_DoubleClick(sender As Object, e As EventArgs) Handles ListBox3.DoubleClick
         allpublichotfixes(0)
+
+
     End Sub
 
     Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
@@ -279,9 +415,71 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+
+        File.WriteAllText(My.Application.Info.DirectoryPath + "\HotFixTweakerSettings.hfts",
+"Only Change Stuff Wrapped In Brackets () And Do Not Add/Remove Any Lines Or You Will Break Stuff.
+
+Use Inital HotFixes Directory On Load : (" + CheckBoxX1.Checked.ToString + ")
+Inital HotFixes Directory : (" + TextBoxX1.Text + ")
+Session Editor Background Color R : (" + ColorPickerButton1.SelectedColor.R.ToString + ")
+Session Editor Background Color G : (" + ColorPickerButton1.SelectedColor.G.ToString + ")
+Session Editor Background Color B : (" + ColorPickerButton1.SelectedColor.B.ToString + ")
+Session Editor Text Color R : (" + ColorPickerButton2.SelectedColor.R.ToString + ")
+Session Editor Text Color G : (" + ColorPickerButton2.SelectedColor.G.ToString + ")
+Session Editor Text Color B : (" + ColorPickerButton2.SelectedColor.B.ToString + ")
+HotFix Code Background Color R : (" + ColorPickerButton4.SelectedColor.R.ToString + ")
+HotFix Code Background Color G : (" + ColorPickerButton4.SelectedColor.G.ToString + ")
+HotFix Code Background Color B : (" + ColorPickerButton4.SelectedColor.B.ToString + ")
+HotFix Code Text Color R : (" + ColorPickerButton3.SelectedColor.R.ToString + ")
+HotFix Code Text Color G : (" + ColorPickerButton3.SelectedColor.G.ToString + ")
+HotFix Code Text Color B : (" + ColorPickerButton3.SelectedColor.B.ToString + ")
+
+")
+
+        If ListBox4.Items.Count > 0 Then
+            File.Delete(My.Application.Info.DirectoryPath + "\HotFixTweakerFavorites.hfts")
+            For Each item In ListBox4.Items
+                File.AppendAllText(My.Application.Info.DirectoryPath + "\HotFixTweakerFavorites.hfts", item + Environment.NewLine)
+            Next
+        End If
+
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
+    End Sub
+
+    Private Sub AddToFavoritesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddToFavoritesToolStripMenuItem.Click
+        ListBox4.Items.Add(RichTextBoxEx1.SelectedText)
+        TabItem13.Text = "Favorites (" + ListBox4.Items.Count.ToString + ")"
+    End Sub
+
+    Private Sub AddItemToListboxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddItemToListboxToolStripMenuItem.Click
+        ListBox4.Items.Add(ToolStripTextBox2.Text)
+
+        TabItem13.Text = "Favorites (" + ListBox4.Items.Count.ToString + ")"
+    End Sub
+
+    Private Sub RemoveSelectedItemFromFavoritesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveSelectedItemFromFavoritesToolStripMenuItem.Click
+        If Not ListBox4.SelectedItem = Nothing Then
+            ListBox4.Items.Remove(ListBox4.SelectedItem)
+            TabItem13.Text = "Favorites (" + ListBox4.Items.Count.ToString + ")"
+        End If
+    End Sub
+
+    Private Sub AddToFavoritesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AddToFavoritesToolStripMenuItem1.Click
+        ListBox4.Items.Add(RichTextBoxEx2.SelectedText)
+
+    End Sub
+
+
+
     Private Sub RemoveItemFromListboxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveItemFromListboxToolStripMenuItem.Click
         If Not ListBox1.SelectedItem = Nothing Then
             ListBox1.Items.Remove(ListBox1.SelectedItem)
+            TabItem1.Text = "Loading (" + ListBox1.Items.Count.ToString + ")"
         End If
     End Sub
 
@@ -290,6 +488,7 @@ Public Class Form1
             If File.Exists(ListBox1.SelectedItem) Then
                 File.Delete(ListBox1.SelectedItem)
                 ListBox1.Items.Remove(ListBox1.SelectedItem)
+                TabItem1.Text = "Loading (" + ListBox1.Items.Count.ToString + ")"
             End If
         End If
     End Sub
