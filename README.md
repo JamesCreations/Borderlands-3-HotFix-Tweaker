@@ -2,11 +2,12 @@
 HotFix Merger Addition
 
 To get source running smoothly install this theme : https://www.devcomponents.com/dotnetbar/download.aspx
-
+----------------------------
 BORDERLANDS 3 HOTFIX TWEAKER
+----------------------------
+
+
 ---------------------
-
-
 CONTENTS OF THIS FILE
 ---------------------
 
@@ -16,20 +17,26 @@ CONTENTS OF THIS FILE
  * Credit
 
 
+------------
 INTRODUCTION
 ------------
 
  "Borderlands 3 Hotfix Tweaker" is a program designed to make the process of editing existing hotfix files easier and more intuitive.
 
 
+------------
 FEATURES
 ------------
 
  * Public Hotfixes are populated from Github and are synced automatically whenever their creator makes a change to that file.
- * Ability to edit locally stored Hotfix files
- * Ability to edit Hotfix files hosted on Github (Mod Cabinet)
+ * Ability to edit locally stored Hotfix files.
+ * Ability to edit Hotfix files hosted on Github (Mod Cabinet).
+ * Ability to save specific lines of code to your "Favorites" so it can be quickly copied and applied to another hotfix file later on.
+ * Ability to customize colors/themes for various tabs within the program.
+ * Ability to view a list of all game files/directories, and all DLC Prefixes (codenames).
+ 
 
-
+-------------
 INSTRUCTIONS & CONFIGURATION
 -------------
  
@@ -41,12 +48,21 @@ Loading Custom Hotfix Files From Your Own Local Directory/Folder:
 Loading Public Hotfix files from Github:
  * Navigate to the "HotFix Documentation" tab > "Public Hotfixes" tab > "List" tab > Double click any file on that list to view it's contents > "Hotfix Code" tab > Make your desired changes to the file > Right click anywhere within that box > Select "Save File" to save a copy of that public hotfix file to your PC >
 
-"More Information" Tab:
- * Lists all prefixes (codenames) for all main DLC (to help you identify which DLC an item comes from).
-
 Adding Favorites to the "Favorites" Tab:
  *Select any line of code > Right click > Select "Add to Favorites" >
 
+"More Information" Tab:
+ * "DLC Prefixes" - Lists all prefixes (codenames) for all main DLC (to help you identify which DLC an item comes from).
+ * "Inventory Dump" - Lists all game files/directories (syncs/updates according to an online source)
+ * "User Codes" - List of item codes (for the save editor) that were created by various user's from the "BL3 Modding" Discord. Double click a name to view their item codes.
+
+"Settings" Tab:
+ * "Use Initial HotFixes Directory On Load" - Tells the program to load the custom Hotfix directory (specified below) on startup.
+ * "Initial HotFixes Directory" - Specified custom Hotfix directory.
+ * Color Options - Allows you to specify which colors you'd like to apply to various tabs within the program.
+ 
+ 
+-----------
 CREDIT
 -----------
 
