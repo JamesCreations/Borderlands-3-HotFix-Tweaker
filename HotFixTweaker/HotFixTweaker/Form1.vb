@@ -1,23 +1,28 @@
 ﻿Imports System.IO
 Imports System.Net
+Imports System.Text.RegularExpressions
 Imports DevComponents.DotNetBar
+Imports DevComponents.DotNetBar.Controls
 
 Public Class Form1
     Dim selectedtext, selectedfolder, savefilepath As String
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        RichTextBoxEx6.Text = Readtextfromgithub("https://raw.githubusercontent.com/gibbed/Borderlands3Dumps/master/Inventory%20Serial%20Number%20Database.json").Replace(",", "").Replace("[", "").Replace("]", "").Replace("{", "").Replace("}", "").Replace(Chr(34), "")
+
+        TabItem14.Text = "Inventory Dump ( Lines " + RichTextBoxEx6.Lines.Count.ToString + ")"
+
         TabItem2.Visible = False
-        allpublichotfixes(1)
 
-
+        ListboxPopulationFunc(1)
+        ListUserCodeItems(1)
         TabItem8.Text = "List (" + ListBox3.Items.Count.ToString + ")"
-
 
         ColorPickerButton1.SelectedColor = Color.Black
         ColorPickerButton2.SelectedColor = Color.White
-        ColorPickerButton3.SelectedColor = Color.Black
-        ColorPickerButton4.SelectedColor = Color.White
+        ColorPickerButton3.SelectedColor = Color.White
+        ColorPickerButton4.SelectedColor = Color.Black
 
         If File.Exists(My.Application.Info.DirectoryPath + "\HotFixTweakerFavorites.hfts") Then
             For Each item In File.ReadAllLines(My.Application.Info.DirectoryPath + "\HotFixTweakerFavorites.hfts")
@@ -25,7 +30,6 @@ Public Class Form1
             Next
             TabItem13.Text = "Favorites (" + ListBox4.Items.Count.ToString + ")"
         End If
-
 
         If File.Exists(My.Application.Info.DirectoryPath + "\HotFixTweakerSettings.hfts") Then
 
@@ -50,8 +54,6 @@ Public Class Form1
         RichTextBoxEx2.BackColorRichTextBox = ColorPickerButton4.SelectedColor
         RichTextBoxEx2.ForeColor = ColorPickerButton3.SelectedColor
 
-
-
     End Sub
 
     Function Semiparseloadingvalues(linenow As Integer, stringfromsettings As String) As String
@@ -67,6 +69,41 @@ Public Class Form1
         Return reader.ReadToEnd
     End Function
 
+
+
+#Region "User Codes"
+    Dim countofcodes As Integer
+    Function ListUserBL3CodesAndPopulate(selected As String, gity As String, loadordoubleclick As Boolean)
+        If loadordoubleclick = True Then
+            If Not ListBox5.Items.Contains(selected) Then
+                ListBox5.Items.Add(selected)
+            End If
+        Else
+            If ListBox5.SelectedItem = selected Then
+                countofcodes = 0
+                RichTextBoxEx7.Clear()
+                RichTextBoxEx7.Text = Readtextfromgithub(gity)
+                TabControl7.SelectedTabIndex = 1
+
+                For Each line In RichTextBoxEx7.Lines
+                    If line.Contains("bl3(") Or line.Contains("Bl3(") Or line.Contains("BL3(") Or line.Contains("bL3(") Then
+                        countofcodes += 1
+                    End If
+                Next
+                TabItem17.Text = "User : " + ListBox5.SelectedItem + " | Codes ( Amount Of Codes " + countofcodes.ToString + " | Lines " + RichTextBoxEx7.Lines.Count.ToString + ")"
+
+            End If
+        End If
+        Return 0
+    End Function
+    Function ListUserCodeItems(loadordoubleclick As Boolean)
+        ListUserBL3CodesAndPopulate("Aplixion", "https://raw.githubusercontent.com/Aplixion/Aplixions-Custom-Item-Codes/main/Aplixion's%20Custom%20Item%20Codes.txt", loadordoubleclick)
+    End Function
+
+
+#End Region
+
+#Region "Public HotFixes List"
     Function publichotfixes(selected As String, gity As String, loadordoubleclick As Boolean, SwitchoffBLCM As Boolean)
         If loadordoubleclick = True Then
             If Not ListBox3.Items.Contains(selected) Then
@@ -84,7 +121,7 @@ HotFix Lines : " + RichTextBoxEx2.Lines.Count.ToString)
 
                 Else
 
-                    RichTextBoxEx2.Text = gity
+                    RichTextBoxEx2.Text = Readtextfromgithub(gity)
                     ToolTip1.SetToolTip(ListBox3, gity + "
 HotFix Lines : " + RichTextBoxEx2.Lines.Count.ToString)
                     TabItem9.Text = "HotFix Code ( Lines " + RichTextBoxEx2.Lines.Count.ToString + ")"
@@ -92,25 +129,12 @@ HotFix Lines : " + RichTextBoxEx2.Lines.Count.ToString)
                 End If
 
                 TabControl4.SelectedTabIndex = 1
-                End If
             End If
+        End If
         Return 0
     End Function
 
-    Function Listboxrefresh(listybox As ListBox)
-        listybox.Items.Clear()
-        Dim files() As String = IO.Directory.GetFiles(selectedfolder)
-        For Each item In files
-            If item.Contains(".bl3hotfix") Then
-                listybox.Items.Add(item)
-            End If
-        Next
-        Return 0
-    End Function
-
-
-#Region "Public HotFixes List"
-    Function allpublichotfixes(loadordoubleclick As Boolean)
+    Function ListboxPopulationFunc(loadordoubleclick As Boolean)
         publichotfixes("4P Enemy Health in Solo Mode.bl3hotfix", "CZ47/Mayhem/", loadordoubleclick, 0)
         publichotfixes("3000_hyperion_slaughter.bl3hotfix", "bl3mods/altef-4/", loadordoubleclick, 0)
         publichotfixes("3000_mob_spawn_mod.bl3hotfix", "bl3mods/altef-4/", loadordoubleclick, 0)
@@ -323,6 +347,28 @@ HotFix Lines : " + RichTextBoxEx2.Lines.Count.ToString)
     End Function
 #End Region
 
+    Function WriteTextToFile(filename As String, ext As String, textbox As RichTextBoxEx)
+        Dim SaveFileDialog1 As New SaveFileDialog
+        SaveFileDialog1.Filter = "" + ext + " Files (*." + ext + "*)|*." + ext + ""
+        SaveFileDialog1.Title = "Save " + ext + " File/s."
+        SaveFileDialog1.FileName = filename + "." + ext + ""
+        If SaveFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+            savefilepath = SaveFileDialog1.FileName
+            File.WriteAllText(SaveFileDialog1.FileName, textbox.Text)
+        End If
+    End Function
+
+    Function Listboxrefresh(listybox As ListBox)
+        listybox.Items.Clear()
+        Dim files() As String = IO.Directory.GetFiles(selectedfolder)
+        For Each item In files
+            If item.Contains(".bl3hotfix") Then
+                listybox.Items.Add(item)
+            End If
+        Next
+        Return 0
+    End Function
+
 
 
     Private Sub ListBox1_DoubleClick(sender As Object, e As EventArgs) Handles ListBox1.DoubleClick
@@ -342,15 +388,7 @@ HotFix Lines : " + RichTextBoxEx2.Lines.Count.ToString)
     End Sub
 
     Private Sub SaveFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveFileToolStripMenuItem.Click
-        Dim SaveFileDialog1 As New SaveFileDialog
-        SaveFileDialog1.Filter = "bl3hotfix Files (*.bl3hotfix*)|*.bl3hotfix"
-        SaveFileDialog1.Title = "Save HotFix File."
-        SaveFileDialog1.FileName = "Tweaked_" + Path.GetFileName(selectedtext)
-        If SaveFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
-            savefilepath = SaveFileDialog1.FileName
-            File.WriteAllText(SaveFileDialog1.FileName, RichTextBoxEx1.Text)
-            ListBox1.Items.Add(SaveFileDialog1.FileName)
-        End If
+        WriteTextToFile("Tweaked_" + Path.GetFileName(selectedtext), "bl3hotfix", RichTextBoxEx1)
     End Sub
 
     Private Sub AddItemToLisboxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddItemToLisboxToolStripMenuItem.Click
@@ -391,20 +429,11 @@ HotFix Lines : " + RichTextBoxEx2.Lines.Count.ToString)
     End Sub
 
     Private Sub ListBox3_DoubleClick(sender As Object, e As EventArgs) Handles ListBox3.DoubleClick
-        allpublichotfixes(0)
-
-
+        ListboxPopulationFunc(0)
     End Sub
 
     Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
-        Dim SaveFileDialog1 As New SaveFileDialog
-        SaveFileDialog1.Filter = "bl3hotfix Files (*.bl3hotfix*)|*.bl3hotfix"
-        SaveFileDialog1.Title = "Save HotFix File."
-        SaveFileDialog1.FileName = "HotFix.bl3hotfix"
-        If SaveFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
-            savefilepath = SaveFileDialog1.FileName
-            File.WriteAllText(SaveFileDialog1.FileName, RichTextBoxEx2.Text)
-        End If
+        WriteTextToFile("HotFix", "bl3hotfix", RichTextBoxEx2)
     End Sub
 
     Private Sub ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem2.Click
@@ -436,7 +465,6 @@ HotFix Code Text Color G : (" + ColorPickerButton3.SelectedColor.G.ToString + ")
 HotFix Code Text Color B : (" + ColorPickerButton3.SelectedColor.B.ToString + ")
 
 ")
-
         If ListBox4.Items.Count > 0 Then
             File.Delete(My.Application.Info.DirectoryPath + "\HotFixTweakerFavorites.hfts")
             For Each item In ListBox4.Items
@@ -444,10 +472,6 @@ HotFix Code Text Color B : (" + ColorPickerButton3.SelectedColor.B.ToString + ")
             Next
         End If
 
-
-    End Sub
-
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
     End Sub
 
@@ -471,10 +495,47 @@ HotFix Code Text Color B : (" + ColorPickerButton3.SelectedColor.B.ToString + ")
 
     Private Sub AddToFavoritesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AddToFavoritesToolStripMenuItem1.Click
         ListBox4.Items.Add(RichTextBoxEx2.SelectedText)
-
+        TabItem13.Text = "Favorites (" + ListBox4.Items.Count.ToString + ")"
     End Sub
 
+    Private Sub ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem3.Click
+        ListBox4.Items.Add(RichTextBoxEx6.SelectedText)
+        TabItem13.Text = "Favorites (" + ListBox4.Items.Count.ToString + ")"
+    End Sub
 
+    Private Sub ToolStripMenuItem5_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem5.Click
+        If ToolStripMenuItem5.Checked = True Then
+            RichTextBoxEx6.WordWrap = True
+        Else
+            RichTextBoxEx6.WordWrap = False
+        End If
+    End Sub
+
+    Private Sub ToolStripMenuItem4_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem4.Click
+        WriteTextToFile("Inventory_Raw", "json", RichTextBoxEx6)
+    End Sub
+
+    Private Sub ToolStripMenuItem6_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem6.Click
+        ListBox4.Items.Add(RichTextBoxEx7.SelectedText)
+        TabItem13.Text = "Favorites (" + ListBox4.Items.Count.ToString + ")"
+    End Sub
+
+    Private Sub ToolStripMenuItem7_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem7.Click
+        Static Dim randomnow As New Random
+        WriteTextToFile("PlayerCodes_" + randomnow.Next(0, 1000).ToString, "txt", RichTextBoxEx7)
+    End Sub
+
+    Private Sub ToolStripMenuItem8_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem8.Click
+        If ToolStripMenuItem8.Checked = True Then
+            RichTextBoxEx7.WordWrap = True
+        Else
+            RichTextBoxEx7.WordWrap = False
+        End If
+    End Sub
+
+    Private Sub ListBox5_DoubleClick(sender As Object, e As EventArgs) Handles ListBox5.DoubleClick
+        ListUserCodeItems(0)
+    End Sub
 
     Private Sub RemoveItemFromListboxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveItemFromListboxToolStripMenuItem.Click
         If Not ListBox1.SelectedItem = Nothing Then
