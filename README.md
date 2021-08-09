@@ -2,6 +2,9 @@
 HotFix Merger Addition
 
 To get source running smoothly install this theme : https://www.devcomponents.com/dotnetbar/download.aspx
+
+Any questions or suggestions join my Discord : https://www.tiny.cc/JR_DiscordServer
+
 ----------------------------
 BORDERLANDS 3 HOTFIX TWEAKER
 ----------------------------
