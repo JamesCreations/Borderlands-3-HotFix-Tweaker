@@ -26,39 +26,27 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.StyleManager1 = New DevComponents.DotNetBar.StyleManager(Me.components)
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
-        Me.TabControlPanel7 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.TabControl5 = New DevComponents.DotNetBar.TabControl()
-        Me.TabControlPanel15 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.TabControl7 = New DevComponents.DotNetBar.TabControl()
-        Me.TabControlPanel18 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.RichTextBoxEx7 = New DevComponents.DotNetBar.Controls.RichTextBoxEx()
-        Me.ContextMenuStrip6 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem8 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TabItem17 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel17 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.ListBox5 = New System.Windows.Forms.ListBox()
-        Me.TabItem16 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabItem15 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel14 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.RichTextBoxEx6 = New DevComponents.DotNetBar.Controls.RichTextBoxEx()
-        Me.ContextMenuStrip5 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RichTextBoxEx5 = New DevComponents.DotNetBar.Controls.RichTextBoxEx()
-        Me.ContextMenuStrip3 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.AddToFavoritesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RichTextBoxEx4 = New DevComponents.DotNetBar.Controls.RichTextBoxEx()
-        Me.RichTextBoxEx3 = New DevComponents.DotNetBar.Controls.RichTextBoxEx()
-        Me.TabItem14 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel10 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.LabelX2 = New DevComponents.DotNetBar.LabelX()
-        Me.TabItem10 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabItem7 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel20 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.ListBox4 = New System.Windows.Forms.ListBox()
+        Me.ContextMenuStrip4 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.CopySelectedItemToClipboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripTextBox2 = New System.Windows.Forms.ToolStripTextBox()
+        Me.AddItemToListboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RemoveSelectedItemFromFavoritesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TabItem13 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.LoadHotFixsDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RefreshCurrentSelectedDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem10 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
+        Me.AddItemToLisboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RemoveItemFromListboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteSelectedFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListBox6 = New System.Windows.Forms.ListBox()
+        Me.TextBoxX2 = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel2 = New DevComponents.DotNetBar.TabControlPanel()
         Me.TabControl3 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel4 = New DevComponents.DotNetBar.TabControlPanel()
@@ -67,12 +55,75 @@ Partial Class Form1
         Me.TabControlPanel6 = New DevComponents.DotNetBar.TabControlPanel()
         Me.RichTextBoxEx1 = New DevComponents.DotNetBar.Controls.RichTextBoxEx()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ToolStripMenuItem9 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddToFavoritesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WordWrapToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListBox7 = New System.Windows.Forms.ListBox()
+        Me.TextBoxX3 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.TabItem6 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabItem2 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel11 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.LabelX1 = New DevComponents.DotNetBar.LabelX()
+        Me.TabItem11 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel7 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.TabControl5 = New DevComponents.DotNetBar.TabControl()
+        Me.TabControlPanel15 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.TabControl7 = New DevComponents.DotNetBar.TabControl()
+        Me.TabControlPanel18 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.RichTextBoxEx7 = New DevComponents.DotNetBar.Controls.RichTextBoxEx()
+        Me.ContextMenuStrip6 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ToolStripMenuItem13 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem8 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListBox11 = New System.Windows.Forms.ListBox()
+        Me.TextBoxX8 = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.TabItem17 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel17 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.ListBox5 = New System.Windows.Forms.ListBox()
+        Me.TabItem16 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabItem15 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel14 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.RichTextBoxEx6 = New DevComponents.DotNetBar.Controls.RichTextBoxEx()
+        Me.ContextMenuStrip5 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ToolStripMenuItem12 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListBox10 = New System.Windows.Forms.ListBox()
+        Me.TextBoxX7 = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.TabItem14 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel10 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.LabelX2 = New DevComponents.DotNetBar.LabelX()
+        Me.TabItem10 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel19 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.RichTextBoxEx8 = New DevComponents.DotNetBar.Controls.RichTextBoxEx()
+        Me.TabItem18 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabItem7 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel3 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.TabControl2 = New DevComponents.DotNetBar.TabControl()
+        Me.TabControlPanel5 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.TabControl4 = New DevComponents.DotNetBar.TabControl()
+        Me.TabControlPanel8 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.ListBox3 = New System.Windows.Forms.ListBox()
+        Me.ListBox9 = New System.Windows.Forms.ListBox()
+        Me.TextBoxX6 = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.TabItem8 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel9 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.RichTextBoxEx2 = New DevComponents.DotNetBar.Controls.RichTextBoxEx()
+        Me.ContextMenuStrip3 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ToolStripMenuItem11 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddToFavoritesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListBox8 = New System.Windows.Forms.ListBox()
+        Me.TextBoxX5 = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.TabItem9 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabItem5 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabItem3 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel12 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.ColorPickerButton3 = New DevComponents.DotNetBar.ColorPickerButton()
         Me.LabelX6 = New DevComponents.DotNetBar.LabelX()
         Me.ColorPickerButton4 = New DevComponents.DotNetBar.ColorPickerButton()
@@ -85,45 +136,26 @@ Partial Class Form1
         Me.TextBoxX1 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.LabelX3 = New DevComponents.DotNetBar.LabelX()
         Me.TabItem12 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.LoadHotFixsDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RefreshCurrentSelectedDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
-        Me.AddItemToLisboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RemoveItemFromListboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeleteSelectedFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel3 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.TabControl2 = New DevComponents.DotNetBar.TabControl()
-        Me.TabControlPanel5 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.TabControl4 = New DevComponents.DotNetBar.TabControl()
-        Me.TabControlPanel9 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.RichTextBoxEx2 = New DevComponents.DotNetBar.Controls.RichTextBoxEx()
-        Me.TabItem9 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel8 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.ListBox3 = New System.Windows.Forms.ListBox()
-        Me.TabItem8 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabItem5 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabItem3 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel13 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.ListBox4 = New System.Windows.Forms.ListBox()
-        Me.ContextMenuStrip4 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ToolStripTextBox2 = New System.Windows.Forms.ToolStripTextBox()
-        Me.AddItemToListboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RemoveSelectedItemFromFavoritesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TabItem13 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel11 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.LabelX1 = New DevComponents.DotNetBar.LabelX()
-        Me.TabItem11 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabControl6 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel16 = New DevComponents.DotNetBar.TabControlPanel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ListBox12 = New System.Windows.Forms.ListBox()
+        Me.TextBoxX4 = New DevComponents.DotNetBar.Controls.TextBoxX()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
+        Me.TabControlPanel20.SuspendLayout()
+        Me.ContextMenuStrip4.SuspendLayout()
+        Me.TabControlPanel1.SuspendLayout()
+        Me.ContextMenuStrip2.SuspendLayout()
+        Me.TabControlPanel2.SuspendLayout()
+        CType(Me.TabControl3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl3.SuspendLayout()
+        Me.TabControlPanel4.SuspendLayout()
+        Me.TabControlPanel6.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
+        Me.TabControlPanel11.SuspendLayout()
         Me.TabControlPanel7.SuspendLayout()
         CType(Me.TabControl5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl5.SuspendLayout()
@@ -135,28 +167,18 @@ Partial Class Form1
         Me.TabControlPanel17.SuspendLayout()
         Me.TabControlPanel14.SuspendLayout()
         Me.ContextMenuStrip5.SuspendLayout()
-        Me.ContextMenuStrip3.SuspendLayout()
         Me.TabControlPanel10.SuspendLayout()
-        Me.TabControlPanel2.SuspendLayout()
-        CType(Me.TabControl3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabControl3.SuspendLayout()
-        Me.TabControlPanel4.SuspendLayout()
-        Me.TabControlPanel6.SuspendLayout()
-        Me.ContextMenuStrip1.SuspendLayout()
-        Me.TabControlPanel12.SuspendLayout()
-        Me.TabControlPanel1.SuspendLayout()
-        Me.ContextMenuStrip2.SuspendLayout()
+        Me.TabControlPanel19.SuspendLayout()
         Me.TabControlPanel3.SuspendLayout()
         CType(Me.TabControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl2.SuspendLayout()
         Me.TabControlPanel5.SuspendLayout()
         CType(Me.TabControl4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl4.SuspendLayout()
-        Me.TabControlPanel9.SuspendLayout()
         Me.TabControlPanel8.SuspendLayout()
-        Me.TabControlPanel13.SuspendLayout()
-        Me.ContextMenuStrip4.SuspendLayout()
-        Me.TabControlPanel11.SuspendLayout()
+        Me.TabControlPanel9.SuspendLayout()
+        Me.ContextMenuStrip3.SuspendLayout()
+        Me.TabControlPanel12.SuspendLayout()
         CType(Me.TabControl6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl6.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -173,17 +195,17 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControl1.CanReorderTabs = True
+        Me.TabControl1.CanReorderTabs = False
         Me.TabControl1.ColorScheme.TabItemHotBackground = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.TabControl1.ColorScheme.TabItemSelectedBorder = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.TabControl1.ColorScheme.TabItemSelectedText = System.Drawing.Color.Yellow
         Me.TabControl1.Controls.Add(Me.TabControlPanel1)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel20)
         Me.TabControl1.Controls.Add(Me.TabControlPanel2)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel13)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel3)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel7)
         Me.TabControl1.Controls.Add(Me.TabControlPanel12)
         Me.TabControl1.Controls.Add(Me.TabControlPanel11)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel7)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel3)
         Me.TabControl1.ForeColor = System.Drawing.Color.White
         Me.TabControl1.Location = New System.Drawing.Point(0, 120)
         Me.TabControl1.Name = "TabControl1"
@@ -203,434 +225,221 @@ Partial Class Form1
         Me.TabControl1.Text = "TabControl1"
         Me.TabControl1.ThemeAware = True
         '
-        'TabControlPanel7
+        'TabControlPanel20
         '
-        Me.TabControlPanel7.Controls.Add(Me.TabControl5)
-        Me.TabControlPanel7.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel7.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel7.Name = "TabControlPanel7"
-        Me.TabControlPanel7.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel7.Size = New System.Drawing.Size(733, 531)
-        Me.TabControlPanel7.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControlPanel7.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel7.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.TabControlPanel7.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+        Me.TabControlPanel20.Controls.Add(Me.ListBox4)
+        Me.TabControlPanel20.Controls.Add(Me.ListBox12)
+        Me.TabControlPanel20.Controls.Add(Me.TextBoxX4)
+        Me.TabControlPanel20.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel20.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel20.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel20.Name = "TabControlPanel20"
+        Me.TabControlPanel20.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel20.Size = New System.Drawing.Size(733, 531)
+        Me.TabControlPanel20.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControlPanel20.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel20.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.TabControlPanel20.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
             Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel7.Style.GradientAngle = 90
-        Me.TabControlPanel7.TabIndex = 13
-        Me.TabControlPanel7.TabItem = Me.TabItem7
+        Me.TabControlPanel20.Style.GradientAngle = 90
+        Me.TabControlPanel20.TabIndex = 71
+        Me.TabControlPanel20.TabItem = Me.TabItem13
         '
-        'TabControl5
+        'ListBox4
         '
-        Me.TabControl5.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControl5.CanReorderTabs = True
-        Me.TabControl5.ColorScheme.TabItemHotBackground = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.TabControl5.ColorScheme.TabItemSelectedBorder = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.TabControl5.ColorScheme.TabItemSelectedText = System.Drawing.Color.Yellow
-        Me.TabControl5.Controls.Add(Me.TabControlPanel15)
-        Me.TabControl5.Controls.Add(Me.TabControlPanel10)
-        Me.TabControl5.Controls.Add(Me.TabControlPanel14)
-        Me.TabControl5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl5.ForeColor = System.Drawing.Color.White
-        Me.TabControl5.Location = New System.Drawing.Point(1, 1)
-        Me.TabControl5.Name = "TabControl5"
-        Me.TabControl5.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.TabControl5.SelectedTabIndex = 0
-        Me.TabControl5.Size = New System.Drawing.Size(731, 529)
-        Me.TabControl5.Style = DevComponents.DotNetBar.eTabStripStyle.Metro
-        Me.TabControl5.TabIndex = 3
-        Me.TabControl5.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
-        Me.TabControl5.Tabs.Add(Me.TabItem10)
-        Me.TabControl5.Tabs.Add(Me.TabItem14)
-        Me.TabControl5.Tabs.Add(Me.TabItem15)
-        Me.TabControl5.Text = "TabControl5"
-        Me.TabControl5.ThemeAware = True
+        Me.ListBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.ListBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListBox4.ContextMenuStrip = Me.ContextMenuStrip4
+        Me.ListBox4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ListBox4.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox4.ForeColor = System.Drawing.Color.White
+        Me.ListBox4.FormattingEnabled = True
+        Me.ListBox4.HorizontalScrollbar = True
+        Me.ListBox4.ItemHeight = 18
+        Me.ListBox4.Location = New System.Drawing.Point(1, 129)
+        Me.ListBox4.Name = "ListBox4"
+        Me.ListBox4.ScrollAlwaysVisible = True
+        Me.ListBox4.Size = New System.Drawing.Size(731, 401)
+        Me.ListBox4.TabIndex = 3
         '
-        'TabControlPanel15
+        'ContextMenuStrip4
         '
-        Me.TabControlPanel15.Controls.Add(Me.TabControl7)
-        Me.TabControlPanel15.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel15.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel15.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel15.Name = "TabControlPanel15"
-        Me.TabControlPanel15.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel15.Size = New System.Drawing.Size(731, 502)
-        Me.TabControlPanel15.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControlPanel15.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel15.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.TabControlPanel15.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+        Me.ContextMenuStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopySelectedItemToClipboardToolStripMenuItem, Me.ToolStripTextBox2, Me.AddItemToListboxToolStripMenuItem, Me.RemoveSelectedItemFromFavoritesToolStripMenuItem})
+        Me.ContextMenuStrip4.Name = "ContextMenuStrip4"
+        Me.ContextMenuStrip4.Size = New System.Drawing.Size(297, 95)
+        '
+        'CopySelectedItemToClipboardToolStripMenuItem
+        '
+        Me.CopySelectedItemToClipboardToolStripMenuItem.Image = CType(resources.GetObject("CopySelectedItemToClipboardToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.CopySelectedItemToClipboardToolStripMenuItem.Name = "CopySelectedItemToClipboardToolStripMenuItem"
+        Me.CopySelectedItemToClipboardToolStripMenuItem.Size = New System.Drawing.Size(296, 22)
+        Me.CopySelectedItemToClipboardToolStripMenuItem.Text = "Copy Selected Item To Clipboard"
+        '
+        'ToolStripTextBox2
+        '
+        Me.ToolStripTextBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ToolStripTextBox2.Name = "ToolStripTextBox2"
+        Me.ToolStripTextBox2.Size = New System.Drawing.Size(100, 23)
+        Me.ToolStripTextBox2.Text = "N/A"
+        '
+        'AddItemToListboxToolStripMenuItem
+        '
+        Me.AddItemToListboxToolStripMenuItem.Image = CType(resources.GetObject("AddItemToListboxToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.AddItemToListboxToolStripMenuItem.Name = "AddItemToListboxToolStripMenuItem"
+        Me.AddItemToListboxToolStripMenuItem.Size = New System.Drawing.Size(272, 22)
+        Me.AddItemToListboxToolStripMenuItem.Text = "Add Item To Favorites"
+        '
+        'RemoveSelectedItemFromFavoritesToolStripMenuItem
+        '
+        Me.RemoveSelectedItemFromFavoritesToolStripMenuItem.Image = CType(resources.GetObject("RemoveSelectedItemFromFavoritesToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.RemoveSelectedItemFromFavoritesToolStripMenuItem.Name = "RemoveSelectedItemFromFavoritesToolStripMenuItem"
+        Me.RemoveSelectedItemFromFavoritesToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete
+        Me.RemoveSelectedItemFromFavoritesToolStripMenuItem.Size = New System.Drawing.Size(296, 22)
+        Me.RemoveSelectedItemFromFavoritesToolStripMenuItem.Text = "Remove Selected Item From Favorites"
+        '
+        'TabItem13
+        '
+        Me.TabItem13.AttachedControl = Me.TabControlPanel20
+        Me.TabItem13.Image = CType(resources.GetObject("TabItem13.Image"), System.Drawing.Image)
+        Me.TabItem13.Name = "TabItem13"
+        Me.TabItem13.Text = "Favorites"
+        '
+        'TabControlPanel1
+        '
+        Me.TabControlPanel1.Controls.Add(Me.ListBox1)
+        Me.TabControlPanel1.Controls.Add(Me.ListBox6)
+        Me.TabControlPanel1.Controls.Add(Me.TextBoxX2)
+        Me.TabControlPanel1.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel1.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel1.Name = "TabControlPanel1"
+        Me.TabControlPanel1.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel1.Size = New System.Drawing.Size(733, 531)
+        Me.TabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.TabControlPanel1.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
             Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel15.Style.GradientAngle = 90
-        Me.TabControlPanel15.TabIndex = 9
-        Me.TabControlPanel15.TabItem = Me.TabItem15
-        '
-        'TabControl7
-        '
-        Me.TabControl7.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControl7.CanReorderTabs = True
-        Me.TabControl7.ColorScheme.TabItemHotBackground = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.TabControl7.ColorScheme.TabItemSelectedBorder = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.TabControl7.ColorScheme.TabItemSelectedText = System.Drawing.Color.Yellow
-        Me.TabControl7.Controls.Add(Me.TabControlPanel17)
-        Me.TabControl7.Controls.Add(Me.TabControlPanel18)
-        Me.TabControl7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl7.ForeColor = System.Drawing.Color.White
-        Me.TabControl7.Location = New System.Drawing.Point(1, 1)
-        Me.TabControl7.Name = "TabControl7"
-        Me.TabControl7.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.TabControl7.SelectedTabIndex = 0
-        Me.TabControl7.Size = New System.Drawing.Size(729, 500)
-        Me.TabControl7.Style = DevComponents.DotNetBar.eTabStripStyle.Metro
-        Me.TabControl7.TabIndex = 4
-        Me.TabControl7.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
-        Me.TabControl7.Tabs.Add(Me.TabItem16)
-        Me.TabControl7.Tabs.Add(Me.TabItem17)
-        Me.TabControl7.Text = "TabControl7"
-        Me.TabControl7.ThemeAware = True
-        '
-        'TabControlPanel18
-        '
-        Me.TabControlPanel18.Controls.Add(Me.RichTextBoxEx7)
-        Me.TabControlPanel18.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel18.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel18.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel18.Name = "TabControlPanel18"
-        Me.TabControlPanel18.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel18.Size = New System.Drawing.Size(729, 473)
-        Me.TabControlPanel18.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControlPanel18.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel18.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.TabControlPanel18.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel18.Style.GradientAngle = 90
-        Me.TabControlPanel18.TabIndex = 13
-        Me.TabControlPanel18.TabItem = Me.TabItem17
-        '
-        'RichTextBoxEx7
-        '
-        Me.RichTextBoxEx7.BackColor = System.Drawing.Color.Black
-        '
-        '
-        '
-        Me.RichTextBoxEx7.BackgroundStyle.Class = "RichTextBoxBorder"
-        Me.RichTextBoxEx7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RichTextBoxEx7.ContextMenuStrip = Me.ContextMenuStrip6
-        Me.RichTextBoxEx7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBoxEx7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBoxEx7.ForeColor = System.Drawing.Color.White
-        Me.RichTextBoxEx7.Location = New System.Drawing.Point(1, 1)
-        Me.RichTextBoxEx7.Name = "RichTextBoxEx7"
-        Me.RichTextBoxEx7.Rtf = "{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft S" &
-    "ans Serif;}}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "{\colortbl ;\red255\green255\blue255;}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "\viewkind4\uc1\pard\cf1\f0" &
-    "\fs20\par" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.RichTextBoxEx7.Size = New System.Drawing.Size(727, 471)
-        Me.RichTextBoxEx7.TabIndex = 8
-        Me.RichTextBoxEx7.WordWrap = False
-        '
-        'ContextMenuStrip6
-        '
-        Me.ContextMenuStrip6.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem6, Me.ToolStripMenuItem7, Me.ToolStripMenuItem8})
-        Me.ContextMenuStrip6.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip6.Size = New System.Drawing.Size(192, 70)
-        '
-        'ToolStripMenuItem6
-        '
-        Me.ToolStripMenuItem6.Image = CType(resources.GetObject("ToolStripMenuItem6.Image"), System.Drawing.Image)
-        Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
-        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(191, 22)
-        Me.ToolStripMenuItem6.Text = "Add To Favorites"
-        '
-        'ToolStripMenuItem7
-        '
-        Me.ToolStripMenuItem7.Image = CType(resources.GetObject("ToolStripMenuItem7.Image"), System.Drawing.Image)
-        Me.ToolStripMenuItem7.Name = "ToolStripMenuItem7"
-        Me.ToolStripMenuItem7.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-            Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(191, 22)
-        Me.ToolStripMenuItem7.Text = "Save File"
-        '
-        'ToolStripMenuItem8
-        '
-        Me.ToolStripMenuItem8.CheckOnClick = True
-        Me.ToolStripMenuItem8.Name = "ToolStripMenuItem8"
-        Me.ToolStripMenuItem8.Size = New System.Drawing.Size(191, 22)
-        Me.ToolStripMenuItem8.Text = "Word Wrap"
-        '
-        'TabItem17
-        '
-        Me.TabItem17.AttachedControl = Me.TabControlPanel18
-        Me.TabItem17.Image = CType(resources.GetObject("TabItem17.Image"), System.Drawing.Image)
-        Me.TabItem17.Name = "TabItem17"
-        Me.TabItem17.Text = "Codes"
-        '
-        'TabControlPanel17
-        '
-        Me.TabControlPanel17.Controls.Add(Me.ListBox5)
-        Me.TabControlPanel17.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel17.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel17.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel17.Name = "TabControlPanel17"
-        Me.TabControlPanel17.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel17.Size = New System.Drawing.Size(729, 473)
-        Me.TabControlPanel17.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControlPanel17.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel17.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.TabControlPanel17.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel17.Style.GradientAngle = 90
-        Me.TabControlPanel17.TabIndex = 9
-        Me.TabControlPanel17.TabItem = Me.TabItem16
-        '
-        'ListBox5
-        '
-        Me.ListBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.ListBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ListBox5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListBox5.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox5.ForeColor = System.Drawing.Color.White
-        Me.ListBox5.FormattingEnabled = True
-        Me.ListBox5.HorizontalScrollbar = True
-        Me.ListBox5.ItemHeight = 18
-        Me.ListBox5.Location = New System.Drawing.Point(1, 1)
-        Me.ListBox5.Name = "ListBox5"
-        Me.ListBox5.ScrollAlwaysVisible = True
-        Me.ListBox5.Size = New System.Drawing.Size(727, 471)
-        Me.ListBox5.TabIndex = 4
-        '
-        'TabItem16
-        '
-        Me.TabItem16.AttachedControl = Me.TabControlPanel17
-        Me.TabItem16.Image = CType(resources.GetObject("TabItem16.Image"), System.Drawing.Image)
-        Me.TabItem16.Name = "TabItem16"
-        Me.TabItem16.Text = "List Of People"
-        '
-        'TabItem15
-        '
-        Me.TabItem15.AttachedControl = Me.TabControlPanel15
-        Me.TabItem15.Image = CType(resources.GetObject("TabItem15.Image"), System.Drawing.Image)
-        Me.TabItem15.Name = "TabItem15"
-        Me.TabItem15.Text = "User Codes"
-        '
-        'TabControlPanel14
-        '
-        Me.TabControlPanel14.Controls.Add(Me.RichTextBoxEx6)
-        Me.TabControlPanel14.Controls.Add(Me.RichTextBoxEx5)
-        Me.TabControlPanel14.Controls.Add(Me.RichTextBoxEx4)
-        Me.TabControlPanel14.Controls.Add(Me.RichTextBoxEx3)
-        Me.TabControlPanel14.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel14.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel14.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel14.Name = "TabControlPanel14"
-        Me.TabControlPanel14.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel14.Size = New System.Drawing.Size(731, 502)
-        Me.TabControlPanel14.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControlPanel14.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel14.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.TabControlPanel14.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel14.Style.GradientAngle = 90
-        Me.TabControlPanel14.TabIndex = 5
-        Me.TabControlPanel14.TabItem = Me.TabItem14
-        '
-        'RichTextBoxEx6
-        '
-        Me.RichTextBoxEx6.BackColor = System.Drawing.Color.Black
-        '
-        '
-        '
-        Me.RichTextBoxEx6.BackgroundStyle.Class = "RichTextBoxBorder"
-        Me.RichTextBoxEx6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RichTextBoxEx6.ContextMenuStrip = Me.ContextMenuStrip5
-        Me.RichTextBoxEx6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBoxEx6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBoxEx6.ForeColor = System.Drawing.Color.White
-        Me.RichTextBoxEx6.Location = New System.Drawing.Point(1, 1)
-        Me.RichTextBoxEx6.Name = "RichTextBoxEx6"
-        Me.RichTextBoxEx6.Rtf = "{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft S" &
-    "ans Serif;}}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "{\colortbl ;\red255\green255\blue255;}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "\viewkind4\uc1\pard\cf1\f0" &
-    "\fs20\par" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.RichTextBoxEx6.Size = New System.Drawing.Size(729, 500)
-        Me.RichTextBoxEx6.TabIndex = 7
-        Me.RichTextBoxEx6.WordWrap = False
-        '
-        'ContextMenuStrip5
-        '
-        Me.ContextMenuStrip5.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem3, Me.ToolStripMenuItem4, Me.ToolStripMenuItem5})
-        Me.ContextMenuStrip5.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip5.Size = New System.Drawing.Size(192, 70)
-        '
-        'ToolStripMenuItem3
-        '
-        Me.ToolStripMenuItem3.Image = CType(resources.GetObject("ToolStripMenuItem3.Image"), System.Drawing.Image)
-        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(191, 22)
-        Me.ToolStripMenuItem3.Text = "Add To Favorites"
-        '
-        'ToolStripMenuItem4
-        '
-        Me.ToolStripMenuItem4.Image = CType(resources.GetObject("ToolStripMenuItem4.Image"), System.Drawing.Image)
-        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        Me.ToolStripMenuItem4.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-            Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(191, 22)
-        Me.ToolStripMenuItem4.Text = "Save File"
-        '
-        'ToolStripMenuItem5
-        '
-        Me.ToolStripMenuItem5.CheckOnClick = True
-        Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
-        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(191, 22)
-        Me.ToolStripMenuItem5.Text = "Word Wrap"
-        '
-        'RichTextBoxEx5
-        '
-        Me.RichTextBoxEx5.BackColor = System.Drawing.Color.Black
-        '
-        '
-        '
-        Me.RichTextBoxEx5.BackgroundStyle.Class = "RichTextBoxBorder"
-        Me.RichTextBoxEx5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RichTextBoxEx5.ContextMenuStrip = Me.ContextMenuStrip3
-        Me.RichTextBoxEx5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBoxEx5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBoxEx5.ForeColor = System.Drawing.Color.White
-        Me.RichTextBoxEx5.Location = New System.Drawing.Point(1, 1)
-        Me.RichTextBoxEx5.Name = "RichTextBoxEx5"
-        Me.RichTextBoxEx5.Rtf = "{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft S" &
-    "ans Serif;}}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "{\colortbl ;\red255\green255\blue255;}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "\viewkind4\uc1\pard\cf1\f0" &
-    "\fs20\par" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.RichTextBoxEx5.Size = New System.Drawing.Size(729, 500)
-        Me.RichTextBoxEx5.TabIndex = 6
-        Me.RichTextBoxEx5.WordWrap = False
-        '
-        'ContextMenuStrip3
-        '
-        Me.ContextMenuStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToFavoritesToolStripMenuItem1, Me.ToolStripMenuItem1, Me.ToolStripMenuItem2})
-        Me.ContextMenuStrip3.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip3.Size = New System.Drawing.Size(192, 70)
-        '
-        'AddToFavoritesToolStripMenuItem1
-        '
-        Me.AddToFavoritesToolStripMenuItem1.Image = CType(resources.GetObject("AddToFavoritesToolStripMenuItem1.Image"), System.Drawing.Image)
-        Me.AddToFavoritesToolStripMenuItem1.Name = "AddToFavoritesToolStripMenuItem1"
-        Me.AddToFavoritesToolStripMenuItem1.Size = New System.Drawing.Size(191, 22)
-        Me.AddToFavoritesToolStripMenuItem1.Text = "Add To Favorites"
-        '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.Image = CType(resources.GetObject("ToolStripMenuItem1.Image"), System.Drawing.Image)
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-            Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(191, 22)
-        Me.ToolStripMenuItem1.Text = "Save File"
-        '
-        'ToolStripMenuItem2
-        '
-        Me.ToolStripMenuItem2.CheckOnClick = True
-        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(191, 22)
-        Me.ToolStripMenuItem2.Text = "Word Wrap"
-        '
-        'RichTextBoxEx4
-        '
-        Me.RichTextBoxEx4.BackColor = System.Drawing.Color.Black
-        '
-        '
-        '
-        Me.RichTextBoxEx4.BackgroundStyle.Class = "RichTextBoxBorder"
-        Me.RichTextBoxEx4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RichTextBoxEx4.ContextMenuStrip = Me.ContextMenuStrip3
-        Me.RichTextBoxEx4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBoxEx4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBoxEx4.ForeColor = System.Drawing.Color.White
-        Me.RichTextBoxEx4.Location = New System.Drawing.Point(1, 1)
-        Me.RichTextBoxEx4.Name = "RichTextBoxEx4"
-        Me.RichTextBoxEx4.Rtf = "{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft S" &
-    "ans Serif;}}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "{\colortbl ;\red255\green255\blue255;}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "\viewkind4\uc1\pard\cf1\f0" &
-    "\fs20\par" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.RichTextBoxEx4.Size = New System.Drawing.Size(729, 500)
-        Me.RichTextBoxEx4.TabIndex = 5
-        Me.RichTextBoxEx4.WordWrap = False
-        '
-        'RichTextBoxEx3
-        '
-        Me.RichTextBoxEx3.BackColor = System.Drawing.Color.Black
-        '
-        '
-        '
-        Me.RichTextBoxEx3.BackgroundStyle.Class = "RichTextBoxBorder"
-        Me.RichTextBoxEx3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RichTextBoxEx3.ContextMenuStrip = Me.ContextMenuStrip3
-        Me.RichTextBoxEx3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBoxEx3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBoxEx3.ForeColor = System.Drawing.Color.White
-        Me.RichTextBoxEx3.Location = New System.Drawing.Point(1, 1)
-        Me.RichTextBoxEx3.Name = "RichTextBoxEx3"
-        Me.RichTextBoxEx3.Rtf = "{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft S" &
-    "ans Serif;}}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "{\colortbl ;\red255\green255\blue255;}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "\viewkind4\uc1\pard\cf1\f0" &
-    "\fs20\par" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.RichTextBoxEx3.Size = New System.Drawing.Size(729, 500)
-        Me.RichTextBoxEx3.TabIndex = 4
-        Me.RichTextBoxEx3.WordWrap = False
-        '
-        'TabItem14
-        '
-        Me.TabItem14.AttachedControl = Me.TabControlPanel14
-        Me.TabItem14.Image = CType(resources.GetObject("TabItem14.Image"), System.Drawing.Image)
-        Me.TabItem14.Name = "TabItem14"
-        Me.TabItem14.Text = "Inventory Dump"
-        '
-        'TabControlPanel10
-        '
-        Me.TabControlPanel10.Controls.Add(Me.LabelX2)
-        Me.TabControlPanel10.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel10.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel10.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel10.Name = "TabControlPanel10"
-        Me.TabControlPanel10.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel10.Size = New System.Drawing.Size(731, 502)
-        Me.TabControlPanel10.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControlPanel10.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel10.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.TabControlPanel10.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel10.Style.GradientAngle = 90
-        Me.TabControlPanel10.TabIndex = 1
-        Me.TabControlPanel10.TabItem = Me.TabItem10
-        '
-        'LabelX2
-        '
-        Me.LabelX2.AutoSize = True
-        Me.LabelX2.BackColor = System.Drawing.Color.Transparent
-        '
-        '
-        '
-        Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX2.ForeColor = System.Drawing.Color.White
-        Me.LabelX2.Location = New System.Drawing.Point(149, 156)
-        Me.LabelX2.Name = "LabelX2"
-        Me.LabelX2.SingleLineColor = System.Drawing.Color.Transparent
-        Me.LabelX2.Size = New System.Drawing.Size(432, 111)
-        Me.LabelX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.LabelX2.TabIndex = 3
-        Me.LabelX2.Text = resources.GetString("LabelX2.Text")
-        '
-        'TabItem10
-        '
-        Me.TabItem10.AttachedControl = Me.TabControlPanel10
-        Me.TabItem10.Image = CType(resources.GetObject("TabItem10.Image"), System.Drawing.Image)
-        Me.TabItem10.Name = "TabItem10"
-        Me.TabItem10.Text = "DLC Prefixes"
-        '
-        'TabItem7
-        '
-        Me.TabItem7.AttachedControl = Me.TabControlPanel7
-        Me.TabItem7.Image = CType(resources.GetObject("TabItem7.Image"), System.Drawing.Image)
-        Me.TabItem7.Name = "TabItem7"
-        Me.TabItem7.Text = "More Information"
+        Me.TabControlPanel1.Style.GradientAngle = 90
+        Me.TabControlPanel1.TabIndex = 1
+        Me.TabControlPanel1.TabItem = Me.TabItem1
+        '
+        'ListBox1
+        '
+        Me.ListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.ListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListBox1.ContextMenuStrip = Me.ContextMenuStrip2
+        Me.ListBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ListBox1.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox1.ForeColor = System.Drawing.Color.White
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.HorizontalScrollbar = True
+        Me.ListBox1.ItemHeight = 18
+        Me.ListBox1.Location = New System.Drawing.Point(1, 129)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.ScrollAlwaysVisible = True
+        Me.ListBox1.Size = New System.Drawing.Size(731, 401)
+        Me.ListBox1.TabIndex = 2
+        '
+        'ContextMenuStrip2
+        '
+        Me.ContextMenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoadHotFixsDirectoryToolStripMenuItem, Me.RefreshCurrentSelectedDirectoryToolStripMenuItem, Me.ToolStripMenuItem10, Me.ToolStripTextBox1, Me.AddItemToLisboxToolStripMenuItem, Me.RemoveItemFromListboxToolStripMenuItem, Me.DeleteSelectedFileToolStripMenuItem})
+        Me.ContextMenuStrip2.Name = "ContextMenuStrip2"
+        Me.ContextMenuStrip2.Size = New System.Drawing.Size(296, 161)
+        '
+        'LoadHotFixsDirectoryToolStripMenuItem
+        '
+        Me.LoadHotFixsDirectoryToolStripMenuItem.Image = CType(resources.GetObject("LoadHotFixsDirectoryToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.LoadHotFixsDirectoryToolStripMenuItem.Name = "LoadHotFixsDirectoryToolStripMenuItem"
+        Me.LoadHotFixsDirectoryToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
+        Me.LoadHotFixsDirectoryToolStripMenuItem.Size = New System.Drawing.Size(295, 22)
+        Me.LoadHotFixsDirectoryToolStripMenuItem.Text = "Load HotFixes Directory"
+        '
+        'RefreshCurrentSelectedDirectoryToolStripMenuItem
+        '
+        Me.RefreshCurrentSelectedDirectoryToolStripMenuItem.Image = CType(resources.GetObject("RefreshCurrentSelectedDirectoryToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.RefreshCurrentSelectedDirectoryToolStripMenuItem.Name = "RefreshCurrentSelectedDirectoryToolStripMenuItem"
+        Me.RefreshCurrentSelectedDirectoryToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
+        Me.RefreshCurrentSelectedDirectoryToolStripMenuItem.Size = New System.Drawing.Size(295, 22)
+        Me.RefreshCurrentSelectedDirectoryToolStripMenuItem.Text = "Refresh Current Selected Directory"
+        '
+        'ToolStripMenuItem10
+        '
+        Me.ToolStripMenuItem10.Image = CType(resources.GetObject("ToolStripMenuItem10.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItem10.Name = "ToolStripMenuItem10"
+        Me.ToolStripMenuItem10.Size = New System.Drawing.Size(295, 22)
+        Me.ToolStripMenuItem10.Text = "Copy Selected Item To Clipboard"
+        '
+        'ToolStripTextBox1
+        '
+        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
+        Me.ToolStripTextBox1.Size = New System.Drawing.Size(100, 23)
+        Me.ToolStripTextBox1.Text = "N/A"
+        '
+        'AddItemToLisboxToolStripMenuItem
+        '
+        Me.AddItemToLisboxToolStripMenuItem.Image = CType(resources.GetObject("AddItemToLisboxToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.AddItemToLisboxToolStripMenuItem.Name = "AddItemToLisboxToolStripMenuItem"
+        Me.AddItemToLisboxToolStripMenuItem.Size = New System.Drawing.Size(295, 22)
+        Me.AddItemToLisboxToolStripMenuItem.Text = "Add Item To Listbox"
+        '
+        'RemoveItemFromListboxToolStripMenuItem
+        '
+        Me.RemoveItemFromListboxToolStripMenuItem.Image = CType(resources.GetObject("RemoveItemFromListboxToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.RemoveItemFromListboxToolStripMenuItem.Name = "RemoveItemFromListboxToolStripMenuItem"
+        Me.RemoveItemFromListboxToolStripMenuItem.Size = New System.Drawing.Size(295, 22)
+        Me.RemoveItemFromListboxToolStripMenuItem.Text = "Remove Selected Item From Listbox"
+        '
+        'DeleteSelectedFileToolStripMenuItem
+        '
+        Me.DeleteSelectedFileToolStripMenuItem.Image = CType(resources.GetObject("DeleteSelectedFileToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.DeleteSelectedFileToolStripMenuItem.Name = "DeleteSelectedFileToolStripMenuItem"
+        Me.DeleteSelectedFileToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
+        Me.DeleteSelectedFileToolStripMenuItem.Size = New System.Drawing.Size(295, 22)
+        Me.DeleteSelectedFileToolStripMenuItem.Text = "Delete Selected File"
+        '
+        'ListBox6
+        '
+        Me.ListBox6.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.ListBox6.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListBox6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ListBox6.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox6.ForeColor = System.Drawing.Color.White
+        Me.ListBox6.FormattingEnabled = True
+        Me.ListBox6.HorizontalScrollbar = True
+        Me.ListBox6.ItemHeight = 18
+        Me.ListBox6.Items.AddRange(New Object() {"Search Results..."})
+        Me.ListBox6.Location = New System.Drawing.Point(1, 21)
+        Me.ListBox6.Name = "ListBox6"
+        Me.ListBox6.ScrollAlwaysVisible = True
+        Me.ListBox6.Size = New System.Drawing.Size(731, 108)
+        Me.ListBox6.TabIndex = 5
+        '
+        'TextBoxX2
+        '
+        Me.TextBoxX2.BackColor = System.Drawing.Color.Black
+        '
+        '
+        '
+        Me.TextBoxX2.Border.Class = "TextBoxBorder"
+        Me.TextBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.TextBoxX2.DisabledBackColor = System.Drawing.Color.Black
+        Me.TextBoxX2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBoxX2.ForeColor = System.Drawing.Color.White
+        Me.TextBoxX2.Location = New System.Drawing.Point(1, 1)
+        Me.TextBoxX2.Name = "TextBoxX2"
+        Me.TextBoxX2.PreventEnterBeep = True
+        Me.TextBoxX2.Size = New System.Drawing.Size(731, 20)
+        Me.TextBoxX2.TabIndex = 4
+        Me.TextBoxX2.Text = "Press Enter To Search..."
+        '
+        'TabItem1
+        '
+        Me.TabItem1.AttachedControl = Me.TabControlPanel1
+        Me.TabItem1.Image = CType(resources.GetObject("TabItem1.Image"), System.Drawing.Image)
+        Me.TabItem1.Name = "TabItem1"
+        Me.TabItem1.Text = "Loading"
         '
         'TabControlPanel2
         '
@@ -653,7 +462,7 @@ Partial Class Form1
         'TabControl3
         '
         Me.TabControl3.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControl3.CanReorderTabs = True
+        Me.TabControl3.CanReorderTabs = False
         Me.TabControl3.ColorScheme.TabItemHotBackground = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.TabControl3.ColorScheme.TabItemSelectedBorder = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.TabControl3.ColorScheme.TabItemSelectedText = System.Drawing.Color.Yellow
@@ -718,6 +527,8 @@ Partial Class Form1
         'TabControlPanel6
         '
         Me.TabControlPanel6.Controls.Add(Me.RichTextBoxEx1)
+        Me.TabControlPanel6.Controls.Add(Me.ListBox7)
+        Me.TabControlPanel6.Controls.Add(Me.TextBoxX3)
         Me.TabControlPanel6.DisabledBackColor = System.Drawing.Color.Empty
         Me.TabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControlPanel6.Location = New System.Drawing.Point(0, 27)
@@ -745,26 +556,31 @@ Partial Class Form1
         Me.RichTextBoxEx1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RichTextBoxEx1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBoxEx1.ForeColor = System.Drawing.Color.White
-        Me.RichTextBoxEx1.Location = New System.Drawing.Point(1, 1)
+        Me.RichTextBoxEx1.Location = New System.Drawing.Point(1, 129)
         Me.RichTextBoxEx1.Name = "RichTextBoxEx1"
-        Me.RichTextBoxEx1.Rtf = "{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft S" &
-    "ans Serif;}}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "{\colortbl ;\red255\green255\blue255;}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "\viewkind4\uc1\pard\cf1\f0" &
-    "\fs20\par" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.RichTextBoxEx1.Size = New System.Drawing.Size(729, 500)
+        Me.RichTextBoxEx1.Rtf = resources.GetString("RichTextBoxEx1.Rtf")
+        Me.RichTextBoxEx1.Size = New System.Drawing.Size(729, 372)
         Me.RichTextBoxEx1.TabIndex = 2
         Me.RichTextBoxEx1.WordWrap = False
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToFavoritesToolStripMenuItem, Me.SaveFileToolStripMenuItem, Me.WordWrapToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem9, Me.AddToFavoritesToolStripMenuItem, Me.SaveFileToolStripMenuItem, Me.WordWrapToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(162, 70)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(247, 92)
+        '
+        'ToolStripMenuItem9
+        '
+        Me.ToolStripMenuItem9.Image = CType(resources.GetObject("ToolStripMenuItem9.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItem9.Name = "ToolStripMenuItem9"
+        Me.ToolStripMenuItem9.Size = New System.Drawing.Size(246, 22)
+        Me.ToolStripMenuItem9.Text = "Copy Selected Item To Clipboard"
         '
         'AddToFavoritesToolStripMenuItem
         '
         Me.AddToFavoritesToolStripMenuItem.Image = CType(resources.GetObject("AddToFavoritesToolStripMenuItem.Image"), System.Drawing.Image)
         Me.AddToFavoritesToolStripMenuItem.Name = "AddToFavoritesToolStripMenuItem"
-        Me.AddToFavoritesToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.AddToFavoritesToolStripMenuItem.Size = New System.Drawing.Size(246, 22)
         Me.AddToFavoritesToolStripMenuItem.Text = "Add To Favorites"
         '
         'SaveFileToolStripMenuItem
@@ -772,15 +588,50 @@ Partial Class Form1
         Me.SaveFileToolStripMenuItem.Image = CType(resources.GetObject("SaveFileToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SaveFileToolStripMenuItem.Name = "SaveFileToolStripMenuItem"
         Me.SaveFileToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.SaveFileToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.SaveFileToolStripMenuItem.Size = New System.Drawing.Size(246, 22)
         Me.SaveFileToolStripMenuItem.Text = "Save File"
         '
         'WordWrapToolStripMenuItem
         '
         Me.WordWrapToolStripMenuItem.CheckOnClick = True
         Me.WordWrapToolStripMenuItem.Name = "WordWrapToolStripMenuItem"
-        Me.WordWrapToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.WordWrapToolStripMenuItem.Size = New System.Drawing.Size(246, 22)
         Me.WordWrapToolStripMenuItem.Text = "Word Wrap"
+        '
+        'ListBox7
+        '
+        Me.ListBox7.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.ListBox7.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListBox7.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ListBox7.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox7.ForeColor = System.Drawing.Color.White
+        Me.ListBox7.FormattingEnabled = True
+        Me.ListBox7.HorizontalScrollbar = True
+        Me.ListBox7.ItemHeight = 18
+        Me.ListBox7.Items.AddRange(New Object() {"Search Results..."})
+        Me.ListBox7.Location = New System.Drawing.Point(1, 21)
+        Me.ListBox7.Name = "ListBox7"
+        Me.ListBox7.ScrollAlwaysVisible = True
+        Me.ListBox7.Size = New System.Drawing.Size(729, 108)
+        Me.ListBox7.TabIndex = 7
+        '
+        'TextBoxX3
+        '
+        Me.TextBoxX3.BackColor = System.Drawing.Color.Black
+        '
+        '
+        '
+        Me.TextBoxX3.Border.Class = "TextBoxBorder"
+        Me.TextBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.TextBoxX3.DisabledBackColor = System.Drawing.Color.Black
+        Me.TextBoxX3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBoxX3.ForeColor = System.Drawing.Color.White
+        Me.TextBoxX3.Location = New System.Drawing.Point(1, 1)
+        Me.TextBoxX3.Name = "TextBoxX3"
+        Me.TextBoxX3.PreventEnterBeep = True
+        Me.TextBoxX3.Size = New System.Drawing.Size(729, 20)
+        Me.TextBoxX3.TabIndex = 6
+        Me.TextBoxX3.Text = "Press Enter To Search..."
         '
         'TabItem6
         '
@@ -795,554 +646,6 @@ Partial Class Form1
         Me.TabItem2.Image = CType(resources.GetObject("TabItem2.Image"), System.Drawing.Image)
         Me.TabItem2.Name = "TabItem2"
         Me.TabItem2.Text = "HotFix Editing"
-        '
-        'TabControlPanel12
-        '
-        Me.TabControlPanel12.Controls.Add(Me.ColorPickerButton3)
-        Me.TabControlPanel12.Controls.Add(Me.LabelX6)
-        Me.TabControlPanel12.Controls.Add(Me.ColorPickerButton4)
-        Me.TabControlPanel12.Controls.Add(Me.LabelX7)
-        Me.TabControlPanel12.Controls.Add(Me.ColorPickerButton2)
-        Me.TabControlPanel12.Controls.Add(Me.LabelX5)
-        Me.TabControlPanel12.Controls.Add(Me.ColorPickerButton1)
-        Me.TabControlPanel12.Controls.Add(Me.LabelX4)
-        Me.TabControlPanel12.Controls.Add(Me.CheckBoxX1)
-        Me.TabControlPanel12.Controls.Add(Me.TextBoxX1)
-        Me.TabControlPanel12.Controls.Add(Me.LabelX3)
-        Me.TabControlPanel12.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel12.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel12.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel12.Name = "TabControlPanel12"
-        Me.TabControlPanel12.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel12.Size = New System.Drawing.Size(733, 531)
-        Me.TabControlPanel12.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControlPanel12.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel12.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.TabControlPanel12.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel12.Style.GradientAngle = 90
-        Me.TabControlPanel12.TabIndex = 33
-        Me.TabControlPanel12.TabItem = Me.TabItem12
-        '
-        'ColorPickerButton3
-        '
-        Me.ColorPickerButton3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ColorPickerButton3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ColorPickerButton3.Image = CType(resources.GetObject("ColorPickerButton3.Image"), System.Drawing.Image)
-        Me.ColorPickerButton3.Location = New System.Drawing.Point(199, 139)
-        Me.ColorPickerButton3.Name = "ColorPickerButton3"
-        Me.ColorPickerButton3.SelectedColorImageRectangle = New System.Drawing.Rectangle(2, 2, 12, 12)
-        Me.ColorPickerButton3.Size = New System.Drawing.Size(37, 23)
-        Me.ColorPickerButton3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.ColorPickerButton3.TabIndex = 11
-        '
-        'LabelX6
-        '
-        Me.LabelX6.AutoSize = True
-        Me.LabelX6.BackColor = System.Drawing.Color.Transparent
-        '
-        '
-        '
-        Me.LabelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX6.ForeColor = System.Drawing.Color.White
-        Me.LabelX6.Location = New System.Drawing.Point(6, 139)
-        Me.LabelX6.Name = "LabelX6"
-        Me.LabelX6.SingleLineColor = System.Drawing.Color.Transparent
-        Me.LabelX6.Size = New System.Drawing.Size(187, 21)
-        Me.LabelX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.LabelX6.TabIndex = 10
-        Me.LabelX6.Text = "HotFix Code Text Color : "
-        '
-        'ColorPickerButton4
-        '
-        Me.ColorPickerButton4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ColorPickerButton4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ColorPickerButton4.Image = CType(resources.GetObject("ColorPickerButton4.Image"), System.Drawing.Image)
-        Me.ColorPickerButton4.Location = New System.Drawing.Point(253, 112)
-        Me.ColorPickerButton4.Name = "ColorPickerButton4"
-        Me.ColorPickerButton4.SelectedColorImageRectangle = New System.Drawing.Rectangle(2, 2, 12, 12)
-        Me.ColorPickerButton4.Size = New System.Drawing.Size(37, 23)
-        Me.ColorPickerButton4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.ColorPickerButton4.TabIndex = 9
-        '
-        'LabelX7
-        '
-        Me.LabelX7.AutoSize = True
-        Me.LabelX7.BackColor = System.Drawing.Color.Transparent
-        '
-        '
-        '
-        Me.LabelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX7.ForeColor = System.Drawing.Color.White
-        Me.LabelX7.Location = New System.Drawing.Point(6, 112)
-        Me.LabelX7.Name = "LabelX7"
-        Me.LabelX7.SingleLineColor = System.Drawing.Color.Transparent
-        Me.LabelX7.Size = New System.Drawing.Size(241, 21)
-        Me.LabelX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.LabelX7.TabIndex = 8
-        Me.LabelX7.Text = "HotFix Code Background Color : "
-        '
-        'ColorPickerButton2
-        '
-        Me.ColorPickerButton2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ColorPickerButton2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ColorPickerButton2.Image = CType(resources.GetObject("ColorPickerButton2.Image"), System.Drawing.Image)
-        Me.ColorPickerButton2.Location = New System.Drawing.Point(213, 85)
-        Me.ColorPickerButton2.Name = "ColorPickerButton2"
-        Me.ColorPickerButton2.SelectedColorImageRectangle = New System.Drawing.Rectangle(2, 2, 12, 12)
-        Me.ColorPickerButton2.Size = New System.Drawing.Size(37, 23)
-        Me.ColorPickerButton2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.ColorPickerButton2.TabIndex = 7
-        '
-        'LabelX5
-        '
-        Me.LabelX5.AutoSize = True
-        Me.LabelX5.BackColor = System.Drawing.Color.Transparent
-        '
-        '
-        '
-        Me.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX5.ForeColor = System.Drawing.Color.White
-        Me.LabelX5.Location = New System.Drawing.Point(6, 85)
-        Me.LabelX5.Name = "LabelX5"
-        Me.LabelX5.SingleLineColor = System.Drawing.Color.Transparent
-        Me.LabelX5.Size = New System.Drawing.Size(201, 21)
-        Me.LabelX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.LabelX5.TabIndex = 6
-        Me.LabelX5.Text = "Session Editor Text Color : "
-        '
-        'ColorPickerButton1
-        '
-        Me.ColorPickerButton1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ColorPickerButton1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ColorPickerButton1.Image = CType(resources.GetObject("ColorPickerButton1.Image"), System.Drawing.Image)
-        Me.ColorPickerButton1.Location = New System.Drawing.Point(267, 58)
-        Me.ColorPickerButton1.Name = "ColorPickerButton1"
-        Me.ColorPickerButton1.SelectedColorImageRectangle = New System.Drawing.Rectangle(2, 2, 12, 12)
-        Me.ColorPickerButton1.Size = New System.Drawing.Size(37, 23)
-        Me.ColorPickerButton1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.ColorPickerButton1.TabIndex = 5
-        '
-        'LabelX4
-        '
-        Me.LabelX4.AutoSize = True
-        Me.LabelX4.BackColor = System.Drawing.Color.Transparent
-        '
-        '
-        '
-        Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX4.ForeColor = System.Drawing.Color.White
-        Me.LabelX4.Location = New System.Drawing.Point(6, 58)
-        Me.LabelX4.Name = "LabelX4"
-        Me.LabelX4.SingleLineColor = System.Drawing.Color.Transparent
-        Me.LabelX4.Size = New System.Drawing.Size(255, 21)
-        Me.LabelX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.LabelX4.TabIndex = 4
-        Me.LabelX4.Text = "Session Editor Background Color : "
-        '
-        'CheckBoxX1
-        '
-        Me.CheckBoxX1.AutoSize = True
-        Me.CheckBoxX1.BackColor = System.Drawing.Color.Transparent
-        '
-        '
-        '
-        Me.CheckBoxX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.CheckBoxX1.ForeColor = System.Drawing.Color.White
-        Me.CheckBoxX1.Location = New System.Drawing.Point(6, 9)
-        Me.CheckBoxX1.Name = "CheckBoxX1"
-        Me.CheckBoxX1.Size = New System.Drawing.Size(207, 15)
-        Me.CheckBoxX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.CheckBoxX1.TabIndex = 3
-        Me.CheckBoxX1.Text = "Use Inital HotFixes Directory On Load"
-        '
-        'TextBoxX1
-        '
-        Me.TextBoxX1.BackColor = System.Drawing.Color.Black
-        '
-        '
-        '
-        Me.TextBoxX1.Border.Class = "TextBoxBorder"
-        Me.TextBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.TextBoxX1.DisabledBackColor = System.Drawing.Color.Black
-        Me.TextBoxX1.ForeColor = System.Drawing.Color.White
-        Me.TextBoxX1.Location = New System.Drawing.Point(202, 30)
-        Me.TextBoxX1.Name = "TextBoxX1"
-        Me.TextBoxX1.PreventEnterBeep = True
-        Me.TextBoxX1.Size = New System.Drawing.Size(377, 20)
-        Me.TextBoxX1.TabIndex = 2
-        '
-        'LabelX3
-        '
-        Me.LabelX3.AutoSize = True
-        Me.LabelX3.BackColor = System.Drawing.Color.Transparent
-        '
-        '
-        '
-        Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX3.ForeColor = System.Drawing.Color.White
-        Me.LabelX3.Location = New System.Drawing.Point(6, 26)
-        Me.LabelX3.Name = "LabelX3"
-        Me.LabelX3.SingleLineColor = System.Drawing.Color.Transparent
-        Me.LabelX3.Size = New System.Drawing.Size(190, 21)
-        Me.LabelX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.LabelX3.TabIndex = 1
-        Me.LabelX3.Text = "Inital HotFixes Directory : "
-        '
-        'TabItem12
-        '
-        Me.TabItem12.AttachedControl = Me.TabControlPanel12
-        Me.TabItem12.Image = CType(resources.GetObject("TabItem12.Image"), System.Drawing.Image)
-        Me.TabItem12.Name = "TabItem12"
-        Me.TabItem12.Text = "Settings"
-        '
-        'TabControlPanel1
-        '
-        Me.TabControlPanel1.Controls.Add(Me.ListBox1)
-        Me.TabControlPanel1.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel1.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel1.Name = "TabControlPanel1"
-        Me.TabControlPanel1.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel1.Size = New System.Drawing.Size(733, 531)
-        Me.TabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.TabControlPanel1.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel1.Style.GradientAngle = 90
-        Me.TabControlPanel1.TabIndex = 1
-        Me.TabControlPanel1.TabItem = Me.TabItem1
-        '
-        'ListBox1
-        '
-        Me.ListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.ListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ListBox1.ContextMenuStrip = Me.ContextMenuStrip2
-        Me.ListBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListBox1.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox1.ForeColor = System.Drawing.Color.White
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.HorizontalScrollbar = True
-        Me.ListBox1.ItemHeight = 18
-        Me.ListBox1.Location = New System.Drawing.Point(1, 1)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.ScrollAlwaysVisible = True
-        Me.ListBox1.Size = New System.Drawing.Size(731, 529)
-        Me.ListBox1.TabIndex = 2
-        '
-        'ContextMenuStrip2
-        '
-        Me.ContextMenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoadHotFixsDirectoryToolStripMenuItem, Me.RefreshCurrentSelectedDirectoryToolStripMenuItem, Me.ToolStripTextBox1, Me.AddItemToLisboxToolStripMenuItem, Me.RemoveItemFromListboxToolStripMenuItem, Me.DeleteSelectedFileToolStripMenuItem})
-        Me.ContextMenuStrip2.Name = "ContextMenuStrip2"
-        Me.ContextMenuStrip2.Size = New System.Drawing.Size(296, 139)
-        '
-        'LoadHotFixsDirectoryToolStripMenuItem
-        '
-        Me.LoadHotFixsDirectoryToolStripMenuItem.Image = CType(resources.GetObject("LoadHotFixsDirectoryToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.LoadHotFixsDirectoryToolStripMenuItem.Name = "LoadHotFixsDirectoryToolStripMenuItem"
-        Me.LoadHotFixsDirectoryToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
-        Me.LoadHotFixsDirectoryToolStripMenuItem.Size = New System.Drawing.Size(295, 22)
-        Me.LoadHotFixsDirectoryToolStripMenuItem.Text = "Load HotFixes Directory"
-        '
-        'RefreshCurrentSelectedDirectoryToolStripMenuItem
-        '
-        Me.RefreshCurrentSelectedDirectoryToolStripMenuItem.Image = CType(resources.GetObject("RefreshCurrentSelectedDirectoryToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.RefreshCurrentSelectedDirectoryToolStripMenuItem.Name = "RefreshCurrentSelectedDirectoryToolStripMenuItem"
-        Me.RefreshCurrentSelectedDirectoryToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.RefreshCurrentSelectedDirectoryToolStripMenuItem.Size = New System.Drawing.Size(295, 22)
-        Me.RefreshCurrentSelectedDirectoryToolStripMenuItem.Text = "Refresh Current Selected Directory"
-        '
-        'ToolStripTextBox1
-        '
-        Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
-        Me.ToolStripTextBox1.Size = New System.Drawing.Size(100, 23)
-        Me.ToolStripTextBox1.Text = "N/A"
-        '
-        'AddItemToLisboxToolStripMenuItem
-        '
-        Me.AddItemToLisboxToolStripMenuItem.Image = CType(resources.GetObject("AddItemToLisboxToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.AddItemToLisboxToolStripMenuItem.Name = "AddItemToLisboxToolStripMenuItem"
-        Me.AddItemToLisboxToolStripMenuItem.Size = New System.Drawing.Size(295, 22)
-        Me.AddItemToLisboxToolStripMenuItem.Text = "Add Item To Listbox"
-        '
-        'RemoveItemFromListboxToolStripMenuItem
-        '
-        Me.RemoveItemFromListboxToolStripMenuItem.Image = CType(resources.GetObject("RemoveItemFromListboxToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.RemoveItemFromListboxToolStripMenuItem.Name = "RemoveItemFromListboxToolStripMenuItem"
-        Me.RemoveItemFromListboxToolStripMenuItem.Size = New System.Drawing.Size(295, 22)
-        Me.RemoveItemFromListboxToolStripMenuItem.Text = "Remove Selected Item From Listbox"
-        '
-        'DeleteSelectedFileToolStripMenuItem
-        '
-        Me.DeleteSelectedFileToolStripMenuItem.Image = CType(resources.GetObject("DeleteSelectedFileToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.DeleteSelectedFileToolStripMenuItem.Name = "DeleteSelectedFileToolStripMenuItem"
-        Me.DeleteSelectedFileToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
-        Me.DeleteSelectedFileToolStripMenuItem.Size = New System.Drawing.Size(295, 22)
-        Me.DeleteSelectedFileToolStripMenuItem.Text = "Delete Selected File"
-        '
-        'TabItem1
-        '
-        Me.TabItem1.AttachedControl = Me.TabControlPanel1
-        Me.TabItem1.Image = CType(resources.GetObject("TabItem1.Image"), System.Drawing.Image)
-        Me.TabItem1.Name = "TabItem1"
-        Me.TabItem1.Text = "Loading"
-        '
-        'TabControlPanel3
-        '
-        Me.TabControlPanel3.Controls.Add(Me.TabControl2)
-        Me.TabControlPanel3.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel3.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel3.Name = "TabControlPanel3"
-        Me.TabControlPanel3.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel3.Size = New System.Drawing.Size(733, 531)
-        Me.TabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.TabControlPanel3.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel3.Style.GradientAngle = 90
-        Me.TabControlPanel3.TabIndex = 9
-        Me.TabControlPanel3.TabItem = Me.TabItem3
-        '
-        'TabControl2
-        '
-        Me.TabControl2.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControl2.CanReorderTabs = True
-        Me.TabControl2.ColorScheme.TabItemHotBackground = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.TabControl2.ColorScheme.TabItemSelectedBorder = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.TabControl2.ColorScheme.TabItemSelectedText = System.Drawing.Color.Yellow
-        Me.TabControl2.Controls.Add(Me.TabControlPanel5)
-        Me.TabControl2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl2.ForeColor = System.Drawing.Color.White
-        Me.TabControl2.Location = New System.Drawing.Point(1, 1)
-        Me.TabControl2.Name = "TabControl2"
-        Me.TabControl2.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.TabControl2.SelectedTabIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(731, 529)
-        Me.TabControl2.Style = DevComponents.DotNetBar.eTabStripStyle.Metro
-        Me.TabControl2.TabIndex = 1
-        Me.TabControl2.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
-        Me.TabControl2.Tabs.Add(Me.TabItem5)
-        Me.TabControl2.Text = "TabControl2"
-        Me.TabControl2.ThemeAware = True
-        '
-        'TabControlPanel5
-        '
-        Me.TabControlPanel5.Controls.Add(Me.TabControl4)
-        Me.TabControlPanel5.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel5.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel5.Name = "TabControlPanel5"
-        Me.TabControlPanel5.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel5.Size = New System.Drawing.Size(731, 502)
-        Me.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel5.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.TabControlPanel5.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel5.Style.GradientAngle = 90
-        Me.TabControlPanel5.TabIndex = 1
-        Me.TabControlPanel5.TabItem = Me.TabItem5
-        '
-        'TabControl4
-        '
-        Me.TabControl4.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControl4.CanReorderTabs = True
-        Me.TabControl4.ColorScheme.TabItemHotBackground = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.TabControl4.ColorScheme.TabItemSelectedBorder = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.TabControl4.ColorScheme.TabItemSelectedText = System.Drawing.Color.Yellow
-        Me.TabControl4.Controls.Add(Me.TabControlPanel8)
-        Me.TabControl4.Controls.Add(Me.TabControlPanel9)
-        Me.TabControl4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl4.ForeColor = System.Drawing.Color.White
-        Me.TabControl4.Location = New System.Drawing.Point(1, 1)
-        Me.TabControl4.Name = "TabControl4"
-        Me.TabControl4.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.TabControl4.SelectedTabIndex = 0
-        Me.TabControl4.Size = New System.Drawing.Size(729, 500)
-        Me.TabControl4.Style = DevComponents.DotNetBar.eTabStripStyle.Metro
-        Me.TabControl4.TabIndex = 2
-        Me.TabControl4.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
-        Me.TabControl4.Tabs.Add(Me.TabItem8)
-        Me.TabControl4.Tabs.Add(Me.TabItem9)
-        Me.TabControl4.Text = "TabControl4"
-        Me.TabControl4.ThemeAware = True
-        '
-        'TabControlPanel9
-        '
-        Me.TabControlPanel9.Controls.Add(Me.RichTextBoxEx2)
-        Me.TabControlPanel9.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel9.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel9.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel9.Name = "TabControlPanel9"
-        Me.TabControlPanel9.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel9.Size = New System.Drawing.Size(729, 473)
-        Me.TabControlPanel9.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControlPanel9.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel9.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.TabControlPanel9.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel9.Style.GradientAngle = 90
-        Me.TabControlPanel9.TabIndex = 5
-        Me.TabControlPanel9.TabItem = Me.TabItem9
-        '
-        'RichTextBoxEx2
-        '
-        Me.RichTextBoxEx2.BackColor = System.Drawing.Color.Black
-        '
-        '
-        '
-        Me.RichTextBoxEx2.BackgroundStyle.Class = "RichTextBoxBorder"
-        Me.RichTextBoxEx2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RichTextBoxEx2.ContextMenuStrip = Me.ContextMenuStrip3
-        Me.RichTextBoxEx2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBoxEx2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBoxEx2.ForeColor = System.Drawing.Color.White
-        Me.RichTextBoxEx2.Location = New System.Drawing.Point(1, 1)
-        Me.RichTextBoxEx2.Name = "RichTextBoxEx2"
-        Me.RichTextBoxEx2.Rtf = "{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft S" &
-    "ans Serif;}}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "{\colortbl ;\red255\green255\blue255;}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "\viewkind4\uc1\pard\cf1\f0" &
-    "\fs20\par" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.RichTextBoxEx2.Size = New System.Drawing.Size(727, 471)
-        Me.RichTextBoxEx2.TabIndex = 3
-        Me.RichTextBoxEx2.WordWrap = False
-        '
-        'TabItem9
-        '
-        Me.TabItem9.AttachedControl = Me.TabControlPanel9
-        Me.TabItem9.Image = CType(resources.GetObject("TabItem9.Image"), System.Drawing.Image)
-        Me.TabItem9.Name = "TabItem9"
-        Me.TabItem9.Text = "HotFix Code"
-        '
-        'TabControlPanel8
-        '
-        Me.TabControlPanel8.Controls.Add(Me.ListBox3)
-        Me.TabControlPanel8.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel8.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel8.Name = "TabControlPanel8"
-        Me.TabControlPanel8.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel8.Size = New System.Drawing.Size(729, 473)
-        Me.TabControlPanel8.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControlPanel8.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel8.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.TabControlPanel8.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel8.Style.GradientAngle = 90
-        Me.TabControlPanel8.TabIndex = 1
-        Me.TabControlPanel8.TabItem = Me.TabItem8
-        '
-        'ListBox3
-        '
-        Me.ListBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.ListBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ListBox3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListBox3.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox3.ForeColor = System.Drawing.Color.White
-        Me.ListBox3.FormattingEnabled = True
-        Me.ListBox3.HorizontalScrollbar = True
-        Me.ListBox3.ItemHeight = 18
-        Me.ListBox3.Location = New System.Drawing.Point(1, 1)
-        Me.ListBox3.Name = "ListBox3"
-        Me.ListBox3.ScrollAlwaysVisible = True
-        Me.ListBox3.Size = New System.Drawing.Size(727, 471)
-        Me.ListBox3.TabIndex = 3
-        '
-        'TabItem8
-        '
-        Me.TabItem8.AttachedControl = Me.TabControlPanel8
-        Me.TabItem8.Image = CType(resources.GetObject("TabItem8.Image"), System.Drawing.Image)
-        Me.TabItem8.Name = "TabItem8"
-        Me.TabItem8.Text = "List"
-        '
-        'TabItem5
-        '
-        Me.TabItem5.AttachedControl = Me.TabControlPanel5
-        Me.TabItem5.Image = CType(resources.GetObject("TabItem5.Image"), System.Drawing.Image)
-        Me.TabItem5.Name = "TabItem5"
-        Me.TabItem5.Text = "Public HotFixes"
-        '
-        'TabItem3
-        '
-        Me.TabItem3.AttachedControl = Me.TabControlPanel3
-        Me.TabItem3.Image = CType(resources.GetObject("TabItem3.Image"), System.Drawing.Image)
-        Me.TabItem3.Name = "TabItem3"
-        Me.TabItem3.Text = "Hot FIx Documentation"
-        '
-        'TabControlPanel13
-        '
-        Me.TabControlPanel13.Controls.Add(Me.ListBox4)
-        Me.TabControlPanel13.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel13.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel13.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel13.Name = "TabControlPanel13"
-        Me.TabControlPanel13.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel13.Size = New System.Drawing.Size(733, 531)
-        Me.TabControlPanel13.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabControlPanel13.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel13.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.TabControlPanel13.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel13.Style.GradientAngle = 90
-        Me.TabControlPanel13.TabIndex = 52
-        Me.TabControlPanel13.TabItem = Me.TabItem13
-        '
-        'ListBox4
-        '
-        Me.ListBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.ListBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ListBox4.ContextMenuStrip = Me.ContextMenuStrip4
-        Me.ListBox4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListBox4.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox4.ForeColor = System.Drawing.Color.White
-        Me.ListBox4.FormattingEnabled = True
-        Me.ListBox4.HorizontalScrollbar = True
-        Me.ListBox4.ItemHeight = 18
-        Me.ListBox4.Location = New System.Drawing.Point(1, 1)
-        Me.ListBox4.Name = "ListBox4"
-        Me.ListBox4.ScrollAlwaysVisible = True
-        Me.ListBox4.Size = New System.Drawing.Size(731, 529)
-        Me.ListBox4.TabIndex = 3
-        '
-        'ContextMenuStrip4
-        '
-        Me.ContextMenuStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripTextBox2, Me.AddItemToListboxToolStripMenuItem, Me.RemoveSelectedItemFromFavoritesToolStripMenuItem})
-        Me.ContextMenuStrip4.Name = "ContextMenuStrip4"
-        Me.ContextMenuStrip4.Size = New System.Drawing.Size(273, 73)
-        '
-        'ToolStripTextBox2
-        '
-        Me.ToolStripTextBox2.Name = "ToolStripTextBox2"
-        Me.ToolStripTextBox2.Size = New System.Drawing.Size(100, 23)
-        Me.ToolStripTextBox2.Text = "N/A"
-        '
-        'AddItemToListboxToolStripMenuItem
-        '
-        Me.AddItemToListboxToolStripMenuItem.Image = CType(resources.GetObject("AddItemToListboxToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.AddItemToListboxToolStripMenuItem.Name = "AddItemToListboxToolStripMenuItem"
-        Me.AddItemToListboxToolStripMenuItem.Size = New System.Drawing.Size(272, 22)
-        Me.AddItemToListboxToolStripMenuItem.Text = "Add Item To Favorites"
-        '
-        'RemoveSelectedItemFromFavoritesToolStripMenuItem
-        '
-        Me.RemoveSelectedItemFromFavoritesToolStripMenuItem.Image = CType(resources.GetObject("RemoveSelectedItemFromFavoritesToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.RemoveSelectedItemFromFavoritesToolStripMenuItem.Name = "RemoveSelectedItemFromFavoritesToolStripMenuItem"
-        Me.RemoveSelectedItemFromFavoritesToolStripMenuItem.Size = New System.Drawing.Size(272, 22)
-        Me.RemoveSelectedItemFromFavoritesToolStripMenuItem.Text = "Remove Selected Item From Favorites"
-        '
-        'TabItem13
-        '
-        Me.TabItem13.AttachedControl = Me.TabControlPanel13
-        Me.TabItem13.Image = CType(resources.GetObject("TabItem13.Image"), System.Drawing.Image)
-        Me.TabItem13.Name = "TabItem13"
-        Me.TabItem13.Text = "Favorites"
         '
         'TabControlPanel11
         '
@@ -1388,6 +691,978 @@ Partial Class Form1
         Me.TabItem11.Name = "TabItem11"
         Me.TabItem11.Text = "Credits"
         '
+        'TabControlPanel7
+        '
+        Me.TabControlPanel7.Controls.Add(Me.TabControl5)
+        Me.TabControlPanel7.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel7.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel7.Name = "TabControlPanel7"
+        Me.TabControlPanel7.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel7.Size = New System.Drawing.Size(733, 531)
+        Me.TabControlPanel7.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControlPanel7.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel7.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.TabControlPanel7.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel7.Style.GradientAngle = 90
+        Me.TabControlPanel7.TabIndex = 13
+        Me.TabControlPanel7.TabItem = Me.TabItem7
+        '
+        'TabControl5
+        '
+        Me.TabControl5.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControl5.CanReorderTabs = False
+        Me.TabControl5.ColorScheme.TabItemHotBackground = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.TabControl5.ColorScheme.TabItemSelectedBorder = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.TabControl5.ColorScheme.TabItemSelectedText = System.Drawing.Color.Yellow
+        Me.TabControl5.Controls.Add(Me.TabControlPanel19)
+        Me.TabControl5.Controls.Add(Me.TabControlPanel15)
+        Me.TabControl5.Controls.Add(Me.TabControlPanel14)
+        Me.TabControl5.Controls.Add(Me.TabControlPanel10)
+        Me.TabControl5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl5.ForeColor = System.Drawing.Color.White
+        Me.TabControl5.Location = New System.Drawing.Point(1, 1)
+        Me.TabControl5.Name = "TabControl5"
+        Me.TabControl5.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.TabControl5.SelectedTabIndex = 0
+        Me.TabControl5.Size = New System.Drawing.Size(731, 529)
+        Me.TabControl5.Style = DevComponents.DotNetBar.eTabStripStyle.Metro
+        Me.TabControl5.TabIndex = 3
+        Me.TabControl5.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
+        Me.TabControl5.Tabs.Add(Me.TabItem10)
+        Me.TabControl5.Tabs.Add(Me.TabItem14)
+        Me.TabControl5.Tabs.Add(Me.TabItem15)
+        Me.TabControl5.Tabs.Add(Me.TabItem18)
+        Me.TabControl5.Text = "TabControl5"
+        Me.TabControl5.ThemeAware = True
+        '
+        'TabControlPanel15
+        '
+        Me.TabControlPanel15.Controls.Add(Me.TabControl7)
+        Me.TabControlPanel15.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel15.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel15.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel15.Name = "TabControlPanel15"
+        Me.TabControlPanel15.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel15.Size = New System.Drawing.Size(731, 502)
+        Me.TabControlPanel15.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControlPanel15.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel15.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.TabControlPanel15.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel15.Style.GradientAngle = 90
+        Me.TabControlPanel15.TabIndex = 9
+        Me.TabControlPanel15.TabItem = Me.TabItem15
+        '
+        'TabControl7
+        '
+        Me.TabControl7.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControl7.CanReorderTabs = False
+        Me.TabControl7.ColorScheme.TabItemHotBackground = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.TabControl7.ColorScheme.TabItemSelectedBorder = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.TabControl7.ColorScheme.TabItemSelectedText = System.Drawing.Color.Yellow
+        Me.TabControl7.Controls.Add(Me.TabControlPanel17)
+        Me.TabControl7.Controls.Add(Me.TabControlPanel18)
+        Me.TabControl7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl7.ForeColor = System.Drawing.Color.White
+        Me.TabControl7.Location = New System.Drawing.Point(1, 1)
+        Me.TabControl7.Name = "TabControl7"
+        Me.TabControl7.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.TabControl7.SelectedTabIndex = 0
+        Me.TabControl7.Size = New System.Drawing.Size(729, 500)
+        Me.TabControl7.Style = DevComponents.DotNetBar.eTabStripStyle.Metro
+        Me.TabControl7.TabIndex = 4
+        Me.TabControl7.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
+        Me.TabControl7.Tabs.Add(Me.TabItem16)
+        Me.TabControl7.Tabs.Add(Me.TabItem17)
+        Me.TabControl7.Text = "TabControl7"
+        Me.TabControl7.ThemeAware = True
+        '
+        'TabControlPanel18
+        '
+        Me.TabControlPanel18.Controls.Add(Me.RichTextBoxEx7)
+        Me.TabControlPanel18.Controls.Add(Me.ListBox11)
+        Me.TabControlPanel18.Controls.Add(Me.TextBoxX8)
+        Me.TabControlPanel18.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel18.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel18.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel18.Name = "TabControlPanel18"
+        Me.TabControlPanel18.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel18.Size = New System.Drawing.Size(729, 473)
+        Me.TabControlPanel18.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControlPanel18.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel18.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.TabControlPanel18.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel18.Style.GradientAngle = 90
+        Me.TabControlPanel18.TabIndex = 13
+        Me.TabControlPanel18.TabItem = Me.TabItem17
+        '
+        'RichTextBoxEx7
+        '
+        Me.RichTextBoxEx7.BackColor = System.Drawing.Color.Black
+        '
+        '
+        '
+        Me.RichTextBoxEx7.BackgroundStyle.Class = "RichTextBoxBorder"
+        Me.RichTextBoxEx7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RichTextBoxEx7.ContextMenuStrip = Me.ContextMenuStrip6
+        Me.RichTextBoxEx7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RichTextBoxEx7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBoxEx7.ForeColor = System.Drawing.Color.White
+        Me.RichTextBoxEx7.Location = New System.Drawing.Point(1, 129)
+        Me.RichTextBoxEx7.Name = "RichTextBoxEx7"
+        Me.RichTextBoxEx7.Rtf = resources.GetString("RichTextBoxEx7.Rtf")
+        Me.RichTextBoxEx7.Size = New System.Drawing.Size(727, 343)
+        Me.RichTextBoxEx7.TabIndex = 8
+        Me.RichTextBoxEx7.WordWrap = False
+        '
+        'ContextMenuStrip6
+        '
+        Me.ContextMenuStrip6.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem13, Me.ToolStripMenuItem6, Me.ToolStripMenuItem7, Me.ToolStripMenuItem8})
+        Me.ContextMenuStrip6.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip6.Size = New System.Drawing.Size(247, 92)
+        '
+        'ToolStripMenuItem13
+        '
+        Me.ToolStripMenuItem13.Image = CType(resources.GetObject("ToolStripMenuItem13.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItem13.Name = "ToolStripMenuItem13"
+        Me.ToolStripMenuItem13.Size = New System.Drawing.Size(246, 22)
+        Me.ToolStripMenuItem13.Text = "Copy Selected Item To Clipboard"
+        '
+        'ToolStripMenuItem6
+        '
+        Me.ToolStripMenuItem6.Image = CType(resources.GetObject("ToolStripMenuItem6.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
+        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(246, 22)
+        Me.ToolStripMenuItem6.Text = "Add To Favorites"
+        '
+        'ToolStripMenuItem7
+        '
+        Me.ToolStripMenuItem7.Image = CType(resources.GetObject("ToolStripMenuItem7.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItem7.Name = "ToolStripMenuItem7"
+        Me.ToolStripMenuItem7.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(246, 22)
+        Me.ToolStripMenuItem7.Text = "Save File"
+        '
+        'ToolStripMenuItem8
+        '
+        Me.ToolStripMenuItem8.CheckOnClick = True
+        Me.ToolStripMenuItem8.Name = "ToolStripMenuItem8"
+        Me.ToolStripMenuItem8.Size = New System.Drawing.Size(246, 22)
+        Me.ToolStripMenuItem8.Text = "Word Wrap"
+        '
+        'ListBox11
+        '
+        Me.ListBox11.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.ListBox11.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListBox11.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ListBox11.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox11.ForeColor = System.Drawing.Color.White
+        Me.ListBox11.FormattingEnabled = True
+        Me.ListBox11.HorizontalScrollbar = True
+        Me.ListBox11.ItemHeight = 18
+        Me.ListBox11.Items.AddRange(New Object() {"Search Results..."})
+        Me.ListBox11.Location = New System.Drawing.Point(1, 21)
+        Me.ListBox11.Name = "ListBox11"
+        Me.ListBox11.ScrollAlwaysVisible = True
+        Me.ListBox11.Size = New System.Drawing.Size(727, 108)
+        Me.ListBox11.TabIndex = 11
+        '
+        'TextBoxX8
+        '
+        Me.TextBoxX8.BackColor = System.Drawing.Color.Black
+        '
+        '
+        '
+        Me.TextBoxX8.Border.Class = "TextBoxBorder"
+        Me.TextBoxX8.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.TextBoxX8.DisabledBackColor = System.Drawing.Color.Black
+        Me.TextBoxX8.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBoxX8.ForeColor = System.Drawing.Color.White
+        Me.TextBoxX8.Location = New System.Drawing.Point(1, 1)
+        Me.TextBoxX8.Name = "TextBoxX8"
+        Me.TextBoxX8.PreventEnterBeep = True
+        Me.TextBoxX8.Size = New System.Drawing.Size(727, 20)
+        Me.TextBoxX8.TabIndex = 10
+        Me.TextBoxX8.Text = "Press Enter To Search..."
+        '
+        'TabItem17
+        '
+        Me.TabItem17.AttachedControl = Me.TabControlPanel18
+        Me.TabItem17.Image = CType(resources.GetObject("TabItem17.Image"), System.Drawing.Image)
+        Me.TabItem17.Name = "TabItem17"
+        Me.TabItem17.Text = "Codes"
+        '
+        'TabControlPanel17
+        '
+        Me.TabControlPanel17.Controls.Add(Me.ListBox5)
+        Me.TabControlPanel17.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel17.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel17.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel17.Name = "TabControlPanel17"
+        Me.TabControlPanel17.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel17.Size = New System.Drawing.Size(729, 473)
+        Me.TabControlPanel17.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControlPanel17.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel17.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.TabControlPanel17.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel17.Style.GradientAngle = 90
+        Me.TabControlPanel17.TabIndex = 9
+        Me.TabControlPanel17.TabItem = Me.TabItem16
+        '
+        'ListBox5
+        '
+        Me.ListBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.ListBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListBox5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ListBox5.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox5.ForeColor = System.Drawing.Color.White
+        Me.ListBox5.FormattingEnabled = True
+        Me.ListBox5.HorizontalScrollbar = True
+        Me.ListBox5.ItemHeight = 18
+        Me.ListBox5.Location = New System.Drawing.Point(1, 1)
+        Me.ListBox5.Name = "ListBox5"
+        Me.ListBox5.ScrollAlwaysVisible = True
+        Me.ListBox5.Size = New System.Drawing.Size(727, 471)
+        Me.ListBox5.TabIndex = 4
+        '
+        'TabItem16
+        '
+        Me.TabItem16.AttachedControl = Me.TabControlPanel17
+        Me.TabItem16.Image = CType(resources.GetObject("TabItem16.Image"), System.Drawing.Image)
+        Me.TabItem16.Name = "TabItem16"
+        Me.TabItem16.Text = "List Of People"
+        '
+        'TabItem15
+        '
+        Me.TabItem15.AttachedControl = Me.TabControlPanel15
+        Me.TabItem15.Image = CType(resources.GetObject("TabItem15.Image"), System.Drawing.Image)
+        Me.TabItem15.Name = "TabItem15"
+        Me.TabItem15.Text = "User Codes"
+        '
+        'TabControlPanel14
+        '
+        Me.TabControlPanel14.Controls.Add(Me.RichTextBoxEx6)
+        Me.TabControlPanel14.Controls.Add(Me.ListBox10)
+        Me.TabControlPanel14.Controls.Add(Me.TextBoxX7)
+        Me.TabControlPanel14.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel14.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel14.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel14.Name = "TabControlPanel14"
+        Me.TabControlPanel14.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel14.Size = New System.Drawing.Size(731, 502)
+        Me.TabControlPanel14.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControlPanel14.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel14.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.TabControlPanel14.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel14.Style.GradientAngle = 90
+        Me.TabControlPanel14.TabIndex = 5
+        Me.TabControlPanel14.TabItem = Me.TabItem14
+        '
+        'RichTextBoxEx6
+        '
+        Me.RichTextBoxEx6.BackColor = System.Drawing.Color.Black
+        '
+        '
+        '
+        Me.RichTextBoxEx6.BackgroundStyle.Class = "RichTextBoxBorder"
+        Me.RichTextBoxEx6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RichTextBoxEx6.ContextMenuStrip = Me.ContextMenuStrip5
+        Me.RichTextBoxEx6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RichTextBoxEx6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBoxEx6.ForeColor = System.Drawing.Color.White
+        Me.RichTextBoxEx6.Location = New System.Drawing.Point(1, 129)
+        Me.RichTextBoxEx6.Name = "RichTextBoxEx6"
+        Me.RichTextBoxEx6.Rtf = resources.GetString("RichTextBoxEx6.Rtf")
+        Me.RichTextBoxEx6.Size = New System.Drawing.Size(729, 372)
+        Me.RichTextBoxEx6.TabIndex = 7
+        Me.RichTextBoxEx6.WordWrap = False
+        '
+        'ContextMenuStrip5
+        '
+        Me.ContextMenuStrip5.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem12, Me.ToolStripMenuItem3, Me.ToolStripMenuItem4, Me.ToolStripMenuItem5})
+        Me.ContextMenuStrip5.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip5.Size = New System.Drawing.Size(247, 92)
+        '
+        'ToolStripMenuItem12
+        '
+        Me.ToolStripMenuItem12.Image = CType(resources.GetObject("ToolStripMenuItem12.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItem12.Name = "ToolStripMenuItem12"
+        Me.ToolStripMenuItem12.Size = New System.Drawing.Size(246, 22)
+        Me.ToolStripMenuItem12.Text = "Copy Selected Item To Clipboard"
+        '
+        'ToolStripMenuItem3
+        '
+        Me.ToolStripMenuItem3.Image = CType(resources.GetObject("ToolStripMenuItem3.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(246, 22)
+        Me.ToolStripMenuItem3.Text = "Add To Favorites"
+        '
+        'ToolStripMenuItem4
+        '
+        Me.ToolStripMenuItem4.Image = CType(resources.GetObject("ToolStripMenuItem4.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
+        Me.ToolStripMenuItem4.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(246, 22)
+        Me.ToolStripMenuItem4.Text = "Save File"
+        '
+        'ToolStripMenuItem5
+        '
+        Me.ToolStripMenuItem5.CheckOnClick = True
+        Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
+        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(246, 22)
+        Me.ToolStripMenuItem5.Text = "Word Wrap"
+        '
+        'ListBox10
+        '
+        Me.ListBox10.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.ListBox10.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListBox10.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ListBox10.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox10.ForeColor = System.Drawing.Color.White
+        Me.ListBox10.FormattingEnabled = True
+        Me.ListBox10.HorizontalScrollbar = True
+        Me.ListBox10.ItemHeight = 18
+        Me.ListBox10.Items.AddRange(New Object() {"Search Results..."})
+        Me.ListBox10.Location = New System.Drawing.Point(1, 21)
+        Me.ListBox10.Name = "ListBox10"
+        Me.ListBox10.ScrollAlwaysVisible = True
+        Me.ListBox10.Size = New System.Drawing.Size(729, 108)
+        Me.ListBox10.TabIndex = 9
+        '
+        'TextBoxX7
+        '
+        Me.TextBoxX7.BackColor = System.Drawing.Color.Black
+        '
+        '
+        '
+        Me.TextBoxX7.Border.Class = "TextBoxBorder"
+        Me.TextBoxX7.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.TextBoxX7.DisabledBackColor = System.Drawing.Color.Black
+        Me.TextBoxX7.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBoxX7.ForeColor = System.Drawing.Color.White
+        Me.TextBoxX7.Location = New System.Drawing.Point(1, 1)
+        Me.TextBoxX7.Name = "TextBoxX7"
+        Me.TextBoxX7.PreventEnterBeep = True
+        Me.TextBoxX7.Size = New System.Drawing.Size(729, 20)
+        Me.TextBoxX7.TabIndex = 8
+        Me.TextBoxX7.Text = "Press Enter To Search..."
+        '
+        'TabItem14
+        '
+        Me.TabItem14.AttachedControl = Me.TabControlPanel14
+        Me.TabItem14.Image = CType(resources.GetObject("TabItem14.Image"), System.Drawing.Image)
+        Me.TabItem14.Name = "TabItem14"
+        Me.TabItem14.Text = "Inventory Dump"
+        '
+        'TabControlPanel10
+        '
+        Me.TabControlPanel10.Controls.Add(Me.LabelX2)
+        Me.TabControlPanel10.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel10.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel10.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel10.Name = "TabControlPanel10"
+        Me.TabControlPanel10.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel10.Size = New System.Drawing.Size(731, 502)
+        Me.TabControlPanel10.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControlPanel10.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel10.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.TabControlPanel10.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel10.Style.GradientAngle = 90
+        Me.TabControlPanel10.TabIndex = 1
+        Me.TabControlPanel10.TabItem = Me.TabItem10
+        '
+        'LabelX2
+        '
+        Me.LabelX2.AutoSize = True
+        Me.LabelX2.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX2.ForeColor = System.Drawing.Color.White
+        Me.LabelX2.Location = New System.Drawing.Point(149, 156)
+        Me.LabelX2.Name = "LabelX2"
+        Me.LabelX2.SingleLineColor = System.Drawing.Color.Transparent
+        Me.LabelX2.Size = New System.Drawing.Size(432, 111)
+        Me.LabelX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.LabelX2.TabIndex = 3
+        Me.LabelX2.Text = resources.GetString("LabelX2.Text")
+        '
+        'TabItem10
+        '
+        Me.TabItem10.AttachedControl = Me.TabControlPanel10
+        Me.TabItem10.Image = CType(resources.GetObject("TabItem10.Image"), System.Drawing.Image)
+        Me.TabItem10.Name = "TabItem10"
+        Me.TabItem10.Text = "DLC Prefixes"
+        '
+        'TabControlPanel19
+        '
+        Me.TabControlPanel19.Controls.Add(Me.RichTextBoxEx8)
+        Me.TabControlPanel19.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel19.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel19.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel19.Name = "TabControlPanel19"
+        Me.TabControlPanel19.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel19.Size = New System.Drawing.Size(731, 502)
+        Me.TabControlPanel19.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControlPanel19.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel19.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.TabControlPanel19.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel19.Style.GradientAngle = 90
+        Me.TabControlPanel19.TabIndex = 16
+        Me.TabControlPanel19.TabItem = Me.TabItem18
+        '
+        'RichTextBoxEx8
+        '
+        Me.RichTextBoxEx8.BackColor = System.Drawing.Color.Black
+        '
+        '
+        '
+        Me.RichTextBoxEx8.BackgroundStyle.Class = "RichTextBoxBorder"
+        Me.RichTextBoxEx8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RichTextBoxEx8.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RichTextBoxEx8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBoxEx8.ForeColor = System.Drawing.Color.White
+        Me.RichTextBoxEx8.Location = New System.Drawing.Point(1, 1)
+        Me.RichTextBoxEx8.Name = "RichTextBoxEx8"
+        Me.RichTextBoxEx8.Rtf = resources.GetString("RichTextBoxEx8.Rtf")
+        Me.RichTextBoxEx8.Size = New System.Drawing.Size(729, 500)
+        Me.RichTextBoxEx8.TabIndex = 8
+        Me.RichTextBoxEx8.WordWrap = False
+        '
+        'TabItem18
+        '
+        Me.TabItem18.AttachedControl = Me.TabControlPanel19
+        Me.TabItem18.Image = CType(resources.GetObject("TabItem18.Image"), System.Drawing.Image)
+        Me.TabItem18.Name = "TabItem18"
+        Me.TabItem18.Text = "How To Use"
+        '
+        'TabItem7
+        '
+        Me.TabItem7.AttachedControl = Me.TabControlPanel7
+        Me.TabItem7.Image = CType(resources.GetObject("TabItem7.Image"), System.Drawing.Image)
+        Me.TabItem7.Name = "TabItem7"
+        Me.TabItem7.Text = "More Information"
+        '
+        'TabControlPanel3
+        '
+        Me.TabControlPanel3.Controls.Add(Me.TabControl2)
+        Me.TabControlPanel3.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel3.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel3.Name = "TabControlPanel3"
+        Me.TabControlPanel3.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel3.Size = New System.Drawing.Size(733, 531)
+        Me.TabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.TabControlPanel3.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel3.Style.GradientAngle = 90
+        Me.TabControlPanel3.TabIndex = 9
+        Me.TabControlPanel3.TabItem = Me.TabItem3
+        '
+        'TabControl2
+        '
+        Me.TabControl2.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControl2.CanReorderTabs = False
+        Me.TabControl2.ColorScheme.TabItemHotBackground = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.TabControl2.ColorScheme.TabItemSelectedBorder = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.TabControl2.ColorScheme.TabItemSelectedText = System.Drawing.Color.Yellow
+        Me.TabControl2.Controls.Add(Me.TabControlPanel5)
+        Me.TabControl2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl2.ForeColor = System.Drawing.Color.White
+        Me.TabControl2.Location = New System.Drawing.Point(1, 1)
+        Me.TabControl2.Name = "TabControl2"
+        Me.TabControl2.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.TabControl2.SelectedTabIndex = 0
+        Me.TabControl2.Size = New System.Drawing.Size(731, 529)
+        Me.TabControl2.Style = DevComponents.DotNetBar.eTabStripStyle.Metro
+        Me.TabControl2.TabIndex = 1
+        Me.TabControl2.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
+        Me.TabControl2.Tabs.Add(Me.TabItem5)
+        Me.TabControl2.Text = "TabControl2"
+        Me.TabControl2.ThemeAware = True
+        '
+        'TabControlPanel5
+        '
+        Me.TabControlPanel5.Controls.Add(Me.TabControl4)
+        Me.TabControlPanel5.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel5.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel5.Name = "TabControlPanel5"
+        Me.TabControlPanel5.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel5.Size = New System.Drawing.Size(731, 502)
+        Me.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel5.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.TabControlPanel5.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel5.Style.GradientAngle = 90
+        Me.TabControlPanel5.TabIndex = 1
+        Me.TabControlPanel5.TabItem = Me.TabItem5
+        '
+        'TabControl4
+        '
+        Me.TabControl4.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControl4.CanReorderTabs = False
+        Me.TabControl4.ColorScheme.TabItemHotBackground = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.TabControl4.ColorScheme.TabItemSelectedBorder = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.TabControl4.ColorScheme.TabItemSelectedText = System.Drawing.Color.Yellow
+        Me.TabControl4.Controls.Add(Me.TabControlPanel8)
+        Me.TabControl4.Controls.Add(Me.TabControlPanel9)
+        Me.TabControl4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl4.ForeColor = System.Drawing.Color.White
+        Me.TabControl4.Location = New System.Drawing.Point(1, 1)
+        Me.TabControl4.Name = "TabControl4"
+        Me.TabControl4.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.TabControl4.SelectedTabIndex = 0
+        Me.TabControl4.Size = New System.Drawing.Size(729, 500)
+        Me.TabControl4.Style = DevComponents.DotNetBar.eTabStripStyle.Metro
+        Me.TabControl4.TabIndex = 2
+        Me.TabControl4.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
+        Me.TabControl4.Tabs.Add(Me.TabItem8)
+        Me.TabControl4.Tabs.Add(Me.TabItem9)
+        Me.TabControl4.Text = "TabControl4"
+        Me.TabControl4.ThemeAware = True
+        '
+        'TabControlPanel8
+        '
+        Me.TabControlPanel8.Controls.Add(Me.ListBox3)
+        Me.TabControlPanel8.Controls.Add(Me.ListBox9)
+        Me.TabControlPanel8.Controls.Add(Me.TextBoxX6)
+        Me.TabControlPanel8.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel8.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel8.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel8.Name = "TabControlPanel8"
+        Me.TabControlPanel8.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel8.Size = New System.Drawing.Size(729, 473)
+        Me.TabControlPanel8.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControlPanel8.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel8.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.TabControlPanel8.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel8.Style.GradientAngle = 90
+        Me.TabControlPanel8.TabIndex = 1
+        Me.TabControlPanel8.TabItem = Me.TabItem8
+        '
+        'ListBox3
+        '
+        Me.ListBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.ListBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListBox3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ListBox3.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox3.ForeColor = System.Drawing.Color.White
+        Me.ListBox3.FormattingEnabled = True
+        Me.ListBox3.HorizontalScrollbar = True
+        Me.ListBox3.ItemHeight = 18
+        Me.ListBox3.Location = New System.Drawing.Point(1, 129)
+        Me.ListBox3.Name = "ListBox3"
+        Me.ListBox3.ScrollAlwaysVisible = True
+        Me.ListBox3.Size = New System.Drawing.Size(727, 343)
+        Me.ListBox3.TabIndex = 3
+        '
+        'ListBox9
+        '
+        Me.ListBox9.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.ListBox9.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListBox9.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ListBox9.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox9.ForeColor = System.Drawing.Color.White
+        Me.ListBox9.FormattingEnabled = True
+        Me.ListBox9.HorizontalScrollbar = True
+        Me.ListBox9.ItemHeight = 18
+        Me.ListBox9.Items.AddRange(New Object() {"Search Results..."})
+        Me.ListBox9.Location = New System.Drawing.Point(1, 21)
+        Me.ListBox9.Name = "ListBox9"
+        Me.ListBox9.ScrollAlwaysVisible = True
+        Me.ListBox9.Size = New System.Drawing.Size(727, 108)
+        Me.ListBox9.TabIndex = 11
+        '
+        'TextBoxX6
+        '
+        Me.TextBoxX6.BackColor = System.Drawing.Color.Black
+        '
+        '
+        '
+        Me.TextBoxX6.Border.Class = "TextBoxBorder"
+        Me.TextBoxX6.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.TextBoxX6.DisabledBackColor = System.Drawing.Color.Black
+        Me.TextBoxX6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBoxX6.ForeColor = System.Drawing.Color.White
+        Me.TextBoxX6.Location = New System.Drawing.Point(1, 1)
+        Me.TextBoxX6.Name = "TextBoxX6"
+        Me.TextBoxX6.PreventEnterBeep = True
+        Me.TextBoxX6.Size = New System.Drawing.Size(727, 20)
+        Me.TextBoxX6.TabIndex = 10
+        Me.TextBoxX6.Text = "Press Enter To Search..."
+        '
+        'TabItem8
+        '
+        Me.TabItem8.AttachedControl = Me.TabControlPanel8
+        Me.TabItem8.Image = CType(resources.GetObject("TabItem8.Image"), System.Drawing.Image)
+        Me.TabItem8.Name = "TabItem8"
+        Me.TabItem8.Text = "List"
+        '
+        'TabControlPanel9
+        '
+        Me.TabControlPanel9.Controls.Add(Me.RichTextBoxEx2)
+        Me.TabControlPanel9.Controls.Add(Me.ListBox8)
+        Me.TabControlPanel9.Controls.Add(Me.TextBoxX5)
+        Me.TabControlPanel9.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel9.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel9.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel9.Name = "TabControlPanel9"
+        Me.TabControlPanel9.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel9.Size = New System.Drawing.Size(729, 473)
+        Me.TabControlPanel9.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControlPanel9.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel9.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.TabControlPanel9.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel9.Style.GradientAngle = 90
+        Me.TabControlPanel9.TabIndex = 5
+        Me.TabControlPanel9.TabItem = Me.TabItem9
+        '
+        'RichTextBoxEx2
+        '
+        Me.RichTextBoxEx2.BackColor = System.Drawing.Color.Black
+        '
+        '
+        '
+        Me.RichTextBoxEx2.BackgroundStyle.Class = "RichTextBoxBorder"
+        Me.RichTextBoxEx2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RichTextBoxEx2.ContextMenuStrip = Me.ContextMenuStrip3
+        Me.RichTextBoxEx2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RichTextBoxEx2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBoxEx2.ForeColor = System.Drawing.Color.White
+        Me.RichTextBoxEx2.Location = New System.Drawing.Point(1, 129)
+        Me.RichTextBoxEx2.Name = "RichTextBoxEx2"
+        Me.RichTextBoxEx2.Rtf = resources.GetString("RichTextBoxEx2.Rtf")
+        Me.RichTextBoxEx2.Size = New System.Drawing.Size(727, 343)
+        Me.RichTextBoxEx2.TabIndex = 3
+        Me.RichTextBoxEx2.WordWrap = False
+        '
+        'ContextMenuStrip3
+        '
+        Me.ContextMenuStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem11, Me.AddToFavoritesToolStripMenuItem1, Me.ToolStripMenuItem1, Me.ToolStripMenuItem2})
+        Me.ContextMenuStrip3.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip3.Size = New System.Drawing.Size(247, 92)
+        '
+        'ToolStripMenuItem11
+        '
+        Me.ToolStripMenuItem11.Image = CType(resources.GetObject("ToolStripMenuItem11.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItem11.Name = "ToolStripMenuItem11"
+        Me.ToolStripMenuItem11.Size = New System.Drawing.Size(246, 22)
+        Me.ToolStripMenuItem11.Text = "Copy Selected Item To Clipboard"
+        '
+        'AddToFavoritesToolStripMenuItem1
+        '
+        Me.AddToFavoritesToolStripMenuItem1.Image = CType(resources.GetObject("AddToFavoritesToolStripMenuItem1.Image"), System.Drawing.Image)
+        Me.AddToFavoritesToolStripMenuItem1.Name = "AddToFavoritesToolStripMenuItem1"
+        Me.AddToFavoritesToolStripMenuItem1.Size = New System.Drawing.Size(246, 22)
+        Me.AddToFavoritesToolStripMenuItem1.Text = "Add To Favorites"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Image = CType(resources.GetObject("ToolStripMenuItem1.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(246, 22)
+        Me.ToolStripMenuItem1.Text = "Save File"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.CheckOnClick = True
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(246, 22)
+        Me.ToolStripMenuItem2.Text = "Word Wrap"
+        '
+        'ListBox8
+        '
+        Me.ListBox8.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.ListBox8.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListBox8.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ListBox8.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox8.ForeColor = System.Drawing.Color.White
+        Me.ListBox8.FormattingEnabled = True
+        Me.ListBox8.HorizontalScrollbar = True
+        Me.ListBox8.ItemHeight = 18
+        Me.ListBox8.Items.AddRange(New Object() {"Search Results..."})
+        Me.ListBox8.Location = New System.Drawing.Point(1, 21)
+        Me.ListBox8.Name = "ListBox8"
+        Me.ListBox8.ScrollAlwaysVisible = True
+        Me.ListBox8.Size = New System.Drawing.Size(727, 108)
+        Me.ListBox8.TabIndex = 9
+        '
+        'TextBoxX5
+        '
+        Me.TextBoxX5.BackColor = System.Drawing.Color.Black
+        '
+        '
+        '
+        Me.TextBoxX5.Border.Class = "TextBoxBorder"
+        Me.TextBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.TextBoxX5.DisabledBackColor = System.Drawing.Color.Black
+        Me.TextBoxX5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBoxX5.ForeColor = System.Drawing.Color.White
+        Me.TextBoxX5.Location = New System.Drawing.Point(1, 1)
+        Me.TextBoxX5.Name = "TextBoxX5"
+        Me.TextBoxX5.PreventEnterBeep = True
+        Me.TextBoxX5.Size = New System.Drawing.Size(727, 20)
+        Me.TextBoxX5.TabIndex = 8
+        Me.TextBoxX5.Text = "Press Enter To Search..."
+        '
+        'TabItem9
+        '
+        Me.TabItem9.AttachedControl = Me.TabControlPanel9
+        Me.TabItem9.Image = CType(resources.GetObject("TabItem9.Image"), System.Drawing.Image)
+        Me.TabItem9.Name = "TabItem9"
+        Me.TabItem9.Text = "HotFix Code"
+        '
+        'TabItem5
+        '
+        Me.TabItem5.AttachedControl = Me.TabControlPanel5
+        Me.TabItem5.Image = CType(resources.GetObject("TabItem5.Image"), System.Drawing.Image)
+        Me.TabItem5.Name = "TabItem5"
+        Me.TabItem5.Text = "Public HotFixes"
+        '
+        'TabItem3
+        '
+        Me.TabItem3.AttachedControl = Me.TabControlPanel3
+        Me.TabItem3.Image = CType(resources.GetObject("TabItem3.Image"), System.Drawing.Image)
+        Me.TabItem3.Name = "TabItem3"
+        Me.TabItem3.Text = "Hot FIx Documentation"
+        '
+        'TabControlPanel12
+        '
+        Me.TabControlPanel12.Controls.Add(Me.ButtonX1)
+        Me.TabControlPanel12.Controls.Add(Me.ColorPickerButton3)
+        Me.TabControlPanel12.Controls.Add(Me.LabelX6)
+        Me.TabControlPanel12.Controls.Add(Me.ColorPickerButton4)
+        Me.TabControlPanel12.Controls.Add(Me.LabelX7)
+        Me.TabControlPanel12.Controls.Add(Me.ColorPickerButton2)
+        Me.TabControlPanel12.Controls.Add(Me.LabelX5)
+        Me.TabControlPanel12.Controls.Add(Me.ColorPickerButton1)
+        Me.TabControlPanel12.Controls.Add(Me.LabelX4)
+        Me.TabControlPanel12.Controls.Add(Me.CheckBoxX1)
+        Me.TabControlPanel12.Controls.Add(Me.TextBoxX1)
+        Me.TabControlPanel12.Controls.Add(Me.LabelX3)
+        Me.TabControlPanel12.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel12.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel12.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel12.Name = "TabControlPanel12"
+        Me.TabControlPanel12.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel12.Size = New System.Drawing.Size(733, 531)
+        Me.TabControlPanel12.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.TabControlPanel12.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel12.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.TabControlPanel12.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel12.Style.GradientAngle = 90
+        Me.TabControlPanel12.TabIndex = 33
+        Me.TabControlPanel12.TabItem = Me.TabItem12
+        '
+        'ButtonX1
+        '
+        Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX1.Image = CType(resources.GetObject("ButtonX1.Image"), System.Drawing.Image)
+        Me.ButtonX1.Location = New System.Drawing.Point(6, 54)
+        Me.ButtonX1.Name = "ButtonX1"
+        Me.ButtonX1.Size = New System.Drawing.Size(573, 23)
+        Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ButtonX1.TabIndex = 12
+        Me.ButtonX1.Text = "Browse For Initial HotFixes Directory"
+        '
+        'ColorPickerButton3
+        '
+        Me.ColorPickerButton3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ColorPickerButton3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ColorPickerButton3.Image = CType(resources.GetObject("ColorPickerButton3.Image"), System.Drawing.Image)
+        Me.ColorPickerButton3.Location = New System.Drawing.Point(199, 164)
+        Me.ColorPickerButton3.Name = "ColorPickerButton3"
+        Me.ColorPickerButton3.SelectedColorImageRectangle = New System.Drawing.Rectangle(2, 2, 12, 12)
+        Me.ColorPickerButton3.Size = New System.Drawing.Size(37, 23)
+        Me.ColorPickerButton3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ColorPickerButton3.TabIndex = 11
+        '
+        'LabelX6
+        '
+        Me.LabelX6.AutoSize = True
+        Me.LabelX6.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX6.ForeColor = System.Drawing.Color.White
+        Me.LabelX6.Location = New System.Drawing.Point(6, 164)
+        Me.LabelX6.Name = "LabelX6"
+        Me.LabelX6.SingleLineColor = System.Drawing.Color.Transparent
+        Me.LabelX6.Size = New System.Drawing.Size(187, 21)
+        Me.LabelX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.LabelX6.TabIndex = 10
+        Me.LabelX6.Text = "HotFix Code Text Color : "
+        '
+        'ColorPickerButton4
+        '
+        Me.ColorPickerButton4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ColorPickerButton4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ColorPickerButton4.Image = CType(resources.GetObject("ColorPickerButton4.Image"), System.Drawing.Image)
+        Me.ColorPickerButton4.Location = New System.Drawing.Point(253, 137)
+        Me.ColorPickerButton4.Name = "ColorPickerButton4"
+        Me.ColorPickerButton4.SelectedColorImageRectangle = New System.Drawing.Rectangle(2, 2, 12, 12)
+        Me.ColorPickerButton4.Size = New System.Drawing.Size(37, 23)
+        Me.ColorPickerButton4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ColorPickerButton4.TabIndex = 9
+        '
+        'LabelX7
+        '
+        Me.LabelX7.AutoSize = True
+        Me.LabelX7.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX7.ForeColor = System.Drawing.Color.White
+        Me.LabelX7.Location = New System.Drawing.Point(6, 137)
+        Me.LabelX7.Name = "LabelX7"
+        Me.LabelX7.SingleLineColor = System.Drawing.Color.Transparent
+        Me.LabelX7.Size = New System.Drawing.Size(241, 21)
+        Me.LabelX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.LabelX7.TabIndex = 8
+        Me.LabelX7.Text = "HotFix Code Background Color : "
+        '
+        'ColorPickerButton2
+        '
+        Me.ColorPickerButton2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ColorPickerButton2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ColorPickerButton2.Image = CType(resources.GetObject("ColorPickerButton2.Image"), System.Drawing.Image)
+        Me.ColorPickerButton2.Location = New System.Drawing.Point(213, 110)
+        Me.ColorPickerButton2.Name = "ColorPickerButton2"
+        Me.ColorPickerButton2.SelectedColorImageRectangle = New System.Drawing.Rectangle(2, 2, 12, 12)
+        Me.ColorPickerButton2.Size = New System.Drawing.Size(37, 23)
+        Me.ColorPickerButton2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ColorPickerButton2.TabIndex = 7
+        '
+        'LabelX5
+        '
+        Me.LabelX5.AutoSize = True
+        Me.LabelX5.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX5.ForeColor = System.Drawing.Color.White
+        Me.LabelX5.Location = New System.Drawing.Point(6, 110)
+        Me.LabelX5.Name = "LabelX5"
+        Me.LabelX5.SingleLineColor = System.Drawing.Color.Transparent
+        Me.LabelX5.Size = New System.Drawing.Size(201, 21)
+        Me.LabelX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.LabelX5.TabIndex = 6
+        Me.LabelX5.Text = "Session Editor Text Color : "
+        '
+        'ColorPickerButton1
+        '
+        Me.ColorPickerButton1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ColorPickerButton1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ColorPickerButton1.Image = CType(resources.GetObject("ColorPickerButton1.Image"), System.Drawing.Image)
+        Me.ColorPickerButton1.Location = New System.Drawing.Point(267, 83)
+        Me.ColorPickerButton1.Name = "ColorPickerButton1"
+        Me.ColorPickerButton1.SelectedColorImageRectangle = New System.Drawing.Rectangle(2, 2, 12, 12)
+        Me.ColorPickerButton1.Size = New System.Drawing.Size(37, 23)
+        Me.ColorPickerButton1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ColorPickerButton1.TabIndex = 5
+        '
+        'LabelX4
+        '
+        Me.LabelX4.AutoSize = True
+        Me.LabelX4.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX4.ForeColor = System.Drawing.Color.White
+        Me.LabelX4.Location = New System.Drawing.Point(6, 83)
+        Me.LabelX4.Name = "LabelX4"
+        Me.LabelX4.SingleLineColor = System.Drawing.Color.Transparent
+        Me.LabelX4.Size = New System.Drawing.Size(255, 21)
+        Me.LabelX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.LabelX4.TabIndex = 4
+        Me.LabelX4.Text = "Session Editor Background Color : "
+        '
+        'CheckBoxX1
+        '
+        Me.CheckBoxX1.AutoSize = True
+        Me.CheckBoxX1.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.CheckBoxX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CheckBoxX1.ForeColor = System.Drawing.Color.White
+        Me.CheckBoxX1.Location = New System.Drawing.Point(6, 9)
+        Me.CheckBoxX1.Name = "CheckBoxX1"
+        Me.CheckBoxX1.Size = New System.Drawing.Size(209, 15)
+        Me.CheckBoxX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CheckBoxX1.TabIndex = 3
+        Me.CheckBoxX1.Text = "Use Initial HotFixes Directory On Load"
+        '
+        'TextBoxX1
+        '
+        Me.TextBoxX1.BackColor = System.Drawing.Color.Black
+        '
+        '
+        '
+        Me.TextBoxX1.Border.Class = "TextBoxBorder"
+        Me.TextBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.TextBoxX1.DisabledBackColor = System.Drawing.Color.Black
+        Me.TextBoxX1.ForeColor = System.Drawing.Color.White
+        Me.TextBoxX1.Location = New System.Drawing.Point(202, 30)
+        Me.TextBoxX1.Name = "TextBoxX1"
+        Me.TextBoxX1.PreventEnterBeep = True
+        Me.TextBoxX1.Size = New System.Drawing.Size(377, 20)
+        Me.TextBoxX1.TabIndex = 2
+        '
+        'LabelX3
+        '
+        Me.LabelX3.AutoSize = True
+        Me.LabelX3.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX3.ForeColor = System.Drawing.Color.White
+        Me.LabelX3.Location = New System.Drawing.Point(6, 26)
+        Me.LabelX3.Name = "LabelX3"
+        Me.LabelX3.SingleLineColor = System.Drawing.Color.Transparent
+        Me.LabelX3.Size = New System.Drawing.Size(193, 21)
+        Me.LabelX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.LabelX3.TabIndex = 1
+        Me.LabelX3.Text = "Initial HotFixes Directory : "
+        '
+        'TabItem12
+        '
+        Me.TabItem12.AttachedControl = Me.TabControlPanel12
+        Me.TabItem12.Image = CType(resources.GetObject("TabItem12.Image"), System.Drawing.Image)
+        Me.TabItem12.Name = "TabItem12"
+        Me.TabItem12.Text = "Settings"
+        '
         'TabControl6
         '
         Me.TabControl6.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
@@ -1432,6 +1707,41 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
         '
+        'ListBox12
+        '
+        Me.ListBox12.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.ListBox12.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListBox12.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ListBox12.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox12.ForeColor = System.Drawing.Color.White
+        Me.ListBox12.FormattingEnabled = True
+        Me.ListBox12.HorizontalScrollbar = True
+        Me.ListBox12.ItemHeight = 18
+        Me.ListBox12.Items.AddRange(New Object() {"Search Results..."})
+        Me.ListBox12.Location = New System.Drawing.Point(1, 21)
+        Me.ListBox12.Name = "ListBox12"
+        Me.ListBox12.ScrollAlwaysVisible = True
+        Me.ListBox12.Size = New System.Drawing.Size(731, 108)
+        Me.ListBox12.TabIndex = 9
+        '
+        'TextBoxX4
+        '
+        Me.TextBoxX4.BackColor = System.Drawing.Color.Black
+        '
+        '
+        '
+        Me.TextBoxX4.Border.Class = "TextBoxBorder"
+        Me.TextBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.TextBoxX4.DisabledBackColor = System.Drawing.Color.Black
+        Me.TextBoxX4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBoxX4.ForeColor = System.Drawing.Color.White
+        Me.TextBoxX4.Location = New System.Drawing.Point(1, 1)
+        Me.TextBoxX4.Name = "TextBoxX4"
+        Me.TextBoxX4.PreventEnterBeep = True
+        Me.TextBoxX4.Size = New System.Drawing.Size(731, 20)
+        Me.TextBoxX4.TabIndex = 8
+        Me.TextBoxX4.Text = "Press Enter To Search..."
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1446,6 +1756,20 @@ Partial Class Form1
         Me.Text = "HotFix Tweaker By James reborn"
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
+        Me.TabControlPanel20.ResumeLayout(False)
+        Me.ContextMenuStrip4.ResumeLayout(False)
+        Me.ContextMenuStrip4.PerformLayout()
+        Me.TabControlPanel1.ResumeLayout(False)
+        Me.ContextMenuStrip2.ResumeLayout(False)
+        Me.ContextMenuStrip2.PerformLayout()
+        Me.TabControlPanel2.ResumeLayout(False)
+        CType(Me.TabControl3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl3.ResumeLayout(False)
+        Me.TabControlPanel4.ResumeLayout(False)
+        Me.TabControlPanel6.ResumeLayout(False)
+        Me.ContextMenuStrip1.ResumeLayout(False)
+        Me.TabControlPanel11.ResumeLayout(False)
+        Me.TabControlPanel11.PerformLayout()
         Me.TabControlPanel7.ResumeLayout(False)
         CType(Me.TabControl5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl5.ResumeLayout(False)
@@ -1457,33 +1781,20 @@ Partial Class Form1
         Me.TabControlPanel17.ResumeLayout(False)
         Me.TabControlPanel14.ResumeLayout(False)
         Me.ContextMenuStrip5.ResumeLayout(False)
-        Me.ContextMenuStrip3.ResumeLayout(False)
         Me.TabControlPanel10.ResumeLayout(False)
         Me.TabControlPanel10.PerformLayout()
-        Me.TabControlPanel2.ResumeLayout(False)
-        CType(Me.TabControl3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabControl3.ResumeLayout(False)
-        Me.TabControlPanel4.ResumeLayout(False)
-        Me.TabControlPanel6.ResumeLayout(False)
-        Me.ContextMenuStrip1.ResumeLayout(False)
-        Me.TabControlPanel12.ResumeLayout(False)
-        Me.TabControlPanel12.PerformLayout()
-        Me.TabControlPanel1.ResumeLayout(False)
-        Me.ContextMenuStrip2.ResumeLayout(False)
-        Me.ContextMenuStrip2.PerformLayout()
+        Me.TabControlPanel19.ResumeLayout(False)
         Me.TabControlPanel3.ResumeLayout(False)
         CType(Me.TabControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl2.ResumeLayout(False)
         Me.TabControlPanel5.ResumeLayout(False)
         CType(Me.TabControl4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl4.ResumeLayout(False)
-        Me.TabControlPanel9.ResumeLayout(False)
         Me.TabControlPanel8.ResumeLayout(False)
-        Me.TabControlPanel13.ResumeLayout(False)
-        Me.ContextMenuStrip4.ResumeLayout(False)
-        Me.ContextMenuStrip4.PerformLayout()
-        Me.TabControlPanel11.ResumeLayout(False)
-        Me.TabControlPanel11.PerformLayout()
+        Me.TabControlPanel9.ResumeLayout(False)
+        Me.ContextMenuStrip3.ResumeLayout(False)
+        Me.TabControlPanel12.ResumeLayout(False)
+        Me.TabControlPanel12.PerformLayout()
         CType(Me.TabControl6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl6.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1549,9 +1860,6 @@ Partial Class Form1
     Friend WithEvents LabelX4 As DevComponents.DotNetBar.LabelX
     Friend WithEvents ColorPickerButton2 As DevComponents.DotNetBar.ColorPickerButton
     Friend WithEvents LabelX5 As DevComponents.DotNetBar.LabelX
-    Friend WithEvents TabControlPanel13 As DevComponents.DotNetBar.TabControlPanel
-    Friend WithEvents TabItem13 As DevComponents.DotNetBar.TabItem
-    Friend WithEvents ListBox4 As ListBox
     Friend WithEvents AddToFavoritesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ContextMenuStrip4 As ContextMenuStrip
     Friend WithEvents ToolStripTextBox2 As ToolStripTextBox
@@ -1565,9 +1873,6 @@ Partial Class Form1
     Friend WithEvents AddToFavoritesToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents TabControlPanel14 As DevComponents.DotNetBar.TabControlPanel
     Friend WithEvents RichTextBoxEx6 As DevComponents.DotNetBar.Controls.RichTextBoxEx
-    Friend WithEvents RichTextBoxEx5 As DevComponents.DotNetBar.Controls.RichTextBoxEx
-    Friend WithEvents RichTextBoxEx4 As DevComponents.DotNetBar.Controls.RichTextBoxEx
-    Friend WithEvents RichTextBoxEx3 As DevComponents.DotNetBar.Controls.RichTextBoxEx
     Friend WithEvents TabItem14 As DevComponents.DotNetBar.TabItem
     Friend WithEvents ContextMenuStrip5 As ContextMenuStrip
     Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
@@ -1589,4 +1894,31 @@ Partial Class Form1
     Friend WithEvents ToolStripMenuItem6 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem7 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem8 As ToolStripMenuItem
+    Friend WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents TextBoxX2 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents ListBox6 As ListBox
+    Friend WithEvents CopySelectedItemToClipboardToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem10 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem9 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem11 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem12 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem13 As ToolStripMenuItem
+    Friend WithEvents TabControlPanel19 As DevComponents.DotNetBar.TabControlPanel
+    Friend WithEvents RichTextBoxEx8 As DevComponents.DotNetBar.Controls.RichTextBoxEx
+    Friend WithEvents TabItem18 As DevComponents.DotNetBar.TabItem
+    Friend WithEvents ListBox7 As ListBox
+    Friend WithEvents TextBoxX3 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents ListBox8 As ListBox
+    Friend WithEvents TextBoxX5 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents ListBox9 As ListBox
+    Friend WithEvents TextBoxX6 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents ListBox10 As ListBox
+    Friend WithEvents TextBoxX7 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents ListBox11 As ListBox
+    Friend WithEvents TextBoxX8 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents TabControlPanel20 As DevComponents.DotNetBar.TabControlPanel
+    Friend WithEvents ListBox4 As ListBox
+    Friend WithEvents TabItem13 As DevComponents.DotNetBar.TabItem
+    Friend WithEvents ListBox12 As ListBox
+    Friend WithEvents TextBoxX4 As DevComponents.DotNetBar.Controls.TextBoxX
 End Class
