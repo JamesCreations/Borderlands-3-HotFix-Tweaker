@@ -57,18 +57,22 @@ Loading Custom Hotfix Files From Your Own Local Directory/Folder:
 Loading Public Hotfix files from Github:
  * Navigate to the "HotFix Documentation" tab > "Public Hotfixes" tab > "List" tab > Double click any file on that list to view it's contents > "Hotfix Code" tab > Make your desired changes to the file > Right click anywhere within that box > Select "Save File" to save a copy of that public hotfix file to your PC >
 
+Searching For Specific Hotfix Files:
+ * Select the "Search" text box at the top of various tabs > Type in your search query > Press ENTER > 
+
 Adding Favorites to the "Favorites" Tab:
  *Select any line of code > Right click > Select "Add to Favorites" >
 
 "More Information" Tab:
  * "DLC Prefixes" - Lists all prefixes (codenames) for all main DLC (to help you identify which DLC an item comes from).
  * "Inventory Dump" - Lists all game files/directories (syncs/updates according to an online source)
- * "User Codes" - List of item codes (for the save editor) that were created by various user's from the "BL3 Modding" Discord. Double click a name to view their item codes.
+ * "User Codes" - List of item codes (for the save editor) that were created by various members of the "BL3 Modding" Discord. Double click a name to view their item codes.
 
 "Settings" Tab:
  * "Use Initial HotFixes Directory On Load" - Tells the program to load the custom Hotfix directory (specified below) on startup.
- * "Initial HotFixes Directory" - Specified custom Hotfix directory.
+ * "Initial HotFixes Directory" - Your specified custom Hotfix directory.
  * Color Options - Allows you to specify which colors you'd like to apply to various tabs within the program.
+ * To save your settings, close the program and reopen (A new "settings" file will be created within the same directory as "HotFixTweaker.exe").
  
  
 -------------------------------------------------------
@@ -78,7 +82,7 @@ HOW TO ADD AN EXCLUSION TO WINDOWS DEFENDER (ANTIVIRUS)
  * Go to Start  > Settings  > Update & Security  > Windows Security > Virus & threat protection.
  * Under Virus & threat protection settings, select Manage settings, and then under Exclusions, select Add or remove exclusions.
  * Select Add an exclusion, and then select from files, folders, file types, or process. A folder exclusion will apply to all subfolders within the folder as well.
- * Once this is done redownload the tool and enjoy :)
+
 
 ------
 CREDIT
