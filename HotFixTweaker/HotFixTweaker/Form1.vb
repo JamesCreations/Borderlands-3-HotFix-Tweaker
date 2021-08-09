@@ -9,6 +9,7 @@ Public Class Form1
     Dim selectedtext, selectedfolder, savefilepath As String
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        NumericUpDown1.Maximum = File.ReadAllLines("HotFixPatches.hfts").Count
 
         RichTextBoxEx8.Text = Readtextfromgithub("https://raw.githubusercontent.com/JamesCreations/Borderlands-3-HotFix-Tweaker/main/README.md")
         RichTextBoxEx6.Text = Readtextfromgithub("https://raw.githubusercontent.com/gibbed/Borderlands3Dumps/master/Inventory%20Serial%20Number%20Database.json").Replace(",", "").Replace("[", "").Replace("]", "").Replace("{", "").Replace("}", "").Replace(Chr(34), "")
@@ -74,14 +75,13 @@ Public Class Form1
         Result = File.ReadLines(My.Application.Info.DirectoryPath + "\HotFixTweakerSettings.hfts")(linenow).Replace(stringfromsettings, "").Replace("(", "").Replace(")", "")
         Return Result
     End Function
+
     Function Readtextfromgithub(githubby As String) As String
         Dim address As String = githubby
         Dim client As WebClient = New WebClient()
         Dim reader As StreamReader = New StreamReader(client.OpenRead(address))
         Return reader.ReadToEnd
     End Function
-
-
 
 #Region "User Codes"
     Dim countofcodes As Integer
@@ -383,7 +383,38 @@ HotFix Lines : " + RichTextBoxEx2.Lines.Count.ToString)
         Return 0
     End Function
 
+    Function Searchresults(listtosearch As ListBox, texttosearchfor As TextBoxX, listtosearchfrom As ListBox, richtextboxtosearchfrom As RichTextBoxEx, switchforcontrol As Integer, e As KeyEventArgs)
 
+        If e.KeyData = Keys.Enter Then
+            listtosearch.Items.Clear()
+            If switchforcontrol = 0 Then
+                For Each item As String In listtosearchfrom.Items
+                    If Regex.IsMatch(item, texttosearchfor.Text, RegexOptions.IgnoreCase) Then
+                        listtosearch.Items.Add(item)
+                    Else
+                        listtosearch.Visible = False
+                    End If
+                Next
+            Else
+                For Each item As String In richtextboxtosearchfrom.Lines
+                    If Regex.IsMatch(item, texttosearchfor.Text, RegexOptions.IgnoreCase) Then
+                        listtosearch.Items.Add(item)
+                    Else
+                        listtosearch.Visible = False
+                    End If
+                Next
+            End If
+
+            If String.IsNullOrEmpty(texttosearchfor.Text) Then
+                listtosearch.Visible = False
+            Else
+                If listtosearch.Items.Count > 0 Then
+                    listtosearch.Visible = True
+                End If
+            End If
+        End If
+        Return 0
+    End Function
 
     Private Sub ListBox1_DoubleClick(sender As Object, e As EventArgs) Handles ListBox1.DoubleClick
         If Not ListBox1.SelectedItem = Nothing Then
@@ -485,7 +516,8 @@ HotFix Code Text Color B : (" + ColorPickerButton3.SelectedColor.B.ToString + ")
         If ListBox4.Items.Count > 0 Then
             File.Delete(My.Application.Info.DirectoryPath + "\HotFixTweakerFavorites.hfts")
             For Each item In ListBox4.Items
-                File.AppendAllText(My.Application.Info.DirectoryPath + "\HotFixTweakerFavorites.hfts", item + Environment.NewLine)
+                File.AppendAllText(My.Application.Info.DirectoryPath + "\HotFixTweakerFavorites.hfts", item)
+
             Next
         End If
 
@@ -561,40 +593,8 @@ HotFix Code Text Color B : (" + ColorPickerButton3.SelectedColor.B.ToString + ")
         End If
     End Sub
 
-    Function Searchresults(listtosearch As ListBox, texttosearchfor As TextBoxX, listtosearchfrom As ListBox, richtextboxtosearchfrom As RichTextBoxEx, switchforcontrol As Integer, e As KeyEventArgs)
-
-        If e.KeyData = Keys.Enter Then
-            listtosearch.Items.Clear()
-            If switchforcontrol = 0 Then
-                For Each item As String In listtosearchfrom.Items
-                    If Regex.IsMatch(item, texttosearchfor.Text, RegexOptions.IgnoreCase) Then
-                        listtosearch.Items.Add(item)
-                    Else
-                        listtosearch.Visible = False
-                    End If
-                Next
-            Else
-                For Each item As String In richtextboxtosearchfrom.Lines
-                    If Regex.IsMatch(item, texttosearchfor.Text, RegexOptions.IgnoreCase) Then
-                        listtosearch.Items.Add(item)
-                    Else
-                        listtosearch.Visible = False
-                    End If
-                Next
-            End If
-
-            If String.IsNullOrEmpty(texttosearchfor.Text) Then
-                listtosearch.Visible = False
-            Else
-                If listtosearch.Items.Count > 0 Then
-                    listtosearch.Visible = True
-                End If
-            End If
-        End If
-        Return 0
-    End Function
     Private Sub TextBoxX2_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBoxX2.KeyDown
-        Searchresults(ListBox6, TextBoxX2, ListBox1, Nothing, 0, e) 'Searchresults(ListBox6, TextBoxX2, richtextboxex1, Nothing, 1, e)
+        Searchresults(ListBox6, TextBoxX2, ListBox1, Nothing, 0, e)
     End Sub
 
     Private Sub CopySelectedItemToClipboardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopySelectedItemToClipboardToolStripMenuItem.Click
@@ -626,8 +626,6 @@ HotFix Code Text Color B : (" + ColorPickerButton3.SelectedColor.B.ToString + ")
     Private Sub ToolStripMenuItem13_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem13.Click
         Clipboard.SetText(RichTextBoxEx7.Text)
     End Sub
-
-
 
     Private Sub TextBoxX3_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBoxX3.KeyDown
         Searchresults(ListBox7, TextBoxX3, Nothing, RichTextBoxEx1, 1, e)
@@ -683,6 +681,51 @@ HotFix Code Text Color B : (" + ColorPickerButton3.SelectedColor.B.ToString + ")
 
     Private Sub ListBox12_DoubleClick(sender As Object, e As EventArgs) Handles ListBox12.DoubleClick
         ListBox4.SelectedItem = ListBox12.SelectedItem
+    End Sub
+
+    Private Sub ButtonX2_Click(sender As Object, e As EventArgs) Handles ButtonX2.Click
+        If Not File.Exists("HotFixPatches.hfts") Then
+            MessageBox.Show("HotFixPatches.hfts Does Not Exist Please Create It And Paste Your Spark Patches In It.", "Heads Up !", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            NumericUpDown1.Maximum = File.ReadAllLines("HotFixPatches.hfts").Count
+            RichTextBoxEx3.Clear()
+            Dim int As Integer
+            For int = 0 To NumericUpDown1.Value - 1
+                Static Dim randomint As New Random
+                Dim stringresult As String
+                stringresult = File.ReadLines("HotFixPatches.hfts")(randomint.Next(0, File.ReadLines("HotFixPatches.hfts").Count))
+                If Not String.IsNullOrEmpty(stringresult) Or Not String.IsNullOrWhiteSpace(stringresult) Then 'checksforemptiesanddoesnotrun
+                    If Not RichTextBoxEx3.Text.Contains(stringresult) Then
+
+                        RichTextBoxEx3.AppendText(stringresult + Environment.NewLine)
+                    Else
+                        'RichTextBoxEx3.AppendText("#DUPPEDOUTPUT" + Environment.NewLine) 'checksfordups
+                    End If
+                End If
+            Next
+        End If
+    End Sub
+
+    Private Sub ToolStripMenuItem14_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem14.Click
+        Clipboard.SetText(RichTextBoxEx3.Text)
+    End Sub
+
+    Private Sub ToolStripMenuItem15_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem15.Click
+        ListBox4.Items.Add(RichTextBoxEx3.SelectedText)
+    End Sub
+
+    Private Sub ToolStripMenuItem16_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem16.Click
+
+        Static Dim randonow As New Random
+        WriteTextToFile("RandomHotFix_" + randonow.Next(0, 1000).ToString, "bl3hotfix", RichTextBoxEx3)
+    End Sub
+
+    Private Sub ToolStripMenuItem17_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem17.Click
+        If ToolStripMenuItem17.Checked = True Then
+            RichTextBoxEx3.WordWrap = True
+        Else
+            RichTextBoxEx3.WordWrap = False
+        End If
     End Sub
 
     Private Sub RemoveItemFromListboxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveItemFromListboxToolStripMenuItem.Click
