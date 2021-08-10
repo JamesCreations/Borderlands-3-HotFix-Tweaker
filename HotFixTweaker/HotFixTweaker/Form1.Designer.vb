@@ -154,6 +154,7 @@ Partial Class Form1
         Me.TabControl6 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel16 = New DevComponents.DotNetBar.TabControlPanel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.CheckBoxX2 = New DevComponents.DotNetBar.Controls.CheckBoxX()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabControlPanel13.SuspendLayout()
@@ -213,20 +214,20 @@ Partial Class Form1
         Me.TabControl1.ColorScheme.TabItemHotBackground = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.TabControl1.ColorScheme.TabItemSelectedBorder = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.TabControl1.ColorScheme.TabItemSelectedText = System.Drawing.Color.Yellow
-        Me.TabControl1.Controls.Add(Me.TabControlPanel1)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel13)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel2)
         Me.TabControl1.Controls.Add(Me.TabControlPanel12)
         Me.TabControl1.Controls.Add(Me.TabControlPanel7)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel11)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel20)
         Me.TabControl1.Controls.Add(Me.TabControlPanel3)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel20)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel13)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel2)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel1)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel11)
         Me.TabControl1.ForeColor = System.Drawing.Color.White
         Me.TabControl1.Location = New System.Drawing.Point(0, 120)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.TabControl1.SelectedTabIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(798, 558)
+        Me.TabControl1.Size = New System.Drawing.Size(844, 558)
         Me.TabControl1.Style = DevComponents.DotNetBar.eTabStripStyle.Metro
         Me.TabControl1.TabIndex = 0
         Me.TabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
@@ -252,7 +253,7 @@ Partial Class Form1
         Me.TabControlPanel13.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel13.Name = "TabControlPanel13"
         Me.TabControlPanel13.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel13.Size = New System.Drawing.Size(798, 531)
+        Me.TabControlPanel13.Size = New System.Drawing.Size(844, 531)
         Me.TabControlPanel13.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel13.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel13.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -279,7 +280,7 @@ Partial Class Form1
         Me.RichTextBoxEx3.Rtf = "{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft S" &
     "ans Serif;}}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "{\colortbl ;\red255\green255\blue255;}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "\viewkind4\uc1\pard\cf1\f0" &
     "\fs20\par" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.RichTextBoxEx3.Size = New System.Drawing.Size(796, 447)
+        Me.RichTextBoxEx3.Size = New System.Drawing.Size(842, 447)
         Me.RichTextBoxEx3.TabIndex = 6
         Me.RichTextBoxEx3.WordWrap = False
         '
@@ -289,7 +290,7 @@ Partial Class Form1
         Me.ContextMenuStrip7.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem14, Me.ToolStripMenuItem15, Me.ToolStripMenuItem16, Me.ToolStripMenuItem17})
         Me.ContextMenuStrip7.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip7.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ContextMenuStrip7.Size = New System.Drawing.Size(247, 114)
+        Me.ContextMenuStrip7.Size = New System.Drawing.Size(247, 92)
         '
         'ToolStripMenuItem14
         '
@@ -332,7 +333,7 @@ Partial Class Form1
         Me.ButtonX2.Image = CType(resources.GetObject("ButtonX2.Image"), System.Drawing.Image)
         Me.ButtonX2.Location = New System.Drawing.Point(1, 42)
         Me.ButtonX2.Name = "ButtonX2"
-        Me.ButtonX2.Size = New System.Drawing.Size(796, 41)
+        Me.ButtonX2.Size = New System.Drawing.Size(842, 41)
         Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX2.TabIndex = 7
         Me.ButtonX2.Text = "Generate Random HotFix"
@@ -343,7 +344,7 @@ Partial Class Form1
         Me.NumericUpDown1.Location = New System.Drawing.Point(1, 22)
         Me.NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(796, 20)
+        Me.NumericUpDown1.Size = New System.Drawing.Size(842, 20)
         Me.NumericUpDown1.TabIndex = 8
         Me.NumericUpDown1.Value = New Decimal(New Integer() {10, 0, 0, 0})
         '
@@ -381,7 +382,7 @@ Partial Class Form1
         Me.TabControlPanel2.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel2.Name = "TabControlPanel2"
         Me.TabControlPanel2.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel2.Size = New System.Drawing.Size(798, 531)
+        Me.TabControlPanel2.Size = New System.Drawing.Size(844, 531)
         Me.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -406,7 +407,7 @@ Partial Class Form1
         Me.TabControl3.Name = "TabControl3"
         Me.TabControl3.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.TabControl3.SelectedTabIndex = 0
-        Me.TabControl3.Size = New System.Drawing.Size(796, 529)
+        Me.TabControl3.Size = New System.Drawing.Size(842, 529)
         Me.TabControl3.Style = DevComponents.DotNetBar.eTabStripStyle.Metro
         Me.TabControl3.TabIndex = 3
         Me.TabControl3.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
@@ -425,7 +426,7 @@ Partial Class Form1
         Me.TabControlPanel6.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel6.Name = "TabControlPanel6"
         Me.TabControlPanel6.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel6.Size = New System.Drawing.Size(796, 502)
+        Me.TabControlPanel6.Size = New System.Drawing.Size(842, 502)
         Me.TabControlPanel6.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel6.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -452,7 +453,7 @@ Partial Class Form1
         Me.RichTextBoxEx1.Rtf = "{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft S" &
     "ans Serif;}}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "{\colortbl ;\red255\green255\blue255;}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "\viewkind4\uc1\pard\cf1\f0" &
     "\fs20\par" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.RichTextBoxEx1.Size = New System.Drawing.Size(794, 372)
+        Me.RichTextBoxEx1.Size = New System.Drawing.Size(840, 372)
         Me.RichTextBoxEx1.TabIndex = 2
         Me.RichTextBoxEx1.WordWrap = False
         '
@@ -511,7 +512,7 @@ Partial Class Form1
         Me.ListBox7.Location = New System.Drawing.Point(1, 21)
         Me.ListBox7.Name = "ListBox7"
         Me.ListBox7.ScrollAlwaysVisible = True
-        Me.ListBox7.Size = New System.Drawing.Size(794, 108)
+        Me.ListBox7.Size = New System.Drawing.Size(840, 108)
         Me.ListBox7.TabIndex = 7
         '
         'TextBoxX3
@@ -528,7 +529,7 @@ Partial Class Form1
         Me.TextBoxX3.Location = New System.Drawing.Point(1, 1)
         Me.TextBoxX3.Name = "TextBoxX3"
         Me.TextBoxX3.PreventEnterBeep = True
-        Me.TextBoxX3.Size = New System.Drawing.Size(794, 20)
+        Me.TextBoxX3.Size = New System.Drawing.Size(840, 20)
         Me.TextBoxX3.TabIndex = 6
         Me.TextBoxX3.Text = "Press Enter To Search..."
         '
@@ -547,7 +548,7 @@ Partial Class Form1
         Me.TabControlPanel4.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel4.Name = "TabControlPanel4"
         Me.TabControlPanel4.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel4.Size = New System.Drawing.Size(796, 502)
+        Me.TabControlPanel4.Size = New System.Drawing.Size(842, 502)
         Me.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -570,7 +571,7 @@ Partial Class Form1
         Me.ListBox2.Location = New System.Drawing.Point(1, 1)
         Me.ListBox2.Name = "ListBox2"
         Me.ListBox2.ScrollAlwaysVisible = True
-        Me.ListBox2.Size = New System.Drawing.Size(794, 500)
+        Me.ListBox2.Size = New System.Drawing.Size(840, 500)
         Me.ListBox2.TabIndex = 3
         '
         'TabItem4
@@ -597,7 +598,7 @@ Partial Class Form1
         Me.TabControlPanel1.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel1.Name = "TabControlPanel1"
         Me.TabControlPanel1.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel1.Size = New System.Drawing.Size(798, 531)
+        Me.TabControlPanel1.Size = New System.Drawing.Size(844, 531)
         Me.TabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -621,7 +622,7 @@ Partial Class Form1
         Me.ListBox1.Location = New System.Drawing.Point(1, 129)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.ScrollAlwaysVisible = True
-        Me.ListBox1.Size = New System.Drawing.Size(796, 401)
+        Me.ListBox1.Size = New System.Drawing.Size(842, 401)
         Me.ListBox1.TabIndex = 2
         '
         'ContextMenuStrip2
@@ -706,7 +707,7 @@ Partial Class Form1
         Me.ListBox6.Location = New System.Drawing.Point(1, 21)
         Me.ListBox6.Name = "ListBox6"
         Me.ListBox6.ScrollAlwaysVisible = True
-        Me.ListBox6.Size = New System.Drawing.Size(796, 108)
+        Me.ListBox6.Size = New System.Drawing.Size(842, 108)
         Me.ListBox6.TabIndex = 5
         '
         'TextBoxX2
@@ -723,7 +724,7 @@ Partial Class Form1
         Me.TextBoxX2.Location = New System.Drawing.Point(1, 1)
         Me.TextBoxX2.Name = "TextBoxX2"
         Me.TextBoxX2.PreventEnterBeep = True
-        Me.TextBoxX2.Size = New System.Drawing.Size(796, 20)
+        Me.TextBoxX2.Size = New System.Drawing.Size(842, 20)
         Me.TextBoxX2.TabIndex = 4
         Me.TextBoxX2.Text = "Press Enter To Search..."
         '
@@ -736,6 +737,7 @@ Partial Class Form1
         '
         'TabControlPanel12
         '
+        Me.TabControlPanel12.Controls.Add(Me.CheckBoxX2)
         Me.TabControlPanel12.Controls.Add(Me.ButtonX1)
         Me.TabControlPanel12.Controls.Add(Me.ColorPickerButton3)
         Me.TabControlPanel12.Controls.Add(Me.LabelX6)
@@ -753,7 +755,7 @@ Partial Class Form1
         Me.TabControlPanel12.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel12.Name = "TabControlPanel12"
         Me.TabControlPanel12.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel12.Size = New System.Drawing.Size(798, 531)
+        Me.TabControlPanel12.Size = New System.Drawing.Size(844, 531)
         Me.TabControlPanel12.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel12.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel12.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -960,7 +962,7 @@ Partial Class Form1
         Me.TabControlPanel7.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel7.Name = "TabControlPanel7"
         Me.TabControlPanel7.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel7.Size = New System.Drawing.Size(798, 531)
+        Me.TabControlPanel7.Size = New System.Drawing.Size(844, 531)
         Me.TabControlPanel7.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel7.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel7.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -977,9 +979,9 @@ Partial Class Form1
         Me.TabControl5.ColorScheme.TabItemHotBackground = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.TabControl5.ColorScheme.TabItemSelectedBorder = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.TabControl5.ColorScheme.TabItemSelectedText = System.Drawing.Color.Yellow
-        Me.TabControl5.Controls.Add(Me.TabControlPanel10)
         Me.TabControl5.Controls.Add(Me.TabControlPanel19)
         Me.TabControl5.Controls.Add(Me.TabControlPanel15)
+        Me.TabControl5.Controls.Add(Me.TabControlPanel10)
         Me.TabControl5.Controls.Add(Me.TabControlPanel14)
         Me.TabControl5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl5.ForeColor = System.Drawing.Color.White
@@ -987,7 +989,7 @@ Partial Class Form1
         Me.TabControl5.Name = "TabControl5"
         Me.TabControl5.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.TabControl5.SelectedTabIndex = 0
-        Me.TabControl5.Size = New System.Drawing.Size(796, 529)
+        Me.TabControl5.Size = New System.Drawing.Size(842, 529)
         Me.TabControl5.Style = DevComponents.DotNetBar.eTabStripStyle.Metro
         Me.TabControl5.TabIndex = 3
         Me.TabControl5.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
@@ -1006,7 +1008,7 @@ Partial Class Form1
         Me.TabControlPanel10.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel10.Name = "TabControlPanel10"
         Me.TabControlPanel10.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel10.Size = New System.Drawing.Size(796, 502)
+        Me.TabControlPanel10.Size = New System.Drawing.Size(842, 502)
         Me.TabControlPanel10.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel10.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel10.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -1049,7 +1051,7 @@ Partial Class Form1
         Me.TabControlPanel19.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel19.Name = "TabControlPanel19"
         Me.TabControlPanel19.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel19.Size = New System.Drawing.Size(796, 502)
+        Me.TabControlPanel19.Size = New System.Drawing.Size(842, 502)
         Me.TabControlPanel19.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel19.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel19.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -1075,7 +1077,7 @@ Partial Class Form1
         Me.RichTextBoxEx8.Rtf = "{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft S" &
     "ans Serif;}}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "{\colortbl ;\red255\green255\blue255;}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "\viewkind4\uc1\pard\cf1\f0" &
     "\fs20\par" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.RichTextBoxEx8.Size = New System.Drawing.Size(794, 500)
+        Me.RichTextBoxEx8.Size = New System.Drawing.Size(840, 500)
         Me.RichTextBoxEx8.TabIndex = 8
         Me.RichTextBoxEx8.WordWrap = False
         '
@@ -1094,7 +1096,7 @@ Partial Class Form1
         Me.TabControlPanel15.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel15.Name = "TabControlPanel15"
         Me.TabControlPanel15.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel15.Size = New System.Drawing.Size(796, 502)
+        Me.TabControlPanel15.Size = New System.Drawing.Size(842, 502)
         Me.TabControlPanel15.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel15.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel15.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -1119,7 +1121,7 @@ Partial Class Form1
         Me.TabControl7.Name = "TabControl7"
         Me.TabControl7.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.TabControl7.SelectedTabIndex = 0
-        Me.TabControl7.Size = New System.Drawing.Size(794, 500)
+        Me.TabControl7.Size = New System.Drawing.Size(840, 500)
         Me.TabControl7.Style = DevComponents.DotNetBar.eTabStripStyle.Metro
         Me.TabControl7.TabIndex = 4
         Me.TabControl7.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
@@ -1136,7 +1138,7 @@ Partial Class Form1
         Me.TabControlPanel17.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel17.Name = "TabControlPanel17"
         Me.TabControlPanel17.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel17.Size = New System.Drawing.Size(794, 473)
+        Me.TabControlPanel17.Size = New System.Drawing.Size(840, 473)
         Me.TabControlPanel17.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel17.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel17.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -1159,7 +1161,7 @@ Partial Class Form1
         Me.ListBox5.Location = New System.Drawing.Point(1, 1)
         Me.ListBox5.Name = "ListBox5"
         Me.ListBox5.ScrollAlwaysVisible = True
-        Me.ListBox5.Size = New System.Drawing.Size(792, 471)
+        Me.ListBox5.Size = New System.Drawing.Size(838, 471)
         Me.ListBox5.TabIndex = 4
         '
         'TabItem16
@@ -1179,7 +1181,7 @@ Partial Class Form1
         Me.TabControlPanel18.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel18.Name = "TabControlPanel18"
         Me.TabControlPanel18.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel18.Size = New System.Drawing.Size(794, 473)
+        Me.TabControlPanel18.Size = New System.Drawing.Size(840, 473)
         Me.TabControlPanel18.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel18.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel18.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -1206,7 +1208,7 @@ Partial Class Form1
         Me.RichTextBoxEx7.Rtf = "{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft S" &
     "ans Serif;}}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "{\colortbl ;\red255\green255\blue255;}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "\viewkind4\uc1\pard\cf1\f0" &
     "\fs20\par" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.RichTextBoxEx7.Size = New System.Drawing.Size(792, 343)
+        Me.RichTextBoxEx7.Size = New System.Drawing.Size(838, 343)
         Me.RichTextBoxEx7.TabIndex = 8
         Me.RichTextBoxEx7.WordWrap = False
         '
@@ -1266,7 +1268,7 @@ Partial Class Form1
         Me.ListBox11.Location = New System.Drawing.Point(1, 21)
         Me.ListBox11.Name = "ListBox11"
         Me.ListBox11.ScrollAlwaysVisible = True
-        Me.ListBox11.Size = New System.Drawing.Size(792, 108)
+        Me.ListBox11.Size = New System.Drawing.Size(838, 108)
         Me.ListBox11.TabIndex = 11
         '
         'TextBoxX8
@@ -1283,7 +1285,7 @@ Partial Class Form1
         Me.TextBoxX8.Location = New System.Drawing.Point(1, 1)
         Me.TextBoxX8.Name = "TextBoxX8"
         Me.TextBoxX8.PreventEnterBeep = True
-        Me.TextBoxX8.Size = New System.Drawing.Size(792, 20)
+        Me.TextBoxX8.Size = New System.Drawing.Size(838, 20)
         Me.TextBoxX8.TabIndex = 10
         Me.TextBoxX8.Text = "Press Enter To Search..."
         '
@@ -1311,7 +1313,7 @@ Partial Class Form1
         Me.TabControlPanel14.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel14.Name = "TabControlPanel14"
         Me.TabControlPanel14.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel14.Size = New System.Drawing.Size(796, 502)
+        Me.TabControlPanel14.Size = New System.Drawing.Size(842, 502)
         Me.TabControlPanel14.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel14.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel14.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -1338,7 +1340,7 @@ Partial Class Form1
         Me.RichTextBoxEx6.Rtf = "{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft S" &
     "ans Serif;}}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "{\colortbl ;\red255\green255\blue255;}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "\viewkind4\uc1\pard\cf1\f0" &
     "\fs20\par" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.RichTextBoxEx6.Size = New System.Drawing.Size(794, 372)
+        Me.RichTextBoxEx6.Size = New System.Drawing.Size(840, 372)
         Me.RichTextBoxEx6.TabIndex = 7
         Me.RichTextBoxEx6.WordWrap = False
         '
@@ -1398,7 +1400,7 @@ Partial Class Form1
         Me.ListBox10.Location = New System.Drawing.Point(1, 21)
         Me.ListBox10.Name = "ListBox10"
         Me.ListBox10.ScrollAlwaysVisible = True
-        Me.ListBox10.Size = New System.Drawing.Size(794, 108)
+        Me.ListBox10.Size = New System.Drawing.Size(840, 108)
         Me.ListBox10.TabIndex = 9
         '
         'TextBoxX7
@@ -1415,7 +1417,7 @@ Partial Class Form1
         Me.TextBoxX7.Location = New System.Drawing.Point(1, 1)
         Me.TextBoxX7.Name = "TextBoxX7"
         Me.TextBoxX7.PreventEnterBeep = True
-        Me.TextBoxX7.Size = New System.Drawing.Size(794, 20)
+        Me.TextBoxX7.Size = New System.Drawing.Size(840, 20)
         Me.TextBoxX7.TabIndex = 8
         Me.TextBoxX7.Text = "Press Enter To Search..."
         '
@@ -1441,7 +1443,7 @@ Partial Class Form1
         Me.TabControlPanel11.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel11.Name = "TabControlPanel11"
         Me.TabControlPanel11.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel11.Size = New System.Drawing.Size(798, 531)
+        Me.TabControlPanel11.Size = New System.Drawing.Size(844, 531)
         Me.TabControlPanel11.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel11.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel11.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -1487,7 +1489,7 @@ Partial Class Form1
         Me.TabControlPanel20.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel20.Name = "TabControlPanel20"
         Me.TabControlPanel20.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel20.Size = New System.Drawing.Size(798, 531)
+        Me.TabControlPanel20.Size = New System.Drawing.Size(844, 531)
         Me.TabControlPanel20.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel20.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel20.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -1511,7 +1513,7 @@ Partial Class Form1
         Me.ListBox4.Location = New System.Drawing.Point(1, 129)
         Me.ListBox4.Name = "ListBox4"
         Me.ListBox4.ScrollAlwaysVisible = True
-        Me.ListBox4.Size = New System.Drawing.Size(796, 401)
+        Me.ListBox4.Size = New System.Drawing.Size(842, 401)
         Me.ListBox4.TabIndex = 3
         '
         'ContextMenuStrip4
@@ -1570,7 +1572,7 @@ Partial Class Form1
         Me.ListBox12.Location = New System.Drawing.Point(1, 21)
         Me.ListBox12.Name = "ListBox12"
         Me.ListBox12.ScrollAlwaysVisible = True
-        Me.ListBox12.Size = New System.Drawing.Size(796, 108)
+        Me.ListBox12.Size = New System.Drawing.Size(842, 108)
         Me.ListBox12.TabIndex = 9
         '
         'TextBoxX4
@@ -1587,7 +1589,7 @@ Partial Class Form1
         Me.TextBoxX4.Location = New System.Drawing.Point(1, 1)
         Me.TextBoxX4.Name = "TextBoxX4"
         Me.TextBoxX4.PreventEnterBeep = True
-        Me.TextBoxX4.Size = New System.Drawing.Size(796, 20)
+        Me.TextBoxX4.Size = New System.Drawing.Size(842, 20)
         Me.TextBoxX4.TabIndex = 8
         Me.TextBoxX4.Text = "Press Enter To Search..."
         '
@@ -1606,7 +1608,7 @@ Partial Class Form1
         Me.TabControlPanel3.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel3.Name = "TabControlPanel3"
         Me.TabControlPanel3.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel3.Size = New System.Drawing.Size(798, 531)
+        Me.TabControlPanel3.Size = New System.Drawing.Size(844, 531)
         Me.TabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -1630,7 +1632,7 @@ Partial Class Form1
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.TabControl2.SelectedTabIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(796, 529)
+        Me.TabControl2.Size = New System.Drawing.Size(842, 529)
         Me.TabControl2.Style = DevComponents.DotNetBar.eTabStripStyle.Metro
         Me.TabControl2.TabIndex = 1
         Me.TabControl2.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
@@ -1646,7 +1648,7 @@ Partial Class Form1
         Me.TabControlPanel5.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel5.Name = "TabControlPanel5"
         Me.TabControlPanel5.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel5.Size = New System.Drawing.Size(796, 502)
+        Me.TabControlPanel5.Size = New System.Drawing.Size(842, 502)
         Me.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel5.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -1671,7 +1673,7 @@ Partial Class Form1
         Me.TabControl4.Name = "TabControl4"
         Me.TabControl4.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.TabControl4.SelectedTabIndex = 0
-        Me.TabControl4.Size = New System.Drawing.Size(794, 500)
+        Me.TabControl4.Size = New System.Drawing.Size(840, 500)
         Me.TabControl4.Style = DevComponents.DotNetBar.eTabStripStyle.Metro
         Me.TabControl4.TabIndex = 2
         Me.TabControl4.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
@@ -1690,7 +1692,7 @@ Partial Class Form1
         Me.TabControlPanel8.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel8.Name = "TabControlPanel8"
         Me.TabControlPanel8.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel8.Size = New System.Drawing.Size(794, 473)
+        Me.TabControlPanel8.Size = New System.Drawing.Size(840, 473)
         Me.TabControlPanel8.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel8.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel8.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -1713,7 +1715,7 @@ Partial Class Form1
         Me.ListBox3.Location = New System.Drawing.Point(1, 129)
         Me.ListBox3.Name = "ListBox3"
         Me.ListBox3.ScrollAlwaysVisible = True
-        Me.ListBox3.Size = New System.Drawing.Size(792, 343)
+        Me.ListBox3.Size = New System.Drawing.Size(838, 343)
         Me.ListBox3.TabIndex = 3
         '
         'ListBox9
@@ -1730,7 +1732,7 @@ Partial Class Form1
         Me.ListBox9.Location = New System.Drawing.Point(1, 21)
         Me.ListBox9.Name = "ListBox9"
         Me.ListBox9.ScrollAlwaysVisible = True
-        Me.ListBox9.Size = New System.Drawing.Size(792, 108)
+        Me.ListBox9.Size = New System.Drawing.Size(838, 108)
         Me.ListBox9.TabIndex = 11
         '
         'TextBoxX6
@@ -1747,7 +1749,7 @@ Partial Class Form1
         Me.TextBoxX6.Location = New System.Drawing.Point(1, 1)
         Me.TextBoxX6.Name = "TextBoxX6"
         Me.TextBoxX6.PreventEnterBeep = True
-        Me.TextBoxX6.Size = New System.Drawing.Size(792, 20)
+        Me.TextBoxX6.Size = New System.Drawing.Size(838, 20)
         Me.TextBoxX6.TabIndex = 10
         Me.TextBoxX6.Text = "Press Enter To Search..."
         '
@@ -1768,7 +1770,7 @@ Partial Class Form1
         Me.TabControlPanel9.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel9.Name = "TabControlPanel9"
         Me.TabControlPanel9.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel9.Size = New System.Drawing.Size(794, 473)
+        Me.TabControlPanel9.Size = New System.Drawing.Size(840, 473)
         Me.TabControlPanel9.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabControlPanel9.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.TabControlPanel9.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -1795,7 +1797,7 @@ Partial Class Form1
         Me.RichTextBoxEx2.Rtf = "{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft S" &
     "ans Serif;}}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "{\colortbl ;\red255\green255\blue255;}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "\viewkind4\uc1\pard\cf1\f0" &
     "\fs20\par" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.RichTextBoxEx2.Size = New System.Drawing.Size(792, 343)
+        Me.RichTextBoxEx2.Size = New System.Drawing.Size(838, 343)
         Me.RichTextBoxEx2.TabIndex = 3
         Me.RichTextBoxEx2.WordWrap = False
         '
@@ -1855,7 +1857,7 @@ Partial Class Form1
         Me.ListBox8.Location = New System.Drawing.Point(1, 21)
         Me.ListBox8.Name = "ListBox8"
         Me.ListBox8.ScrollAlwaysVisible = True
-        Me.ListBox8.Size = New System.Drawing.Size(792, 108)
+        Me.ListBox8.Size = New System.Drawing.Size(838, 108)
         Me.ListBox8.TabIndex = 9
         '
         'TextBoxX5
@@ -1872,7 +1874,7 @@ Partial Class Form1
         Me.TextBoxX5.Location = New System.Drawing.Point(1, 1)
         Me.TextBoxX5.Name = "TextBoxX5"
         Me.TextBoxX5.PreventEnterBeep = True
-        Me.TextBoxX5.Size = New System.Drawing.Size(792, 20)
+        Me.TextBoxX5.Size = New System.Drawing.Size(838, 20)
         Me.TextBoxX5.TabIndex = 8
         Me.TextBoxX5.Text = "Press Enter To Search..."
         '
@@ -1918,10 +1920,10 @@ Partial Class Form1
         '
         Me.TabControlPanel16.DisabledBackColor = System.Drawing.Color.Empty
         Me.TabControlPanel16.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel16.Location = New System.Drawing.Point(0, 0)
+        Me.TabControlPanel16.Location = New System.Drawing.Point(0, 26)
         Me.TabControlPanel16.Name = "TabControlPanel16"
         Me.TabControlPanel16.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel16.Size = New System.Drawing.Size(256, 152)
+        Me.TabControlPanel16.Size = New System.Drawing.Size(256, 126)
         Me.TabControlPanel16.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.TabControlPanel16.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.TabControlPanel16.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
@@ -1941,11 +1943,27 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
         '
+        'CheckBoxX2
+        '
+        Me.CheckBoxX2.AutoSize = True
+        Me.CheckBoxX2.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.CheckBoxX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CheckBoxX2.ForeColor = System.Drawing.Color.White
+        Me.CheckBoxX2.Location = New System.Drawing.Point(221, 9)
+        Me.CheckBoxX2.Name = "CheckBoxX2"
+        Me.CheckBoxX2.Size = New System.Drawing.Size(101, 15)
+        Me.CheckBoxX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CheckBoxX2.TabIndex = 13
+        Me.CheckBoxX2.Text = "Create Backups"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(798, 678)
+        Me.ClientSize = New System.Drawing.Size(844, 678)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TabControl1)
         Me.DoubleBuffered = True
@@ -2135,4 +2153,5 @@ Partial Class Form1
     Friend WithEvents ToolStripMenuItem15 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem16 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem17 As ToolStripMenuItem
+    Friend WithEvents CheckBoxX2 As DevComponents.DotNetBar.Controls.CheckBoxX
 End Class

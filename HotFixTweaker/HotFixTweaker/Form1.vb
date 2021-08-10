@@ -52,6 +52,7 @@ Public Class Form1
             ColorPickerButton2.SelectedColor = Color.FromArgb(Semiparseloadingvalues(7, "Session Editor Text Color R : "), Semiparseloadingvalues(8, "Session Editor Text Color G : "), Semiparseloadingvalues(9, "Session Editor Text Color B : "))
             ColorPickerButton4.SelectedColor = Color.FromArgb(Semiparseloadingvalues(10, "HotFix Code Background Color R : "), Semiparseloadingvalues(11, "HotFix Code Background Color G : "), Semiparseloadingvalues(12, "HotFix Code Background Color B : "))
             ColorPickerButton3.SelectedColor = Color.FromArgb(Semiparseloadingvalues(13, "HotFix Code Text Color R : "), Semiparseloadingvalues(14, "HotFix Code Text Color G : "), Semiparseloadingvalues(15, "HotFix Code Text Color B : "))
+            CheckBoxX2.Checked = Semiparseloadingvalues(16, "Create Backups : ")
 
 
         End If
@@ -422,6 +423,10 @@ HotFix Lines : " + RichTextBoxEx2.Lines.Count.ToString)
             TabControl1.SelectedTabIndex = 1
             If selectedtext.Contains(".bl3hotfix") Then
                 RichTextBoxEx1.Clear()
+                If CheckBoxX2.Checked Then
+                    File.WriteAllText(Path.GetFileName(selectedtext) + ".bak", File.ReadAllText(selectedtext))
+
+                End If
                 RichTextBoxEx1.Text = File.ReadAllText(selectedtext)
                 TabItem2.Visible = True
                 TabItem6.Text = "Session Editor ( Lines " + RichTextBoxEx1.Lines.Count.ToString + ")"
@@ -511,7 +516,7 @@ HotFix Code Background Color B : (" + ColorPickerButton4.SelectedColor.B.ToStrin
 HotFix Code Text Color R : (" + ColorPickerButton3.SelectedColor.R.ToString + ")
 HotFix Code Text Color G : (" + ColorPickerButton3.SelectedColor.G.ToString + ")
 HotFix Code Text Color B : (" + ColorPickerButton3.SelectedColor.B.ToString + ")
-
+Create Backups : (" + CheckBoxX2.Checked.ToString + ")
 ")
         If ListBox4.Items.Count > 0 Then
             File.Delete(My.Application.Info.DirectoryPath + "\HotFixTweakerFavorites.hfts")
