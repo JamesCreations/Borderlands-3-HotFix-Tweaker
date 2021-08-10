@@ -684,23 +684,37 @@ HotFix Code Text Color B : (" + ColorPickerButton3.SelectedColor.B.ToString + ")
     End Sub
 
     Private Sub ButtonX2_Click(sender As Object, e As EventArgs) Handles ButtonX2.Click
+        Static Dim randomint As New Random
         If Not File.Exists("HotFixPatches.hfts") Then
             MessageBox.Show("HotFixPatches.hfts Does Not Exist Please Create It And Paste Your Spark Patches In It.", "Heads Up !", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
             NumericUpDown1.Maximum = File.ReadAllLines("HotFixPatches.hfts").Count
             RichTextBoxEx3.Clear()
+            RichTextBoxEx3.AppendText("#Generated Random HotFix " + randomint.Next(0, 1000).ToString + "
+#Using HotFix Tweaker By James reborn
+#Date : " + DateAndTime.DateString.ToString + " / Time : " + TimeOfDay.ToString("hh:mm:ss") + "
+
+")
             Dim int As Integer
             For int = 0 To NumericUpDown1.Value - 1
-                Static Dim randomint As New Random
+
                 Dim stringresult As String
                 stringresult = File.ReadLines("HotFixPatches.hfts")(randomint.Next(0, File.ReadLines("HotFixPatches.hfts").Count))
                 If Not String.IsNullOrEmpty(stringresult) Or Not String.IsNullOrWhiteSpace(stringresult) Then 'checksforemptiesanddoesnotrun
+
                     If Not RichTextBoxEx3.Text.Contains(stringresult) Then
 
-                        RichTextBoxEx3.AppendText(stringresult + Environment.NewLine)
+                        If Regex.IsMatch(stringresult, "Spar", RegexOptions.IgnoreCase) Then
+
+
+                            RichTextBoxEx3.AppendText(stringresult + Environment.NewLine)
+
+                        End If
+
+
                     Else
-                        'RichTextBoxEx3.AppendText("#DUPPEDOUTPUT" + Environment.NewLine) 'checksfordups
-                    End If
+                            'RichTextBoxEx3.AppendText("#DUPPEDOUTPUT" + Environment.NewLine) 'checksfordups
+                        End If
                 End If
             Next
         End If
@@ -712,6 +726,7 @@ HotFix Code Text Color B : (" + ColorPickerButton3.SelectedColor.B.ToString + ")
 
     Private Sub ToolStripMenuItem15_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem15.Click
         ListBox4.Items.Add(RichTextBoxEx3.SelectedText)
+        TabItem13.Text = "Favorites (" + ListBox4.Items.Count.ToString + ")"
     End Sub
 
     Private Sub ToolStripMenuItem16_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem16.Click
