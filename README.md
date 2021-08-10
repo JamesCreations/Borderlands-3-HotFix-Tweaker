@@ -81,6 +81,8 @@ Adding Favorites to the "Favorites" Tab:
 -------------------------------------------------------
 HOW TO ADD AN EXCLUSION TO WINDOWS DEFENDER (ANTIVIRUS)
 -------------------------------------------------------
+
+ Follow These Steps Or Go To : https://support.microsoft.com/en-ca/help/4028485/windows-10-add-an-exclusion-to-windows-security
  
  * Go to Start  > Settings  > Update & Security  > Windows Security > Virus & threat protection.
  * Under Virus & threat protection settings, select Manage settings, and then under Exclusions, select Add or remove exclusions.
