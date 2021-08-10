@@ -57,6 +57,9 @@ Loading Custom Hotfix Files From Your Own Local Directory/Folder:
 Loading Public Hotfix files from Github:
  * Navigate to the "HotFix Documentation" tab > "Public Hotfixes" tab > "List" tab > Double click any file on that list to view it's contents > "Hotfix Code" tab > Make your desired changes to the file > Right click anywhere within that box > Select "Save File" to save a copy of that public hotfix file to your PC >
 
+Creating Automatically Generated Hotfix Files:
+ * Navigate to the "HotFix Randomizer" tab > Specify how many lines/hotfixes you'd like to include in your hotfix > Select "Generate Random Hotfix" > Your newly generated hotfix will be displayed in lower box > Right click anywhere within the lower box > Select "Save File" > 
+
 Searching For Specific Hotfix Files:
  * Select the "Search" text box at the top of various tabs > Type in your search query > Press ENTER > 
 
@@ -78,6 +81,8 @@ Adding Favorites to the "Favorites" Tab:
 -------------------------------------------------------
 HOW TO ADD AN EXCLUSION TO WINDOWS DEFENDER (ANTIVIRUS)
 -------------------------------------------------------
+
+ Follow These Steps Or Go To : https://support.microsoft.com/en-ca/help/4028485/windows-10-add-an-exclusion-to-windows-security
  
  * Go to Start  > Settings  > Update & Security  > Windows Security > Virus & threat protection.
  * Under Virus & threat protection settings, select Manage settings, and then under Exclusions, select Add or remove exclusions.
