@@ -748,6 +748,61 @@ Create Backups : (" + CheckBoxX2.Checked.ToString + ")
         End If
     End Sub
 
+    Private Sub ListBox13_DoubleClick(sender As Object, e As EventArgs) Handles ListBox13.DoubleClick
+        If Not ListBox13.SelectedItem = Nothing Then
+            If ListBox13.SelectedItem = "Borderlands Modding Community Discord" Then
+                Process.Start("https://discord.gg/jGXXxHz3Hr")
+            End If
+            If ListBox13.SelectedItem = "How to use HotFix Merger" Then
+                Process.Start("https://www.youtube.com/watch?v=KYgUzKomXrk")
+            End If
+            If ListBox13.SelectedItem = "How to use Raptors Save Editor" Then
+                Process.Start("https://www.youtube.com/watch?v=WTD2eBeIJVw")
+            End If
+            If ListBox13.SelectedItem = "Apocalyptech Commandline Editor" Then
+                Process.Start("https://github.com/apocalyptech/bl3-cli-saveedit")
+            End If
+            If ListBox13.SelectedItem = "Raptor's graphical save editor" Then
+                Process.Start("https://github.com/cfi2017/bl3-save")
+                Process.Start("https://github.com/cfi2017/bl3-save-frontend")
+            End If
+            If ListBox13.SelectedItem = "CSave Commandline Save Editor" Then
+                Process.Start("https://github.com/HackerSmacker/CSave ")
+            End If
+            If ListBox13.SelectedItem = "Lootlemon" Then
+                Process.Start("https://www.lootlemon.com/db/borderlands-3/weapons")
+            End If
+            If ListBox13.SelectedItem = "Spreedsheet of Item Parts/Stats" Then
+                Process.Start("https://docs.google.com/spreadsheets/d/16b7bGPFKIrNg_cJm_WCMO6cKahexBs7BiJ6ja0RlD04/edit#gid=1321122034")
+            End If
+            If ListBox13.SelectedItem = "Borderlands 3 Weapon/Item Parts + Weights" Then
+                Process.Start("https://docs.google.com/spreadsheets/d/1XYG30B6CulmcmmVDuq-PkLEJVtjAFacx7cuSkqbv5N4/edit#gid=236414762")
+            End If
+            If ListBox13.SelectedItem = "Weapon Parts Compendium" Then
+                Process.Start("https://docs.google.com/spreadsheets/d/1daTpPa_uxJ0FUdVoAMjDY54GVQhwGRl51LCTsAY6AlU/edit#gid=1048758721")
+            End If
+            If ListBox13.SelectedItem = "BL3 Legendary & Unique Codes" Then
+                Process.Start("https://docs.google.com/spreadsheets/d/1scyeHjKVddQ-uSAq-cn3KTJmpllrgLDAjZSY-LIcqRg/edit#gid=0")
+            End If
+
+            If ListBox13.SelectedItem = "Images with Item Codes (Gibbed Format)" Then
+                Process.Start("https://imgur.com/user/bl3mods/posts")
+            End If
+            If ListBox13.SelectedItem = "Purple Grenade Parts List" Then
+                Process.Start("https://docs.google.com/spreadsheets/d/1emE7ne8dwspx_MeUFqYoHV2GP1352A0-cCGA1g9NMts/edit#gid=196551301")
+            End If
+            If ListBox13.SelectedItem = "Purple Shield Parts Checklist" Then
+                Process.Start("https://docs.google.com/spreadsheets/d/1QoVJYck7qVilOkFeGSEKg4eGJdkZaBJDbqwLRl48LIA/edit#gid=60397113")
+            End If
+            If ListBox13.SelectedItem = "Web Vault Hunter Skill Build Planner" Then
+                Process.Start("https://bl3skills.com/")
+            End If
+            If ListBox13.SelectedItem = "Modding Fabricator Itempool" Then
+                Process.Start("https://www.youtube.com/watch?v=Kz06jPvYWiY")
+            End If
+        End If
+    End Sub
+
     Private Sub RemoveItemFromListboxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveItemFromListboxToolStripMenuItem.Click
         If Not ListBox1.SelectedItem = Nothing Then
             ListBox1.Items.Remove(ListBox1.SelectedItem)
