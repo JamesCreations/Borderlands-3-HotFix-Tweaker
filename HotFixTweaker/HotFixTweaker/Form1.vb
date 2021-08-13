@@ -25,6 +25,7 @@ Public Class Form1
         ListBox10.Visible = False
         ListBox11.Visible = False
         ListBox12.Visible = False
+        ListBox14.Visible = False
 
         TabItem2.Visible = False
 
@@ -801,6 +802,16 @@ Create Backups : (" + CheckBoxX2.Checked.ToString + ")
                 Process.Start("https://www.youtube.com/watch?v=Kz06jPvYWiY")
             End If
         End If
+    End Sub
+
+    Private Sub TextBoxX9_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBoxX9.KeyDown
+        Searchresults(ListBox14, TextBoxX9, Nothing, RichTextBoxEx3, 1, e)
+
+    End Sub
+
+    Private Sub ListBox14_DoubleClick(sender As Object, e As EventArgs) Handles ListBox14.DoubleClick
+        RichTextBoxEx3.Focus()
+        RichTextBoxEx3.Find(ListBox14.SelectedItem)
     End Sub
 
     Private Sub RemoveItemFromListboxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveItemFromListboxToolStripMenuItem.Click
