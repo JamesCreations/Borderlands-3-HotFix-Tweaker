@@ -16,7 +16,15 @@ Public Class Form1
 
         TabItem14.Text = "Inventory Dump ( Lines " + RichTextBoxEx6.Lines.Count.ToString + ")"
 
+        RichTextBoxEx5.Text = Readtextfromgithub("https://raw.githubusercontent.com/BLCM/bl3hotfixes/master/hotfixes_current.json")
 
+        TabItem24.Text = "Raw"
+
+        For Each lines As String In RichTextBoxEx5.Lines
+            If lines.Contains(Chr(34) + "key" + Chr(34) + ": ") Then
+                ListBox15.Items.Add(lines.Replace(Chr(34) + "key" + Chr(34) + ": ", "").Replace(Chr(34), "").Replace(" ", "").Replace(",", ""))
+            End If
+        Next
 
         ListBox6.Visible = False
         ListBox7.Visible = False
@@ -26,6 +34,8 @@ Public Class Form1
         ListBox11.Visible = False
         ListBox12.Visible = False
         ListBox14.Visible = False
+        ListBox16.Visible = False
+
 
         TabItem2.Visible = False
 
@@ -622,15 +632,15 @@ Create Backups : (" + CheckBoxX2.Checked.ToString + ")
     End Sub
 
     Private Sub ToolStripMenuItem11_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem11.Click
-        Clipboard.SetText(RichTextBoxEx2.Text)
+        Clipboard.SetText(RichTextBoxEx2.SelectedText)
     End Sub
 
     Private Sub ToolStripMenuItem12_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem12.Click
-        Clipboard.SetText(RichTextBoxEx6.Text)
+        Clipboard.SetText(RichTextBoxEx6.SelectedText)
     End Sub
 
     Private Sub ToolStripMenuItem13_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem13.Click
-        Clipboard.SetText(RichTextBoxEx7.Text)
+        Clipboard.SetText(RichTextBoxEx7.SelectedText)
     End Sub
 
     Private Sub TextBoxX3_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBoxX3.KeyDown
@@ -727,7 +737,7 @@ Create Backups : (" + CheckBoxX2.Checked.ToString + ")
     End Sub
 
     Private Sub ToolStripMenuItem14_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem14.Click
-        Clipboard.SetText(RichTextBoxEx3.Text)
+        Clipboard.SetText(RichTextBoxEx3.SelectedText)
     End Sub
 
     Private Sub ToolStripMenuItem15_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem15.Click
@@ -812,6 +822,69 @@ Create Backups : (" + CheckBoxX2.Checked.ToString + ")
     Private Sub ListBox14_DoubleClick(sender As Object, e As EventArgs) Handles ListBox14.DoubleClick
         RichTextBoxEx3.Focus()
         RichTextBoxEx3.Find(ListBox14.SelectedItem)
+    End Sub
+
+    Private Sub ListBox15_DoubleClick(sender As Object, e As EventArgs) Handles ListBox15.DoubleClick
+        If Not ListBox15.SelectedItem = Nothing Then
+            RichTextBoxEx4.Clear()
+            Dim lines As String() = RichTextBoxEx5.Lines
+            For line As Integer = 0 To lines.Count - 1
+
+                If Regex.IsMatch(lines(line), ListBox15.SelectedItem) Then
+
+
+                    RichTextBoxEx4.AppendText(Environment.NewLine + lines(line) + Environment.NewLine + lines(line + 1))
+
+                End If
+            Next
+            TabControl8.SelectedTabIndex = 1
+        End If
+    End Sub
+
+    Private Sub ToolStripMenuItem18_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem18.Click
+        Clipboard.SetText(RichTextBoxEx4.SelectedText)
+    End Sub
+
+    Private Sub ToolStripMenuItem19_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem19.Click
+        ListBox4.Items.Add(RichTextBoxEx4.SelectedText)
+        TabItem13.Text = "Favorites (" + ListBox4.Items.Count.ToString + ")"
+
+    End Sub
+
+    Private Sub ToolStripMenuItem21_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem21.Click
+        If ToolStripMenuItem21.Checked = True Then
+            RichTextBoxEx4.WordWrap = True
+        Else
+            RichTextBoxEx4.WordWrap = False
+        End If
+    End Sub
+
+    Private Sub ToolStripMenuItem20_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem20.Click
+        Clipboard.SetText(RichTextBoxEx5.SelectedText)
+
+    End Sub
+
+    Private Sub ToolStripMenuItem22_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem22.Click
+        ListBox4.Items.Add(RichTextBoxEx5.SelectedText)
+        TabItem13.Text = "Favorites (" + ListBox4.Items.Count.ToString + ")"
+
+    End Sub
+
+    Private Sub ToolStripMenuItem23_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem23.Click
+        If ToolStripMenuItem23.Checked = True Then
+            RichTextBoxEx5.WordWrap = True
+        Else
+            RichTextBoxEx5.WordWrap = False
+        End If
+    End Sub
+
+    Private Sub TextBoxX10_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBoxX10.KeyDown
+        Searchresults(ListBox16, TextBoxX10, Nothing, RichTextBoxEx5, 1, e)
+    End Sub
+
+    Private Sub ListBox16_DoubleClick(sender As Object, e As EventArgs) Handles ListBox16.DoubleClick
+        RichTextBoxEx5.Focus()
+        RichTextBoxEx5.Find(ListBox16.SelectedItem)
     End Sub
 
     Private Sub RemoveItemFromListboxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveItemFromListboxToolStripMenuItem.Click
