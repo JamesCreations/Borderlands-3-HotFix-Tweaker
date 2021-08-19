@@ -9,7 +9,7 @@ Public Class Form1
     Dim selectedtext, selectedfolder, savefilepath As String
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        NumericUpDown1.Maximum = File.ReadAllLines("HotFixPatches.hfts").Count
+        ComboBoxEx1.SelectedIndex = 0
 
         RichTextBoxEx8.Text = Readtextfromgithub("https://raw.githubusercontent.com/JamesCreations/Borderlands-3-HotFix-Tweaker/main/README.md")
         RichTextBoxEx6.Text = Readtextfromgithub("https://raw.githubusercontent.com/gibbed/Borderlands3Dumps/master/Inventory%20Serial%20Number%20Database.json").Replace(",", "").Replace("[", "").Replace("]", "").Replace("{", "").Replace("}", "").Replace(Chr(34), "")
@@ -372,6 +372,23 @@ HotFix Lines : " + RichTextBoxEx2.Lines.Count.ToString)
     End Function
 #End Region
 
+    Function randomizerfromfile(filepath As String, richy As RichTextBoxEx)
+        richy.Clear()
+        Dim int As Integer
+        For int = 0 To NumericUpDown2.Value - 1
+            Static Dim randomint As New Random
+            Dim stringresult As String = File.ReadLines(filepath)(randomint.Next(0, File.ReadLines(filepath).Count))
+
+
+
+            richy.AppendText(stringresult + Environment.NewLine)
+        Next
+        Return 0
+    End Function
+
+
+
+
     Function WriteTextToFile(filename As String, ext As String, textbox As RichTextBoxEx)
         Dim SaveFileDialog1 As New SaveFileDialog
         SaveFileDialog1.Filter = "" + ext + " Files (*." + ext + "*)|*." + ext + ""
@@ -699,43 +716,6 @@ Create Backups : (" + CheckBoxX2.Checked.ToString + ")
         ListBox4.SelectedItem = ListBox12.SelectedItem
     End Sub
 
-    Private Sub ButtonX2_Click(sender As Object, e As EventArgs) Handles ButtonX2.Click
-        Static Dim randomint As New Random
-        If Not File.Exists("HotFixPatches.hfts") Then
-            MessageBox.Show("HotFixPatches.hfts Does Not Exist Please Create It And Paste Your Spark Patches In It.", "Heads Up !", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Else
-            NumericUpDown1.Maximum = File.ReadAllLines("HotFixPatches.hfts").Count
-            RichTextBoxEx3.Clear()
-            RichTextBoxEx3.AppendText("#Generated Random HotFix " + randomint.Next(0, 1000).ToString + "
-#Using HotFix Tweaker By James reborn
-#Date : " + DateAndTime.DateString.ToString + " / Time : " + TimeOfDay.ToString("hh:mm:ss") + "
-
-")
-            Dim int As Integer
-            For int = 0 To NumericUpDown1.Value - 1
-
-                Dim stringresult As String
-                stringresult = File.ReadLines("HotFixPatches.hfts")(randomint.Next(0, File.ReadLines("HotFixPatches.hfts").Count))
-                If Not String.IsNullOrEmpty(stringresult) Or Not String.IsNullOrWhiteSpace(stringresult) Then 'checksforemptiesanddoesnotrun
-
-                    If Not RichTextBoxEx3.Text.Contains(stringresult) Then
-
-                        If Regex.IsMatch(stringresult, "Spar", RegexOptions.IgnoreCase) Then
-
-
-                            RichTextBoxEx3.AppendText(stringresult + Environment.NewLine)
-
-                        End If
-
-
-                    Else
-                            'RichTextBoxEx3.AppendText("#DUPPEDOUTPUT" + Environment.NewLine) 'checksfordups
-                        End If
-                End If
-            Next
-        End If
-    End Sub
-
     Private Sub ToolStripMenuItem14_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem14.Click
         Clipboard.SetText(RichTextBoxEx3.SelectedText)
     End Sub
@@ -885,6 +865,55 @@ Create Backups : (" + CheckBoxX2.Checked.ToString + ")
     Private Sub ListBox16_DoubleClick(sender As Object, e As EventArgs) Handles ListBox16.DoubleClick
         RichTextBoxEx5.Focus()
         RichTextBoxEx5.Find(ListBox16.SelectedItem)
+    End Sub
+
+    Private Sub ButtonX3_Click(sender As Object, e As EventArgs) Handles ButtonX3.Click
+        If ComboBoxEx1.SelectedIndex = 0 Then
+            randomizerfromfile("WeaponRandomizer.txt", RichTextBoxEx3)
+        End If
+        If ComboBoxEx1.SelectedIndex = 1 Then
+            randomizerfromfile("EnemiesRandomizer.txt", RichTextBoxEx3)
+        End If
+        If ComboBoxEx1.SelectedIndex = 2 Then
+            randomizerfromfile("LootRandomizer.txt", RichTextBoxEx3)
+        End If
+        If ComboBoxEx1.SelectedIndex = 3 Then
+            Static Dim randomint As New Random
+            If Not File.Exists("HotFixPatches.hfts") Then
+                MessageBox.Show("HotFixPatches.hfts Does Not Exist Please Create It And Paste Your Spark Patches In It.", "Heads Up !", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                NumericUpDown2.Maximum = File.ReadAllLines("HotFixPatches.hfts").Count
+                RichTextBoxEx3.Clear()
+                RichTextBoxEx3.AppendText("#Generated Random HotFix " + randomint.Next(0, 1000).ToString + "
+#Using HotFix Tweaker By James reborn
+#Date : " + DateAndTime.DateString.ToString + " / Time : " + TimeOfDay.ToString("hh:mm:ss") + "
+
+")
+                Dim int As Integer
+                For int = 0 To NumericUpDown2.Value - 1
+
+                    Dim stringresult As String
+                    stringresult = File.ReadLines("HotFixPatches.hfts")(randomint.Next(0, File.ReadLines("HotFixPatches.hfts").Count))
+                    If Not String.IsNullOrEmpty(stringresult) Or Not String.IsNullOrWhiteSpace(stringresult) Then 'checksforemptiesanddoesnotrun
+
+                        If Not RichTextBoxEx3.Text.Contains(stringresult) Then
+
+                            If Regex.IsMatch(stringresult, "Spar", RegexOptions.IgnoreCase) Then
+
+
+                                RichTextBoxEx3.AppendText(stringresult + Environment.NewLine)
+
+                            End If
+
+
+                        Else
+                            'RichTextBoxEx3.AppendText("#DUPPEDOUTPUT" + Environment.NewLine) 'checksfordups
+                        End If
+                    End If
+                Next
+            End If
+        End If
+
     End Sub
 
     Private Sub RemoveItemFromListboxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveItemFromListboxToolStripMenuItem.Click
