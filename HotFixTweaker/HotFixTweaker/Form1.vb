@@ -64,7 +64,7 @@ Public Class Form1
             ColorPickerButton4.SelectedColor = Color.FromArgb(Semiparseloadingvalues(10, "HotFix Code Background Color R : "), Semiparseloadingvalues(11, "HotFix Code Background Color G : "), Semiparseloadingvalues(12, "HotFix Code Background Color B : "))
             ColorPickerButton3.SelectedColor = Color.FromArgb(Semiparseloadingvalues(13, "HotFix Code Text Color R : "), Semiparseloadingvalues(14, "HotFix Code Text Color G : "), Semiparseloadingvalues(15, "HotFix Code Text Color B : "))
             CheckBoxX2.Checked = Semiparseloadingvalues(16, "Create Backups : ")
-
+            TextBoxX11.Text = Semiparseloadingvalues(17, "Custom File For Randomizer : ")
 
         End If
 
@@ -545,6 +545,7 @@ HotFix Code Text Color R : (" + ColorPickerButton3.SelectedColor.R.ToString + ")
 HotFix Code Text Color G : (" + ColorPickerButton3.SelectedColor.G.ToString + ")
 HotFix Code Text Color B : (" + ColorPickerButton3.SelectedColor.B.ToString + ")
 Create Backups : (" + CheckBoxX2.Checked.ToString + ")
+Custom File For Randomizer : (" + TextBoxX11.Text + ")
 ")
         If ListBox4.Items.Count > 0 Then
             File.Delete(My.Application.Info.DirectoryPath + "\HotFixTweakerFavorites.hfts")

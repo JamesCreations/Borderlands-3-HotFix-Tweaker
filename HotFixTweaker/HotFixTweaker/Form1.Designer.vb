@@ -33,14 +33,18 @@ Partial Class Form1
         Me.ToolStripMenuItem15 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem16 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem17 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ButtonX3 = New DevComponents.DotNetBar.ButtonX()
         Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
         Me.LabelX10 = New DevComponents.DotNetBar.LabelX()
+        Me.ButtonX3 = New DevComponents.DotNetBar.ButtonX()
+        Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX()
+        Me.TextBoxX11 = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.LabelX8 = New DevComponents.DotNetBar.LabelX()
         Me.ComboBoxEx1 = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.ComboItem1 = New DevComponents.Editors.ComboItem()
         Me.ComboItem2 = New DevComponents.Editors.ComboItem()
         Me.ComboItem3 = New DevComponents.Editors.ComboItem()
         Me.ComboItem4 = New DevComponents.Editors.ComboItem()
+        Me.ComboItem5 = New DevComponents.Editors.ComboItem()
         Me.LabelX9 = New DevComponents.DotNetBar.LabelX()
         Me.ListBox14 = New System.Windows.Forms.ListBox()
         Me.TextBoxX9 = New DevComponents.DotNetBar.Controls.TextBoxX()
@@ -188,10 +192,6 @@ Partial Class Form1
         Me.TabControl6 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel16 = New DevComponents.DotNetBar.TabControlPanel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ComboItem5 = New DevComponents.Editors.ComboItem()
-        Me.TextBoxX11 = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.LabelX8 = New DevComponents.DotNetBar.LabelX()
-        Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabControlPanel26.SuspendLayout()
@@ -260,8 +260,8 @@ Partial Class Form1
         Me.TabControl1.ColorScheme.TabItemHotBackground = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.TabControl1.ColorScheme.TabItemSelectedBorder = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.TabControl1.ColorScheme.TabItemSelectedText = System.Drawing.Color.Yellow
-        Me.TabControl1.Controls.Add(Me.TabControlPanel26)
         Me.TabControl1.Controls.Add(Me.TabControlPanel1)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel26)
         Me.TabControl1.Controls.Add(Me.TabControlPanel2)
         Me.TabControl1.Controls.Add(Me.TabControlPanel12)
         Me.TabControl1.Controls.Add(Me.TabControlPanel20)
@@ -378,19 +378,6 @@ Partial Class Form1
         Me.ToolStripMenuItem17.Size = New System.Drawing.Size(246, 22)
         Me.ToolStripMenuItem17.Text = "Word Wrap"
         '
-        'ButtonX3
-        '
-        Me.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.ButtonX3.Image = CType(resources.GetObject("ButtonX3.Image"), System.Drawing.Image)
-        Me.ButtonX3.Location = New System.Drawing.Point(1, 253)
-        Me.ButtonX3.Name = "ButtonX3"
-        Me.ButtonX3.Size = New System.Drawing.Size(886, 41)
-        Me.ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.ButtonX3.TabIndex = 12
-        Me.ButtonX3.Text = "Activate Randomizer"
-        '
         'NumericUpDown2
         '
         Me.NumericUpDown2.Dock = System.Windows.Forms.DockStyle.Top
@@ -419,6 +406,69 @@ Partial Class Form1
         Me.LabelX10.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.LabelX10.TabIndex = 14
         Me.LabelX10.Text = "Times Outputed : "
+        '
+        'ButtonX3
+        '
+        Me.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ButtonX3.Image = CType(resources.GetObject("ButtonX3.Image"), System.Drawing.Image)
+        Me.ButtonX3.Location = New System.Drawing.Point(1, 253)
+        Me.ButtonX3.Name = "ButtonX3"
+        Me.ButtonX3.Size = New System.Drawing.Size(886, 41)
+        Me.ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ButtonX3.TabIndex = 12
+        Me.ButtonX3.Text = "Activate Randomizer"
+        '
+        'ButtonX2
+        '
+        Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ButtonX2.Image = CType(resources.GetObject("ButtonX2.Image"), System.Drawing.Image)
+        Me.ButtonX2.Location = New System.Drawing.Point(1, 212)
+        Me.ButtonX2.Name = "ButtonX2"
+        Me.ButtonX2.Size = New System.Drawing.Size(886, 41)
+        Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ButtonX2.TabIndex = 19
+        Me.ButtonX2.Text = "Choose Custom File"
+        '
+        'TextBoxX11
+        '
+        Me.TextBoxX11.BackColor = System.Drawing.Color.Black
+        '
+        '
+        '
+        Me.TextBoxX11.Border.Class = "TextBoxBorder"
+        Me.TextBoxX11.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.TextBoxX11.DisabledBackColor = System.Drawing.Color.Black
+        Me.TextBoxX11.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBoxX11.ForeColor = System.Drawing.Color.White
+        Me.TextBoxX11.Location = New System.Drawing.Point(1, 192)
+        Me.TextBoxX11.Name = "TextBoxX11"
+        Me.TextBoxX11.PreventEnterBeep = True
+        Me.TextBoxX11.Size = New System.Drawing.Size(886, 20)
+        Me.TextBoxX11.TabIndex = 17
+        Me.TextBoxX11.Text = "Desktop"
+        '
+        'LabelX8
+        '
+        Me.LabelX8.AutoSize = True
+        Me.LabelX8.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX8.Dock = System.Windows.Forms.DockStyle.Top
+        Me.LabelX8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX8.ForeColor = System.Drawing.Color.White
+        Me.LabelX8.Location = New System.Drawing.Point(1, 171)
+        Me.LabelX8.Name = "LabelX8"
+        Me.LabelX8.SingleLineColor = System.Drawing.Color.Transparent
+        Me.LabelX8.Size = New System.Drawing.Size(224, 21)
+        Me.LabelX8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.LabelX8.TabIndex = 18
+        Me.LabelX8.Text = "Custom File For Randomizer : "
         '
         'ComboBoxEx1
         '
@@ -451,6 +501,10 @@ Partial Class Form1
         'ComboItem4
         '
         Me.ComboItem4.Text = "Hotfixes"
+        '
+        'ComboItem5
+        '
+        Me.ComboItem5.Text = "Custom File"
         '
         'LabelX9
         '
@@ -2444,60 +2498,6 @@ Partial Class Form1
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
-        '
-        'ComboItem5
-        '
-        Me.ComboItem5.Text = "Custom File"
-        '
-        'TextBoxX11
-        '
-        Me.TextBoxX11.BackColor = System.Drawing.Color.Black
-        '
-        '
-        '
-        Me.TextBoxX11.Border.Class = "TextBoxBorder"
-        Me.TextBoxX11.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.TextBoxX11.DisabledBackColor = System.Drawing.Color.Black
-        Me.TextBoxX11.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TextBoxX11.ForeColor = System.Drawing.Color.White
-        Me.TextBoxX11.Location = New System.Drawing.Point(1, 192)
-        Me.TextBoxX11.Name = "TextBoxX11"
-        Me.TextBoxX11.PreventEnterBeep = True
-        Me.TextBoxX11.Size = New System.Drawing.Size(886, 20)
-        Me.TextBoxX11.TabIndex = 17
-        Me.TextBoxX11.Text = "Desktop"
-        '
-        'LabelX8
-        '
-        Me.LabelX8.AutoSize = True
-        Me.LabelX8.BackColor = System.Drawing.Color.Transparent
-        '
-        '
-        '
-        Me.LabelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX8.Dock = System.Windows.Forms.DockStyle.Top
-        Me.LabelX8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX8.ForeColor = System.Drawing.Color.White
-        Me.LabelX8.Location = New System.Drawing.Point(1, 171)
-        Me.LabelX8.Name = "LabelX8"
-        Me.LabelX8.SingleLineColor = System.Drawing.Color.Transparent
-        Me.LabelX8.Size = New System.Drawing.Size(224, 21)
-        Me.LabelX8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.LabelX8.TabIndex = 18
-        Me.LabelX8.Text = "Custom File For Randomizer : "
-        '
-        'ButtonX2
-        '
-        Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.ButtonX2.Image = CType(resources.GetObject("ButtonX2.Image"), System.Drawing.Image)
-        Me.ButtonX2.Location = New System.Drawing.Point(1, 212)
-        Me.ButtonX2.Name = "ButtonX2"
-        Me.ButtonX2.Size = New System.Drawing.Size(886, 41)
-        Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.ButtonX2.TabIndex = 19
-        Me.ButtonX2.Text = "Choose Custom File"
         '
         'Form1
         '
