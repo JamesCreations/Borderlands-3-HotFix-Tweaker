@@ -914,6 +914,19 @@ Create Backups : (" + CheckBoxX2.Checked.ToString + ")
             End If
         End If
 
+        If ComboBoxEx1.SelectedIndex = 4 Then
+            randomizerfromfile(TextBoxX11.Text, RichTextBoxEx3)
+        End If
+
+    End Sub
+
+    Private Sub ButtonX2_Click(sender As Object, e As EventArgs) Handles ButtonX2.Click
+        Dim openfiledialog As New OpenFileDialog
+
+        If openfiledialog.ShowDialog() = DialogResult.OK Then
+            TextBoxX11.Text = openfiledialog.FileName
+        End If
+
     End Sub
 
     Private Sub RemoveItemFromListboxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveItemFromListboxToolStripMenuItem.Click
